@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Bike,
   Building2,
@@ -7,26 +7,22 @@ import {
   ChevronRight,
   Clock3,
   Download,
-  Flame,
   Leaf,
   MapPin,
   MessageSquarePlus,
-  Moon,
   Plus,
   RotateCcw,
-  Search,
   Send,
   ShieldCheck,
   Shuffle,
   SlidersHorizontal,
   Sparkles,
   Star,
-  Store,
   Utensils,
   WalletCards,
   X,
 } from "lucide-react";
-import { foodCatalog, officialCanteenAreas, officialCanteenStats } from "./data/catalog";
+import { foodCatalog, officialCanteenAreas } from "./data/catalog";
 import { applyCatalogPatch } from "./data/catalogPatch";
 import { loadCatalogPatch } from "./data/catalogPatchApi";
 import {
@@ -42,7 +38,6 @@ import {
   campusLabels,
   channelLabels,
   foodTypeLabels,
-  heatLabels,
   mealPeriodLabels,
   vendorChannels,
   type Campus,
@@ -50,7 +45,6 @@ import {
   type FoodItem,
   type FoodType,
   type FoodVendor,
-  type HeatLevel,
   type MealPeriod,
   type StudentPreference,
 } from "./domain/food";
@@ -122,7 +116,12 @@ function App() {
   );
   const recommendations = useMemo(() => recommendFood(catalog, activePreference), [activePreference, catalog]);
   const top = recommendations[0];
-  const campusVendorCount = catalog.filter((vendor) => vendor.campus === preference.campus).length;
+  const topLocation = top
+    ? top.vendor.locationHint ??
+      [top.vendor.area, top.vendor.floor, top.vendor.windowNo ? `${top.vendor.windowNo}号窗口` : "", top.vendor.windowName]
+        .filter(Boolean)
+        .join(" · ")
+    : "";
   const dineInAreaOptions = useMemo(() => {
     const realAreas = officialCanteenAreas
       .filter((source) => source.campus === preference.campus)
@@ -165,21 +164,6 @@ function App() {
       imageCount: selectedAreaSource.imageCount,
     };
   }, [catalog, preference.campus, selectedAreaSource]);
-  const averageBudget = Math.round(
-    recommendations
-      .slice(0, 5)
-      .filter((result) => typeof result.item.price === "number")
-      .reduce((sum, result) => sum + (result.item.price ?? 0), 0) /
-      Math.max(1, recommendations.slice(0, 5).filter((result) => typeof result.item.price === "number").length),
-  );
-  const lateNightVendorCount = catalog.filter((vendor) => {
-    return (
-      vendor.campus === preference.campus &&
-      vendorChannels(vendor).some((channel) => preference.selectedChannels.includes(channel)) &&
-      vendor.items.some((item) => item.available.includes("late"))
-    );
-  }).length;
-
   useEffect(() => {
     let cancelled = false;
     loadServerSubmissions()
@@ -267,6 +251,70 @@ function App() {
             <h1>西电今天吃什么</h1>
           </div>
         </div>
+
+        <section className="quickPickCard" aria-label="当前推荐">
+          <div className="quickPickHeader">
+            <span>当前推荐</span>
+            <strong>{recommendations.length > 0 ? `${recommendations.length} 个可选` : "暂无结果"}</strong>
+          </div>
+          {top ? (
+            <>
+              <h2>{top.item.name}</h2>
+              <p>{top.vendor.name}</p>
+              <div className="quickPickMeta">
+                <span>{formatPrice(top.item.price)}</span>
+                <span>{formatChannelList(top.vendor)}</span>
+                <span>{topLocation}</span>
+              </div>
+              <div className="quickPickActions">
+                <button onClick={reshuffleRecommendations}>
+                  <Shuffle size={16} />
+                  换一批
+                </button>
+                <button onClick={() => rememberChoice()}>
+                  <Check size={16} />
+                  吃这个
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2>暂时没有合适餐品</h2>
+              <p>放宽预算、换餐别，或选择有已复核菜品的堂食地点。</p>
+              <div className="quickPickActions single">
+                <button onClick={() => setPreference(defaultPreference)}>
+                  <RotateCcw size={16} />
+                  重置筛选
+                </button>
+              </div>
+            </>
+          )}
+        </section>
+
+        <div className="quickTools" aria-label="菜单共建工具">
+          <button
+            onClick={() =>
+              setFeedbackTarget({
+                mode: "new-vendor",
+                areaPreset: "老综",
+                supportedChannels: defaultCommunityChannels,
+              })
+            }
+          >
+            <Plus size={16} />
+            补充
+          </button>
+          <button onClick={() => setShowReviewQueue((current) => !current)}>
+            <Download size={16} />
+            {showReviewQueue ? "收起" : "记录"}
+          </button>
+          <a className="quickToolLink" href={adminHref}>
+            后台
+          </a>
+        </div>
+        <p className="railStatus">
+          {serverQueueOnline ? "手机服务器在线" : "本机缓存模式"} · {catalogPatchOnline ? "在线修订已加载" : "静态菜单"}
+        </p>
 
         <div className="fieldGroup">
           <div className="fieldHeader">
@@ -460,24 +508,6 @@ function App() {
           </label>
         </div>
 
-        <div className="fieldGroup">
-          <div className="fieldHeader">
-            <Flame size={17} />
-            <span>辣度</span>
-          </div>
-          <div className="segmented grid heatGrid">
-            {(["any", "none", "mild", "medium", "hot"] as const).map((heat) => (
-              <button
-                key={heat}
-                className={preference.heat === heat ? "active" : ""}
-                onClick={() => setPreference((current) => ({ ...current, heat }))}
-              >
-                {heat === "any" ? "都可" : heatLabels[heat as HeatLevel]}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <button className="resetButton" onClick={() => setPreference(defaultPreference)}>
           <RotateCcw size={17} />
           重置
@@ -485,47 +515,15 @@ function App() {
       </section>
 
       <section className="resultStage">
-        <header className="topBar">
-          <div className="searchPill">
-            <Search size={18} />
-            <span>
-              {campusLabels[preference.campus]} · {mealPeriodLabels[preference.mealPeriod]} · ¥
-              {preference.budget}
-            </span>
+        <header className="resultHeader">
+          <div>
+            <p className="eyebrow">更多选择</p>
+            <h2>推荐列表</h2>
           </div>
-          <div className="sourceCluster" aria-label="数据来源">
-            <span>{officialCanteenStats.sourceCount} 篇后勤来源</span>
-            <span>{officialCanteenStats.reviewedDishCount} 个已复核菜品</span>
-            <span>{officialCanteenStats.betaDishCount} 个内测候选</span>
-            <span>{submissions.length} 条待审核反馈</span>
-            <span>{serverQueueOnline ? "手机服务器在线" : "本机缓存模式"}</span>
-            <span>{catalogPatchOnline ? "在线修订已加载" : "静态菜单"}</span>
-          </div>
+          <span>
+            {campusLabels[preference.campus]} · {mealPeriodLabels[preference.mealPeriod]} · ¥{preference.budget}
+          </span>
         </header>
-
-        <section className="betaNotice" aria-label="内测数据说明">
-          <MessageSquarePlus size={18} />
-          <span>当前堂食菜单含历史公众号 OCR 内测候选，老综、新综和家属区商家走学生共建审核。支持堂食和外卖的商家可以一次提交两种方式。</span>
-          <button
-            onClick={() =>
-              setFeedbackTarget({
-                mode: "new-vendor",
-                areaPreset: "老综",
-                supportedChannels: defaultCommunityChannels,
-              })
-            }
-          >
-            <Plus size={16} />
-            补充商家
-          </button>
-          <button onClick={() => setShowReviewQueue((current) => !current)}>
-            <Download size={16} />
-            {showReviewQueue ? "收起提交" : "提交记录"}
-          </button>
-          <a className="adminQueueLink" href={adminHref}>
-            后台审核
-          </a>
-        </section>
 
         {showReviewQueue ? (
           <SubmissionQueue
@@ -534,61 +532,6 @@ function App() {
             onClear={clearSubmissions}
           />
         ) : null}
-
-        <section className="decisionBoard" aria-label="当前最佳推荐">
-          <div className="boardTexture" />
-          <div className="boardCopy">
-            <p className="eyebrow">今日首推</p>
-            <h2>{top ? top.item.name : "暂时没有合适餐品"}</h2>
-            {top ? (
-              <p>{top.item.description}</p>
-            ) : (
-              <p>当前条件下没有通过复核的餐品。可以放宽预算、切换餐别，或先选有已复核菜品的堂食地点。</p>
-            )}
-          </div>
-          {top ? (
-            <div className="heroTicket">
-              <div>
-                <span className="ticketLabel">推荐分</span>
-                <strong>{top.score}</strong>
-              </div>
-              <div>
-                <span className="ticketLabel">店家</span>
-                <strong>{top.vendor.name}</strong>
-              </div>
-              <div className="ticketMeta">
-                <span>{formatPrice(top.item.price)}</span>
-                <span>{formatChannelList(top.vendor)}</span>
-                <span>{top.vendor.locationHint ?? top.vendor.area}</span>
-              </div>
-              <div className="ticketActions">
-                <button onClick={reshuffleRecommendations}>
-                  <Shuffle size={16} />
-                  换一批
-                </button>
-                <button onClick={() => rememberChoice()}>
-                  <Check size={16} />
-                  今天吃这个
-                </button>
-              </div>
-            </div>
-          ) : null}
-        </section>
-
-        <section className="statsStrip" aria-label="推荐概况">
-          <Metric icon={<Store size={19} />} label="覆盖店家" value={`${campusVendorCount} 家`} />
-          <Metric icon={<WalletCards size={19} />} label="前五均价" value={averageBudget ? `¥${averageBudget}` : "待补"} />
-          <Metric
-            icon={<Moon size={19} />}
-            label="夜宵可选"
-            value={`${lateNightVendorCount} 家`}
-          />
-          <Metric
-            icon={<Building2 size={19} />}
-            label="堂食地点"
-            value={preference.canteenAreas.length > 0 ? `${preference.canteenAreas.length} 个` : "全部"}
-          />
-        </section>
 
         {selectedAreaSource && selectedReviewedOfficialCount === 0 ? (
           <section className="dataNotice" aria-label="堂食数据状态">
@@ -722,16 +665,6 @@ function App() {
       ) : null}
       {submissionNotice ? <div className="toastMessage">{submissionNotice}</div> : null}
     </main>
-  );
-}
-
-function Metric({ icon, label, value }: { icon: ReactNode; label: string; value: string }) {
-  return (
-    <div className="metric">
-      <div className="metricIcon">{icon}</div>
-      <span>{label}</span>
-      <strong>{value}</strong>
-    </div>
   );
 }
 
