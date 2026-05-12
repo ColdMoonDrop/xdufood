@@ -1,0 +1,38 @@
+{
+  "name": "xdu-food-oracle",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build --configLoader native",
+    "preview": "vite preview --host 0.0.0.0",
+    "serve": "node server/site-server.mjs",
+    "test": "vitest run",
+    "deploy:phone": "pwsh -NoProfile -ExecutionPolicy Bypass -File tools/deploy-phone.ps1",
+    "build:github-pages": "pwsh -NoProfile -ExecutionPolicy Bypass -File tools/build-github-pages.ps1",
+    "ssh:phone": "pwsh -NoProfile -ExecutionPolicy Bypass -File tools/phone-ssh.ps1",
+    "setup:named-tunnel": "pwsh -NoProfile -ExecutionPolicy Bypass -File tools/setup-phone-named-tunnel.ps1",
+    "data:xdu:setup": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/setup-ocr.ps1",
+    "data:xdu:fetch": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 fetch",
+    "data:xdu:ocr": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 ocr",
+    "data:xdu:review": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 review",
+    "data:xdu:ai-review": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 ai-review",
+    "data:xdu:review-ui": "python tools/xdu-canteen-import/review_ui_server.py",
+    "data:xdu:generate": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 generate",
+    "data:xdu:test": "python tools/xdu-canteen-import/test_xdu_canteen_importer.py"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
+  }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "haitang-1f",
+    "campus": "south",
+    "area": "海棠一层餐厅",
+    "floor": "一层",
+    "distanceMinutes": 8,
+    "url": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw"
+  },
+  {
+    "id": "haitang-2f",
+    "campus": "south",
+    "area": "海棠二层餐厅",
+    "floor": "二层",
+    "distanceMinutes": 8,
+    "url": "https://mp.weixin.qq.com/s/WTrA8gzGEq_Yigo1-aSMLg"
+  },
+  {
+    "id": "dingxiang-1f",
+    "campus": "south",
+    "area": "丁香一层餐厅",
+    "floor": "一层",
+    "distanceMinutes": 6,
+    "url": "https://mp.weixin.qq.com/s/BCnHWQErlSOTS0FW0WJI8g"
+  },
+  {
+    "id": "dingxiang-2f",
+    "campus": "south",
+    "area": "丁香二层餐厅",
+    "floor": "二层",
+    "distanceMinutes": 6,
+    "url": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ"
+  },
+  {
+    "id": "dingxiang-3f",
+    "campus": "south",
+    "area": "丁香三层餐厅",
+    "floor": "三层",
+    "distanceMinutes": 6,
+    "url": "https://mp.weixin.qq.com/s/l8Af7govF3EcLMYfkedEKA"
+  },
+  {
+    "id": "zhuyuan-1f",
+    "campus": "south",
+    "area": "竹园一层餐厅",
+    "floor": "一层",
+    "distanceMinutes": 7,
+    "url": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ"
+  },
+  {
+    "id": "zhuyuan-2f",
+    "campus": "south",
+    "area": "竹园二层餐厅",
+    "floor": "二层",
+    "distanceMinutes": 7,
+    "url": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ"
+  },
+  {
+    "id": "zhuyuan-3f",
+    "campus": "south",
+    "area": "竹园三层餐厅",
+    "floor": "三层",
+    "distanceMinutes": 7,
+    "url": "https://mp.weixin.qq.com/s/BpyockL8jvP-PSTvRYzYJA"
+  },
+  {
+    "id": "xiqu-1f",
+    "campus": "north",
+    "area": "西区一层餐厅",
+    "floor": "一层",
+    "distanceMinutes": 5,
+    "url": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ"
+  },
+  {
+    "id": "xiqu-2f",
+    "campus": "north",
+    "area": "西区二层餐厅",
+    "floor": "二层",
+    "distanceMinutes": 5,
+    "url": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ"
+  },
+  {
+    "id": "dongqu-1f",
+    "campus": "north",
+    "area": "东区一层餐厅",
+    "floor": "一层",
+    "distanceMinutes": 6,
+    "url": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ"
+  },
+  {
+    "id": "xijundian",
+    "campus": "north",
+    "area": "西军电餐厅",
+    "floor": "餐厅",
+    "distanceMinutes": 7,
+    "url": "https://mp.weixin.qq.com/s/X830iTQXVEaZUMXRqOPROw"
+  }
+]

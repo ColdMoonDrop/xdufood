@@ -1,0 +1,7 @@
+{
+  "hostName": "192.168.3.85",
+  "port": 8022,
+  "user": "u0_a166",
+  "keyPath": "C:\\path\\to\\k40_termux_ed25519",
+  "adbPath": "C:\\path\\to\\platform-tools\\adb.exe"
+}
