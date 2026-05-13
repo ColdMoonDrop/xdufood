@@ -10,6 +10,8 @@ server-data/
 data/xdu-canteen/raw/
 data/xdu-canteen/ocr/
 data/xdu-canteen/review/
+data/xdu-canteen/export/*
+!data/xdu-canteen/export/xdu-canteen-wechat-text-window-dishes.csv
 data/xdu-canteen/*.log
 tools/xdu-canteen-import/.venv/
 tools/bin/cloudflared.exe
