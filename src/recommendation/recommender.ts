@@ -111,21 +111,6 @@ function scoreCandidate(
     reasons.push(vendor.area);
   }
 
-  if (typeof item.price === "number") {
-    if (item.price <= preference.budget) {
-      const leftover = preference.budget - item.price;
-      score += Math.min(18, 8 + leftover * 0.6);
-      reasons.push(`¥${item.price}，在预算内`);
-    } else {
-      const overBudget = item.price - preference.budget;
-      score -= 20 + overBudget * 2;
-      warnings.push(`超预算 ¥${overBudget}`);
-    }
-  } else {
-    score -= 2;
-    reasons.push("价格待补充");
-  }
-
   const matchedWanted = preference.wantedTypes.filter((type) => item.types.includes(type) || vendor.tags.includes(type));
   if (matchedWanted.length > 0) {
     score += matchedWanted.length * 14;

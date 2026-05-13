@@ -330,19 +330,6 @@ h1 {
   text-shadow: 0 1px 1px rgba(139, 10, 74, 0.16);
 }
 
-.budgetGroup input[type="range"] {
-  width: 100%;
-  accent-color: var(--green);
-}
-
-.rangeTicks {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4px;
-  color: var(--subtle);
-  font-size: 12px;
-}
-
 .chipGrid {
   display: flex;
   flex-wrap: wrap;

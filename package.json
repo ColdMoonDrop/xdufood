@@ -19,6 +19,7 @@
     "data:xdu:review": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 review",
     "data:xdu:ai-review": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 ai-review",
     "data:xdu:review-ui": "python tools/xdu-canteen-import/review_ui_server.py",
+    "data:xdu:wechat-text": "python tools/xdu-canteen-import/generate_wechat_text_data.py",
     "data:xdu:generate": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 generate",
     "data:xdu:test": "python tools/xdu-canteen-import/test_xdu_canteen_importer.py"
   },

@@ -19,7 +19,6 @@ import {
   Sparkles,
   Star,
   Utensils,
-  WalletCards,
   X,
 } from "lucide-react";
 import { foodCatalog, officialCanteenAreas } from "./data/catalog";
@@ -138,14 +137,6 @@ function App() {
       ) ?? null
     );
   }, [preference.campus, preference.canteenAreas]);
-  const selectedReviewedOfficialCount = catalog.filter((vendor) => {
-    return (
-      vendor.campus === preference.campus &&
-      vendor.channel === "canteen" &&
-      vendor.reviewStatus === "approved" &&
-      (preference.canteenAreas.length === 0 || preference.canteenAreas.includes(vendor.area))
-    );
-  }).length;
   const selectedAreaCatalogStats = useMemo(() => {
     if (!selectedAreaSource) return null;
     const vendors = catalog.filter(
@@ -157,10 +148,6 @@ function App() {
     return {
       vendorCount: vendors.length,
       itemCount: vendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
-      pendingItemCount: vendors.reduce(
-        (sum, vendor) => sum + vendor.items.filter((item) => item.reviewStatus === "pending").length,
-        0,
-      ),
       imageCount: selectedAreaSource.imageCount,
     };
   }, [catalog, preference.campus, selectedAreaSource]);
@@ -262,7 +249,6 @@ function App() {
               <h2>{top.item.name}</h2>
               <p>{top.vendor.name}</p>
               <div className="quickPickMeta">
-                <span>{formatPrice(top.item.price)}</span>
                 <span>{formatChannelList(top.vendor)}</span>
                 <span>{topLocation}</span>
               </div>
@@ -280,7 +266,7 @@ function App() {
           ) : (
             <>
               <h2>暂时没有合适餐品</h2>
-              <p>放宽预算、换餐别，或选择有已复核菜品的堂食地点。</p>
+              <p>放宽主类别、换餐别，或选择有正文菜单的堂食地点。</p>
               <div className="quickPickActions single">
                 <button onClick={() => setPreference(defaultPreference)}>
                   <RotateCcw size={16} />
@@ -331,32 +317,6 @@ function App() {
                 {campusLabels[campus]}
               </button>
             ))}
-          </div>
-        </div>
-
-        <div className="fieldGroup budgetGroup">
-          <div className="fieldHeader">
-            <WalletCards size={17} />
-            <span>预算</span>
-            <strong>¥{preference.budget}</strong>
-          </div>
-          <input
-            aria-label="预算"
-            type="range"
-            min="7"
-            max="35"
-            step="1"
-            value={preference.budget}
-            onChange={(event) =>
-              setPreference((current) => ({
-                ...current,
-                budget: Number(event.target.value),
-              }))
-            }
-          />
-          <div className="rangeTicks">
-            <span>¥7</span>
-            <span>¥35</span>
           </div>
         </div>
 
@@ -521,7 +481,7 @@ function App() {
             <h2>推荐列表</h2>
           </div>
           <span>
-            {campusLabels[preference.campus]} · {mealPeriodLabels[preference.mealPeriod]} · ¥{preference.budget}
+            {campusLabels[preference.campus]} · {mealPeriodLabels[preference.mealPeriod]} · 公众号正文菜单
           </span>
         </header>
 
@@ -533,13 +493,13 @@ function App() {
           />
         ) : null}
 
-        {selectedAreaSource && selectedReviewedOfficialCount === 0 ? (
+        {selectedAreaSource ? (
           <section className="dataNotice" aria-label="堂食数据状态">
             <Building2 size={18} />
             <span>
-              {selectedAreaSource.area} 来源文章有 {selectedAreaCatalogStats?.imageCount ?? 0} 张图；当前可推荐{" "}
-              {selectedAreaCatalogStats?.vendorCount ?? 0} 个窗口 / {selectedAreaCatalogStats?.itemCount ?? 0} 道候选菜，
-              多数仍是 OCR 内测数据，缺口需要学生补照片校准。
+              {selectedAreaSource.area} 已接入公众号正文菜单；当前可推荐{" "}
+              {selectedAreaCatalogStats?.vendorCount ?? 0} 个窗口 / {selectedAreaCatalogStats?.itemCount ?? 0} 道菜。
+              历史价格暂不展示，现况可由学生补照片校准。
             </span>
             <a href={selectedAreaSource.sourceUrl} target="_blank" rel="noreferrer">
               查看来源
@@ -570,13 +530,9 @@ function App() {
                 </div>
                 <div className="scoreBadge">{result.score}</div>
               </div>
-              {result.item.reviewStatus === "pending" ? <span className="betaPill">内测待校准</span> : null}
+              {result.item.reviewStatus === "pending" ? <span className="betaPill">正文待校准</span> : null}
 
               <div className="metaLine">
-                <span>
-                  <WalletCards size={15} />
-                  {formatPrice(result.item.price)}
-                </span>
                 <span>
                   {vendorChannels(result.vendor).includes("delivery") ? <Bike size={15} /> : <Building2 size={15} />}
                   {formatChannelList(result.vendor)}
@@ -698,7 +654,6 @@ function FeedbackPanel({
   const [floor, setFloor] = useState(vendor?.floor ?? "");
   const [windowNo, setWindowNo] = useState(vendor?.windowNo ?? "");
   const [dishName, setDishName] = useState(item?.name ?? "");
-  const [price, setPrice] = useState(item?.price ? String(item.price) : "");
   const [tags, setTags] = useState(item?.types.map((type) => foodTypeLabels[type]).join("、") ?? "");
   const [supportedChannels, setSupportedChannels] = useState<Channel[]>(initialSupportedChannels);
   const [note, setNote] = useState("");
@@ -754,7 +709,6 @@ function FeedbackPanel({
       floor: floor.trim(),
       windowNo: windowNo.trim(),
       suggestedDish: normalizedDish,
-      suggestedPrice: price ? Number(price) : undefined,
       suggestedTags: tags.trim(),
       note: note.trim(),
       contact: contact.trim(),
@@ -830,10 +784,6 @@ function FeedbackPanel({
           <label>
             <span className="labelLine">菜品 <small>选填</small></span>
             <input value={dishName} onChange={(event) => setDishName(event.target.value)} placeholder="菜品名，可留空只反馈商家" />
-          </label>
-          <label>
-            <span className="labelLine">价格 <small>选填</small></span>
-            <input type="number" min="0" step="0.5" value={price} onChange={(event) => setPrice(event.target.value)} placeholder="¥" />
           </label>
           <label className="wide">
             <span className="labelLine">标签 <small>选填</small></span>
@@ -999,7 +949,7 @@ function SubmissionQueue({
             <article key={submission.id}>
               <strong>{submission.vendorName}</strong>
               <span>
-                {submission.area} · {submission.suggestedDish || submission.itemName || "商家信息"} · {submission.suggestedPrice ? `¥${submission.suggestedPrice}` : "价格待核"}
+                {submission.area} · {submission.suggestedDish || submission.itemName || "商家信息"}
               </span>
               {submission.attachmentCount ? <small>含 {submission.attachmentCount} 张菜单照片，等待管理员审核</small> : null}
               <p>{submission.note || "新增候选，等待审核。"}</p>
@@ -1120,10 +1070,6 @@ function toggleCanteenArea(preference: StudentPreference, area: string): Student
 }
 
 export default App;
-
-function formatPrice(price?: number) {
-  return typeof price === "number" ? `¥${price}` : "价格待补";
-}
 
 function formatChannelList(vendor: FoodVendor) {
   const channels = vendorChannels(vendor);

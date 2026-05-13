@@ -1,29 +1,20 @@
 import {
-  xduBetaCanteenVendors,
-  xduOfficialCanteenSourceSummary,
-  xduOfficialCanteenVendors,
-} from "./xduOfficialCanteens.generated";
+  xduWechatTextCanteenSourceSummary,
+  xduWechatTextCanteenVendors,
+} from "./xduWechatTextCanteens.generated";
 
-const reviewedOfficialVendors = xduOfficialCanteenVendors
+const wechatTextVendors = xduWechatTextCanteenVendors
   .map((vendor) => ({
     ...vendor,
-    items: vendor.items.filter((item) => item.reviewStatus === "approved" && typeof item.price === "number"),
+    items: vendor.items.filter((item) => item.sourceMethod === "html-text" && item.reviewStatus === "pending"),
   }))
-  .filter((vendor) => vendor.reviewStatus === "approved" && vendor.items.length > 0);
-
-const betaOfficialVendors = xduBetaCanteenVendors
-  .map((vendor) => ({
-    ...vendor,
-    items: vendor.items.filter((item) => item.reviewStatus === "pending" && typeof item.price === "number"),
-  }))
-  .filter((vendor) => vendor.items.length > 0);
+  .filter((vendor) => vendor.sourceMethod === "html-text" && vendor.items.length > 0);
 
 export const foodCatalog = [
-  ...reviewedOfficialVendors,
-  ...betaOfficialVendors,
+  ...wechatTextVendors,
 ];
 
-export const officialCanteenAreas = xduOfficialCanteenSourceSummary.map((source) => ({
+export const officialCanteenAreas = xduWechatTextCanteenSourceSummary.map((source) => ({
   campus: source.campus,
   area: source.area,
   floor: source.floor,
@@ -34,9 +25,9 @@ export const officialCanteenAreas = xduOfficialCanteenSourceSummary.map((source)
 }));
 
 export const officialCanteenStats = {
-  sourceCount: xduOfficialCanteenSourceSummary.length,
-  reviewedVendorCount: reviewedOfficialVendors.length,
-  reviewedDishCount: reviewedOfficialVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
-  betaVendorCount: betaOfficialVendors.length,
-  betaDishCount: betaOfficialVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
+  sourceCount: xduWechatTextCanteenSourceSummary.length,
+  reviewedVendorCount: 0,
+  reviewedDishCount: 0,
+  betaVendorCount: wechatTextVendors.length,
+  betaDishCount: wechatTextVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
 };

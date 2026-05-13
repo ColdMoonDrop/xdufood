@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { foodCatalog } from "../data/catalog";
-import { xduOfficialCanteenSourceSummary, xduOfficialCanteenVendors } from "../data/xduOfficialCanteens.generated";
+import {
+  xduWechatTextCanteenSourceSummary,
+  xduWechatTextCanteenVendors,
+} from "../data/xduWechatTextCanteens.generated";
 import type { FoodVendor, StudentPreference } from "../domain/food";
 import { recommendFood } from "./recommender";
 
@@ -306,7 +309,7 @@ describe("recommendFood", () => {
     expect(results.some((result) => result.item.name === "鲜肉包")).toBe(true);
   });
 
-  it("includes approved official Haitang first-floor canteen data from XDU logistics", () => {
+  it("includes direct WeChat article text canteen data from XDU logistics", () => {
     const results = recommendFood(foodCatalog, {
       ...basePreference,
       selectedChannels: ["canteen"],
@@ -317,12 +320,13 @@ describe("recommendFood", () => {
 
     expect(results.length).toBeGreaterThan(0);
     expect(results.every((result) => result.vendor.source.includes("西电后勤公众号"))).toBe(true);
-    expect(results.every((result) => typeof result.item.price === "number")).toBe(true);
-    expect(results.some((result) => result.item.reviewStatus === "approved")).toBe(true);
-    expect(results.every((result) => ["approved", "pending"].includes(result.item.reviewStatus ?? ""))).toBe(true);
+    expect(results.every((result) => result.vendor.source.includes("正文菜单"))).toBe(true);
+    expect(results.every((result) => result.item.sourceMethod === "html-text")).toBe(true);
+    expect(results.every((result) => result.item.price === undefined)).toBe(true);
+    expect(results.every((result) => result.item.reviewStatus === "pending")).toBe(true);
   });
 
-  it("includes beta canteen candidates as clearly pending student-calibration data", () => {
+  it("includes text canteen candidates as clearly pending student-calibration data", () => {
     const betaResults = recommendFood(foodCatalog, {
       ...basePreference,
       selectedChannels: ["canteen"],
@@ -332,7 +336,8 @@ describe("recommendFood", () => {
     }).filter((result) => result.item.reviewStatus === "pending");
 
     expect(betaResults.length).toBeGreaterThan(0);
-    expect(betaResults.every((result) => result.vendor.source.includes("内测待学生校准"))).toBe(true);
+    expect(betaResults.every((result) => result.vendor.source.includes("正文菜单待校准"))).toBe(true);
+    expect(betaResults.every((result) => result.item.sourceMethod === "html-text")).toBe(true);
   });
 
   it("only includes official XDU logistics canteen data in the base catalog", () => {
@@ -342,26 +347,28 @@ describe("recommendFood", () => {
     expect(foodCatalog.some((vendor) => vendor.source.includes("样例") || vendor.source.includes("平台导入"))).toBe(false);
   });
 
-  it("keeps official source metadata and approved prices well formed", () => {
-    expect(xduOfficialCanteenSourceSummary.length).toBe(12);
-    expect(xduOfficialCanteenVendors.length).toBeGreaterThan(0);
+  it("keeps WeChat text source metadata and item ids well formed", () => {
+    expect(xduWechatTextCanteenSourceSummary.length).toBe(11);
+    expect(xduWechatTextCanteenVendors.length).toBeGreaterThan(200);
 
     const vendorIds = new Set<string>();
     const itemIds = new Set<string>();
 
-    for (const vendor of xduOfficialCanteenVendors) {
+    for (const vendor of xduWechatTextCanteenVendors) {
       expect(vendorIds.has(vendor.id)).toBe(false);
       vendorIds.add(vendor.id);
       expect(vendor.sourceUrl).toMatch(/^https:\/\/mp.weixin.qq.com\//);
-      expect(vendor.reviewStatus).toBe("approved");
+      expect(vendor.sourceMethod).toBe("html-text");
+      expect(vendor.reviewStatus).toBe("pending");
       expect(vendor.floor).not.toMatch(/号窗口/);
       expect(vendor.locationHint ?? "").toContain(vendor.area);
 
       for (const item of vendor.items) {
         expect(itemIds.has(item.id)).toBe(false);
         itemIds.add(item.id);
-        expect(item.reviewStatus).toBe("approved");
-        expect(item.price).toBeGreaterThan(0);
+        expect(item.reviewStatus).toBe("pending");
+        expect(item.sourceMethod).toBe("html-text");
+        expect(item.price).toBeUndefined();
         expect(item.available.length).toBeGreaterThan(0);
         expect(item.locationHint ?? "").toContain(vendor.area);
       }
