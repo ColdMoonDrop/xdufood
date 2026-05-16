@@ -1,12 +1,25 @@
 {
   "name": "xdu-food-oracle",
-  "private": true,
   "version": "0.1.0",
+  "description": "西安电子科技大学学生今天吃什么推荐应用，支持真实食堂菜单、学生反馈和服务器部署。",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColdMoonDrop/xdufood.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ColdMoonDrop/xdufood/issues"
+  },
+  "homepage": "https://github.com/ColdMoonDrop/xdufood#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc -b && vite build --configLoader native",
     "preview": "vite preview --host 0.0.0.0",
+    "start": "node server/site-server.mjs",
     "serve": "node server/site-server.mjs",
     "test": "vitest run",
     "deploy:phone": "pwsh -NoProfile -ExecutionPolicy Bypass -File tools/deploy-phone.ps1",

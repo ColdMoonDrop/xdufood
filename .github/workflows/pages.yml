@@ -43,7 +43,7 @@ jobs:
       - name: Build static frontend
         run: npm run build
         env:
-          VITE_API_BASE: ${{ vars.VITE_API_BASE || 'https://oclc-constant-substances-forward.trycloudflare.com' }}
+          VITE_API_BASE: ${{ vars.VITE_API_BASE }}
 
       - name: Add Pages SPA fallback
         run: |

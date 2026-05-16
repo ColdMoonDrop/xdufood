@@ -7,8 +7,11 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
-const siteDir = path.resolve(process.env.SITE_DIR || path.join(projectRoot, "dist"));
-const dataDir = path.resolve(process.env.DATA_DIR || path.join(projectRoot, "server-data"));
+
+await loadEnvFile(path.join(projectRoot, ".env"));
+
+const siteDir = resolveProjectPath(process.env.SITE_DIR, path.join(projectRoot, "dist"));
+const dataDir = resolveProjectPath(process.env.DATA_DIR, path.join(projectRoot, "server-data"));
 const submissionsFile = path.join(dataDir, "submissions.jsonl");
 const catalogPatchFile = path.join(dataDir, "catalog-patch.json");
 const host = process.env.HOST || "0.0.0.0";
@@ -463,4 +466,36 @@ function httpError(statusCode, message) {
   const error = new Error(message);
   error.statusCode = statusCode;
   return error;
+}
+
+function resolveProjectPath(input, fallback) {
+  if (!input) return fallback;
+  return path.resolve(path.isAbsolute(input) ? input : path.join(projectRoot, input));
+}
+
+async function loadEnvFile(filePath) {
+  try {
+    const raw = await readFile(filePath, "utf8");
+    for (const line of raw.replace(/^\uFEFF/, "").split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const match = trimmed.match(/^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/);
+      if (!match) continue;
+      const [, key, rawValue] = match;
+      if (Object.prototype.hasOwnProperty.call(process.env, key)) continue;
+
+      let value = rawValue.trim();
+      const quoted =
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"));
+      if (quoted) {
+        value = value.slice(1, -1);
+      }
+      process.env[key] = value;
+    }
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      console.warn(`[site-server] could not read ${filePath}: ${error?.message || error}`);
+    }
+  }
 }
