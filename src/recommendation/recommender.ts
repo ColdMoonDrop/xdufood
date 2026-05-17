@@ -169,6 +169,10 @@ function scoreCandidate(
   score += 12;
   reasons.push(`适合${mealPeriodLabels[preference.mealPeriod]}`);
 
+  if (vendor.reviewStatus === "approved" || item.reviewStatus === "approved") {
+    score += 14;
+  }
+
   const supportedChannels = vendorChannels(vendor);
   if (
     preference.selectedChannels.length > 0 &&

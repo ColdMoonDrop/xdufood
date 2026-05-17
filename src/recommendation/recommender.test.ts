@@ -410,6 +410,16 @@ describe("recommendFood", () => {
     expect(zhuyuan2f.find((vendor) => vendor.windowNo === "12")?.windowName).toBe("烤肉拌饭");
     expect(zhuyuan2f.find((vendor) => vendor.windowNo === "10")?.items.map((item) => item.name)).toContain("石锅麻辣烤肉");
     expect(zhuyuan2f.find((vendor) => vendor.windowNo === "12")?.items.map((item) => item.name)).toContain("烤五花肉拌饭");
+
+    const results = recommendFood(foodCatalog, {
+      ...basePreference,
+      selectedChannels: ["canteen"],
+      canteenAreas: ["竹园二层餐厅"],
+      wantedTypes: ["rice"],
+      randomnessSeed: 1,
+    });
+    expect(results.some((result) => result.vendor.windowName === "勺伯石锅菜")).toBe(true);
+    expect(results.some((result) => result.vendor.windowName === "烤肉拌饭")).toBe(true);
   });
 
   it("keeps WeChat text source metadata and item ids well formed", () => {
