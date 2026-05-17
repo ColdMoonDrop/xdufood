@@ -238,21 +238,9 @@ h1 {
   margin-bottom: 7px;
 }
 
-.railStatus {
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 1.45;
-}
-
 .fieldGroup {
   padding: 13px 0;
   border-top: 1px solid var(--line);
-}
-
-.railStatus + .fieldGroup {
-  border-top: 0;
 }
 
 .fieldHeader {
@@ -457,12 +445,6 @@ h1 {
   flex: 1 1 auto;
 }
 
-.dataNotice a {
-  flex: 0 0 auto;
-  color: var(--green-dark);
-  text-decoration: none;
-}
-
 .dataNotice button {
   flex: 0 0 auto;
   display: inline-flex;
@@ -504,7 +486,7 @@ h1 {
 .foodCard {
   display: flex;
   flex-direction: column;
-  min-height: 270px;
+  min-height: 232px;
   padding: 17px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -559,31 +541,6 @@ h1 {
   font-size: 14px;
 }
 
-.betaPill {
-  width: fit-content;
-  margin-top: 12px;
-  padding: 5px 9px;
-  border-radius: 999px;
-  color: #805719;
-  background: #fff4df;
-  font-size: 12px;
-  font-weight: 850;
-}
-
-.scoreBadge {
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  color: #ffffff;
-  background: linear-gradient(135deg, #ff3f98, var(--green));
-  font-size: 22px;
-  font-weight: 850;
-  box-shadow: 0 10px 24px rgba(255, 79, 163, 0.3);
-}
-
 .metaLine {
   display: flex;
   flex-wrap: wrap;
@@ -606,12 +563,6 @@ h1 {
 
 .metaLine svg {
   color: var(--green);
-}
-
-.description {
-  margin-bottom: 12px;
-  color: #5e4a52;
-  line-height: 1.65;
 }
 
 .reasonList {
@@ -650,31 +601,6 @@ h1 {
   background: rgba(47, 127, 122, 0.07);
   font-size: 12px;
   font-weight: 800;
-}
-
-.cardFooter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.cardFooter button,
-.sourceButton {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border: 0;
-  border-radius: 8px;
-  color: #ffffff;
-  background: var(--green-dark);
-  text-decoration: none;
 }
 
 .feedbackActions {
@@ -1287,6 +1213,79 @@ h1 {
   line-height: 1.7;
 }
 
+.analysisCard,
+.maintenanceBanner {
+  border: 1px solid rgba(255, 79, 163, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff5f9, #fffaf0);
+}
+
+.analysisCard {
+  display: grid;
+  gap: 12px;
+  padding: 13px;
+}
+
+.analysisTitle,
+.analysisRoute,
+.maintenanceBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.analysisTitle svg,
+.maintenanceBanner svg {
+  flex: 0 0 auto;
+  color: var(--coral);
+}
+
+.analysisTitle strong {
+  min-width: 0;
+  color: var(--ink);
+}
+
+.analysisTitle span {
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--coral);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.analysisRoute {
+  flex-wrap: wrap;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.analysisRoute svg {
+  color: var(--muted);
+}
+
+.analysisCard ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.analysisCard p {
+  margin: 0;
+  padding: 10px 11px;
+  border: 1px solid rgba(47, 127, 122, 0.2);
+  border-radius: 7px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 13px;
+}
+
 .adminPhotoLink {
   color: var(--green-dark);
   text-decoration: none;
@@ -1314,6 +1313,15 @@ h1 {
 
 .editorPanel {
   min-width: 0;
+}
+
+.maintenanceBanner {
+  margin: 14px 16px 0;
+  padding: 10px 12px;
+  color: #713343;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.5;
 }
 
 .editorSelectors,

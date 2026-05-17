@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import {
-  Check,
+  AlertTriangle,
+  ArrowRight,
   EyeOff,
   FileText,
   Image as ImageIcon,
@@ -9,6 +10,7 @@ import {
   Save,
   Store,
   Utensils,
+  Wand2,
 } from "lucide-react";
 import { foodCatalog } from "./data/catalog";
 import {
@@ -54,7 +56,7 @@ const defaultVendorForm: VendorForm = {
   deliveryMinutes: "",
   rating: "",
   busyLevel: "",
-  tags: "rice,protein",
+  tags: "rice",
   source: "后台修订",
 };
 
@@ -62,7 +64,7 @@ const defaultItemForm: ItemForm = {
   id: "",
   name: "",
   price: "",
-  types: "rice,protein",
+  types: "rice",
   heat: "none",
   popularity: "0.7",
   available: "lunch,dinner",
@@ -78,12 +80,17 @@ function AdminApp() {
   const [selectedItemId, setSelectedItemId] = useState("");
   const [vendorForm, setVendorForm] = useState<VendorForm>(defaultVendorForm);
   const [itemForm, setItemForm] = useState<ItemForm>(defaultItemForm);
+  const [replaceVendorId, setReplaceVendorId] = useState("");
   const [notice, setNotice] = useState("");
 
   const catalog = useMemo(() => applyCatalogPatch(foodCatalog, patch), [patch]);
   const selectedSubmission = submissions.find((submission) => submission.id === selectedSubmissionId);
   const selectedVendor = catalog.find((vendor) => vendor.id === selectedVendorId);
   const selectedItem = selectedVendor?.items.find((item) => item.id === selectedItemId);
+  const selectedSubmissionAnalysis = useMemo(
+    () => (selectedSubmission ? analyzeSubmission(selectedSubmission, catalog) : null),
+    [catalog, selectedSubmission],
+  );
 
   useEffect(() => {
     refreshAll();
@@ -113,6 +120,7 @@ function AdminApp() {
 
   function selectVendor(vendorId: string) {
     const vendor = catalog.find((entry) => entry.id === vendorId);
+    setReplaceVendorId("");
     setSelectedVendorId(vendorId);
     setSelectedItemId("");
     setVendorForm(vendor ? vendorToForm(vendor) : defaultVendorForm);
@@ -126,6 +134,7 @@ function AdminApp() {
   }
 
   function startNewVendor() {
+    setReplaceVendorId("");
     setSelectedVendorId("");
     setSelectedItemId("");
     setVendorForm(defaultVendorForm);
@@ -138,33 +147,48 @@ function AdminApp() {
   }
 
   function useSubmission(submission: StudentSubmission) {
-    const vendorId = submission.vendorId || slugify(submission.vendorName);
-    const existingVendor = catalog.find((vendor) => vendor.id === submission.vendorId);
+    const analysis = analyzeSubmission(submission, catalog);
+    const existingVendor = analysis.matchedVendor;
+    const replacingVendor = analysis.action === "replace-vendor" && existingVendor;
+    const vendorId = replacingVendor
+      ? feedbackVendorId(submission)
+      : existingVendor?.id || submission.vendorId || feedbackVendorId(submission);
+    const vendorName = replacingVendor ? formatSubmittedVendorName(submission) : submission.vendorName;
+    const submittedTags = normalizeFoodTypeInput(submission.suggestedTags);
+    const nextItemName = isPlaceholderDish(submission.suggestedDish) ? "" : submission.suggestedDish || submission.itemName || "";
     setSelectedSubmissionId(submission.id);
-    setSelectedVendorId(existingVendor?.id ?? "");
-    setSelectedItemId(submission.itemId ?? "");
+    setReplaceVendorId(replacingVendor ? existingVendor.id : "");
+    setSelectedVendorId(replacingVendor ? "" : existingVendor?.id ?? "");
+    setSelectedItemId(replacingVendor ? "" : submission.itemId ?? "");
     setVendorForm({
       ...defaultVendorForm,
-      ...(existingVendor ? vendorToForm(existingVendor) : {}),
-      id: existingVendor?.id ?? vendorId,
-      name: submission.vendorName,
+      ...(existingVendor && !replacingVendor ? vendorToForm(existingVendor) : {}),
+      id: vendorId,
+      name: vendorName,
       campus: submission.campus,
-      channel: submission.channel,
+      channel: dineInChannelForArea(submission.area, submission.channel),
       supportedChannels: (submission.supportedChannels ?? [submission.channel]).join(","),
       area: submission.area,
-      floor: submission.floor ?? "",
+      floor: normalizeFloor(submission.floor) || existingVendor?.floor || "",
       windowNo: submission.windowNo ?? "",
-      tags: submission.suggestedTags || existingVendor?.tags.join(",") || defaultVendorForm.tags,
+      windowName: replacingVendor ? submission.vendorName : existingVendor?.windowName ?? submission.vendorName,
+      locationHint: formatSubmissionLocation(submission, replacingVendor ? submission.vendorName : existingVendor?.windowName),
+      tags: submittedTags || existingVendor?.tags.join(",") || defaultVendorForm.tags,
+      source: "学生反馈审核",
     });
     setItemForm({
       ...defaultItemForm,
-      id: submission.itemId || slugify(submission.suggestedDish || submission.itemName || "new-dish"),
-      name: submission.suggestedDish || submission.itemName || "",
+      id: submission.itemId || (nextItemName ? slugify(nextItemName) : ""),
+      name: nextItemName,
       price: submission.suggestedPrice ? String(submission.suggestedPrice) : "",
-      types: submission.suggestedTags || defaultItemForm.types,
-      description: submission.note || "",
+      types: submittedTags || defaultItemForm.types,
+      description: submission.note || (replacingVendor ? "根据学生反馈更新商户，菜单待管理员按照片补充。" : ""),
     });
-    setNotice("已把反馈填入编辑表单，确认后点击保存菜单修订。");
+    setNotice(
+      replacingVendor
+        ? `已生成商户变更草案：将隐藏「${existingVendor.windowName || existingVendor.name}」，新建「${submission.vendorName}」。`
+        : "已把反馈拆解到编辑表单，确认后点击保存菜单修订。",
+    );
   }
 
   async function saveEditor() {
@@ -179,7 +203,17 @@ function AdminApp() {
     const baseVendorExists = foodCatalog.some((entry) => entry.id === vendor.id);
     const addedVendorIndex = nextPatch.addedVendors.findIndex((entry) => entry.id === vendor.id);
 
-    if (baseVendorExists) {
+    if (replaceVendorId && replaceVendorId !== vendor.id) {
+      nextPatch.hiddenVendorIds = Array.from(new Set([...nextPatch.hiddenVendorIds, replaceVendorId]));
+      const replacementIndex = nextPatch.addedVendors.findIndex((entry) => entry.id === vendor.id);
+      const currentItems = replacementIndex >= 0 ? nextPatch.addedVendors[replacementIndex].items : [];
+      const items = item ? upsertItems(currentItems, item) : currentItems;
+      if (replacementIndex >= 0) {
+        nextPatch.addedVendors[replacementIndex] = { ...vendor, items };
+      } else {
+        nextPatch.addedVendors.unshift({ ...vendor, items });
+      }
+    } else if (baseVendorExists) {
       nextPatch.vendorOverrides[vendor.id] = vendorOverride(vendor);
       if (item) upsertPatchedItem(nextPatch, vendor, item, Boolean(selectedVendor?.items.some((entry) => entry.id === item.id)));
     } else if (addedVendorIndex >= 0) {
@@ -194,6 +228,7 @@ function AdminApp() {
       const saved = await saveCatalogPatch(nextPatch, token);
       setPatch(saved);
       setSelectedVendorId(vendor.id);
+      setReplaceVendorId("");
       if (item) setSelectedItemId(item.id);
       setNotice("菜单修订已保存，普通前台刷新后生效。");
       if (selectedSubmission) {
@@ -289,8 +324,8 @@ function AdminApp() {
             <h2>反馈详情</h2>
             <div className="inlineActions">
               <button disabled={!selectedSubmission} onClick={() => selectedSubmission && useSubmission(selectedSubmission)}>
-                <Check size={15} />
-                填入表单
+                <Wand2 size={15} />
+                生成草案
               </button>
               <button disabled={!selectedSubmission} onClick={() => markSubmission("reviewed")}>已看</button>
               <button disabled={!selectedSubmission} onClick={() => markSubmission("rejected")}>拒绝</button>
@@ -326,6 +361,7 @@ function AdminApp() {
                 </div>
               ) : null}
               <p>{selectedSubmission.note || "新增候选，等待人工确认。"}</p>
+              {selectedSubmissionAnalysis ? <SubmissionAnalysisCard analysis={selectedSubmissionAnalysis} /> : null}
             </div>
           ) : (
             <div className="adminEmpty">选择一条反馈查看详情。</div>
@@ -344,6 +380,12 @@ function AdminApp() {
               </button>
             </div>
           </div>
+          {replaceVendorId ? (
+            <div className="maintenanceBanner">
+              <AlertTriangle size={16} />
+              <span>商户变更模式：保存后会隐藏旧窗口，并把当前表单作为新商户加入推荐池。</span>
+            </div>
+          ) : null}
 
           <div className="editorSelectors">
             <label>
@@ -418,6 +460,29 @@ function AdminMetric({ icon, label, value }: { icon: ReactNode; label: string; v
       <span>{label}</span>
       <strong>{value}</strong>
     </div>
+  );
+}
+
+function SubmissionAnalysisCard({ analysis }: { analysis: SubmissionAnalysis }) {
+  return (
+    <section className="analysisCard" aria-label="反馈拆解">
+      <div className="analysisTitle">
+        <Wand2 size={16} />
+        <strong>{analysis.title}</strong>
+        <span>{analysis.confidence}</span>
+      </div>
+      <div className="analysisRoute">
+        <span>{analysis.matchedVendor?.windowName || analysis.matchedVendor?.name || "未匹配旧商户"}</span>
+        <ArrowRight size={15} />
+        <span>{analysis.nextVendorName}</span>
+      </div>
+      <ul>
+        {analysis.facts.map((fact) => (
+          <li key={fact}>{fact}</li>
+        ))}
+      </ul>
+      <p>{analysis.recommendation}</p>
+    </section>
   );
 }
 
@@ -535,6 +600,165 @@ function vendorOverride(vendor: FoodVendor): Partial<FoodVendor> {
   return override;
 }
 
+function analyzeSubmission(submission: StudentSubmission, catalog: FoodVendor[]): SubmissionAnalysis {
+  const matchedVendor = findSubmissionVendor(submission, catalog);
+  const submittedVendorName = submission.vendorName.trim();
+  const matchedName = matchedVendor?.windowName || matchedVendor?.name || "";
+  const vendorChanged =
+    Boolean(matchedVendor) &&
+    (/(商家|店|窗口|档口).*(不对|换|改|变|错)|不是|已更名/.test(submission.note) ||
+      (submittedVendorName &&
+        !normalizeComparableText(matchedName).includes(normalizeComparableText(submittedVendorName)) &&
+        !normalizeComparableText(submittedVendorName).includes(normalizeComparableText(matchedName))));
+  const hasDish = Boolean(submission.suggestedDish && !isPlaceholderDish(submission.suggestedDish));
+  const facts = [
+    `${campusLabels[submission.campus]} · ${submission.area}`,
+    [normalizeFloor(submission.floor), submission.windowNo ? `${submission.windowNo}号窗口` : ""].filter(Boolean).join(" · "),
+    hasDish ? `菜品：${submission.suggestedDish}` : "菜品：需查看反馈照片确认",
+    submission.attachmentCount ? `包含 ${submission.attachmentCount} 张照片` : "",
+  ].filter(Boolean);
+
+  if (vendorChanged && matchedVendor) {
+    return {
+      action: "replace-vendor",
+      title: "识别为商户变更",
+      confidence: "建议优先处理",
+      matchedVendor,
+      nextVendorName: submittedVendorName,
+      facts,
+      recommendation: "生成草案会隐藏旧窗口，并新建当前商户；菜单项请结合照片补充后再保存。",
+    };
+  }
+
+  if (matchedVendor) {
+    return {
+      action: hasDish ? "menu-change" : "vendor-update",
+      title: hasDish ? "识别为菜单变更" : "识别为商户信息修订",
+      confidence: "需人工确认",
+      matchedVendor,
+      nextVendorName: submittedVendorName || matchedVendor.windowName || matchedVendor.name,
+      facts,
+      recommendation: hasDish ? "生成草案会把菜品填入当前窗口，保存前请核对照片和餐别。" : "生成草案会更新当前窗口信息。",
+    };
+  }
+
+  return {
+    action: "new-vendor",
+    title: "识别为新增商户",
+    confidence: "需人工确认",
+    nextVendorName: submittedVendorName,
+    facts,
+    recommendation: "生成草案会新增商户；保存前请确认地点、支持方式和菜单。",
+  };
+}
+
+function findSubmissionVendor(submission: StudentSubmission, catalog: FoodVendor[]) {
+  if (submission.vendorId) {
+    const byId = catalog.find((vendor) => vendor.id === submission.vendorId);
+    if (byId) return byId;
+  }
+
+  const byWindow = catalog.find(
+    (vendor) =>
+      vendor.campus === submission.campus &&
+      vendor.area === submission.area &&
+      Boolean(submission.windowNo) &&
+      vendor.windowNo === submission.windowNo,
+  );
+  if (byWindow) return byWindow;
+
+  const submitted = normalizeComparableText(submission.vendorName);
+  return catalog.find((vendor) => {
+    if (vendor.campus !== submission.campus || vendor.area !== submission.area) return false;
+    const vendorText = normalizeComparableText(`${vendor.name}${vendor.windowName ?? ""}`);
+    return Boolean(submitted) && (vendorText.includes(submitted) || submitted.includes(vendorText));
+  });
+}
+
+function formatSubmittedVendorName(submission: StudentSubmission) {
+  const prefix = [submission.area, submission.windowNo ? `${submission.windowNo}#` : ""].filter(Boolean).join(" ");
+  return prefix ? `${prefix} · ${submission.vendorName}` : submission.vendorName;
+}
+
+function feedbackVendorId(submission: StudentSubmission) {
+  return `${normalizeId(`${submission.area}-${submission.windowNo || "window"}-${submission.vendorName}`)}-${submission.id.slice(0, 8)}`;
+}
+
+function formatSubmissionLocation(submission: StudentSubmission, windowName?: string) {
+  return [
+    submission.area,
+    normalizeFloor(submission.floor),
+    submission.windowNo ? `${submission.windowNo}号窗口` : "",
+    windowName || submission.vendorName,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+}
+
+function normalizeFloor(value?: string) {
+  const text = String(value ?? "").trim();
+  if (!text) return "";
+  return (
+    {
+      "1": "一层",
+      "2": "二层",
+      "3": "三层",
+      "一": "一层",
+      "二": "二层",
+      "三": "三层",
+    }[text] ?? text
+  );
+}
+
+function isPlaceholderDish(value?: string) {
+  return !value || /看.*(图|照片)|见.*(图|照片)|菜单照片|图片|不确定|待确认/.test(value);
+}
+
+function dineInChannelForArea(area: string, fallback: Channel): Channel {
+  return area.includes("餐厅") ? "canteen" : fallback;
+}
+
+function normalizeFoodTypeInput(value?: string) {
+  const alias: Record<string, FoodType> = {
+    米饭: "rice",
+    米饭套餐: "rice",
+    盖饭: "rice",
+    面: "noodle",
+    粉: "noodle",
+    面粉: "noodle",
+    小吃: "snack",
+    西餐: "western",
+    西式: "western",
+    饮品: "drink",
+    甜点: "drink",
+    清淡: "light",
+    辣: "spicy",
+    重口: "spicy",
+    素食: "vegetarian",
+    清真: "halal",
+  };
+  const parsed = String(value ?? "")
+    .split(/[,，、\s/]+/)
+    .map((entry) => entry.trim())
+    .map((entry) => alias[entry] ?? entry)
+    .filter(Boolean);
+  return Array.from(new Set(parsed)).join(",");
+}
+
+function normalizeComparableText(value: string) {
+  return value.replace(/[^\u4e00-\u9fa5a-z0-9]/gi, "").toLowerCase();
+}
+
+function normalizeId(value: string) {
+  return (
+    value
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "vendor"
+  );
+}
+
 function upsertPatchedItem(nextPatch: CatalogPatch, vendor: FoodVendor, item: FoodItem, existsInCatalog: boolean) {
   if (existsInCatalog) {
     nextPatch.itemOverrides[itemKey(vendor.id, item.id)] = item;
@@ -560,10 +784,27 @@ function clonePatch(patch: CatalogPatch): CatalogPatch {
 function parseFoodTypes(value: string): FoodType[] {
   const valid = new Set(Object.keys(foodTypeLabels) as FoodType[]);
   const byLabel = Object.fromEntries(Object.entries(foodTypeLabels).map(([key, label]) => [label, key])) as Record<string, FoodType>;
+  const alias: Record<string, FoodType> = {
+    米饭: "rice",
+    盖饭: "rice",
+    面: "noodle",
+    粉: "noodle",
+    米线: "noodle",
+    小吃: "snack",
+    西餐: "western",
+    西式: "western",
+    饮品: "drink",
+    甜点: "drink",
+    清淡: "light",
+    辣: "spicy",
+    重口: "spicy",
+    素食: "vegetarian",
+    清真: "halal",
+  };
   const parsed = value
     .split(/[,，、\s]+/)
     .map((entry) => entry.trim())
-    .map((entry) => byLabel[entry] ?? entry)
+    .map((entry) => alias[entry] ?? byLabel[entry] ?? entry)
     .filter((entry): entry is FoodType => valid.has(entry as FoodType));
   return parsed.length ? Array.from(new Set(parsed)) : ["rice"];
 }
@@ -631,6 +872,16 @@ interface ItemForm {
   popularity: string;
   available: string;
   description: string;
+}
+
+interface SubmissionAnalysis {
+  action: "replace-vendor" | "menu-change" | "vendor-update" | "new-vendor";
+  title: string;
+  confidence: string;
+  matchedVendor?: FoodVendor;
+  nextVendorName: string;
+  facts: string[];
+  recommendation: string;
 }
 
 const campusOptions = Object.entries(campusLabels).map(([value, label]) => ({ value, label }));

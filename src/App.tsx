@@ -4,7 +4,6 @@ import {
   Building2,
   Camera,
   Check,
-  ChevronRight,
   Clock3,
   Download,
   Leaf,
@@ -17,7 +16,6 @@ import {
   Shuffle,
   SlidersHorizontal,
   Sparkles,
-  Star,
   Utensils,
   X,
 } from "lucide-react";
@@ -72,8 +70,6 @@ const flavorTypeOptions: Array<{ value: FlavorTypeChoice; label: string }> = [
   { value: "spicy", label: "重口" },
 ];
 
-const extraTypeOptions: FoodType[] = ["protein", "local"];
-
 const defaultPreference: StudentPreference = {
   campus: "south",
   budget: 18,
@@ -105,9 +101,7 @@ function App() {
   const [feedbackTarget, setFeedbackTarget] = useState<FeedbackTarget | null>(null);
   const [showReviewQueue, setShowReviewQueue] = useState(false);
   const [submissionNotice, setSubmissionNotice] = useState("");
-  const [serverQueueOnline, setServerQueueOnline] = useState(false);
   const [catalog, setCatalog] = useState(foodCatalog);
-  const [catalogPatchOnline, setCatalogPatchOnline] = useState(false);
 
   const activePreference = useMemo(
     () => ({ ...preference, randomnessSeed, recentItemIds }),
@@ -156,13 +150,10 @@ function App() {
     loadServerSubmissions()
       .then((serverSubmissions) => {
         if (cancelled) return;
-        setServerQueueOnline(true);
         setSubmissions(serverSubmissions);
         saveStudentSubmissions(serverSubmissions);
       })
-      .catch(() => {
-        if (!cancelled) setServerQueueOnline(false);
-      });
+      .catch(() => {});
 
     return () => {
       cancelled = true;
@@ -175,11 +166,8 @@ function App() {
       .then((patch) => {
         if (cancelled) return;
         setCatalog(applyCatalogPatch(foodCatalog, patch));
-        setCatalogPatchOnline(true);
       })
-      .catch(() => {
-        if (!cancelled) setCatalogPatchOnline(false);
-      });
+      .catch(() => {});
 
     return () => {
       cancelled = true;
@@ -205,14 +193,12 @@ function App() {
     try {
       const saved = await submitStudentSubmission(submission);
       const next = [saved, ...submissions.filter((current) => current.id !== saved.id)];
-      setServerQueueOnline(true);
       setSubmissions(next);
       saveStudentSubmissions(next);
       setFeedbackTarget(null);
       setSubmissionNotice("已提交到手机服务器审核队列，审核通过后再更新商家和菜品。");
     } catch {
       const next = [submission, ...submissions];
-      setServerQueueOnline(false);
       setSubmissions(next);
       saveStudentSubmissions(next);
       setFeedbackTarget(null);
@@ -298,10 +284,6 @@ function App() {
             后台
           </a>
         </div>
-        <p className="railStatus">
-          {serverQueueOnline ? "手机服务器在线" : "本机缓存模式"} · {catalogPatchOnline ? "在线修订已加载" : "静态菜单"}
-        </p>
-
         <div className="fieldGroup">
           <div className="fieldHeader">
             <MapPin size={17} />
@@ -417,21 +399,6 @@ function App() {
                 ))}
               </div>
             </div>
-
-            <div className="preferenceBlock">
-              <div className="subFieldLabel">加分偏好</div>
-              <div className="chipGrid">
-                {extraTypeOptions.map((type) => (
-                  <button
-                    key={type}
-                    className={preference.wantedTypes.includes(type) ? "chip active" : "chip"}
-                    onClick={() => setPreference((current) => toggleWantedType(current, type))}
-                  >
-                    {foodTypeLabels[type]}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 
@@ -481,7 +448,7 @@ function App() {
             <h2>推荐列表</h2>
           </div>
           <span>
-            {campusLabels[preference.campus]} · {mealPeriodLabels[preference.mealPeriod]} · 公众号正文菜单
+            {campusLabels[preference.campus]} · {mealPeriodLabels[preference.mealPeriod]}
           </span>
         </header>
 
@@ -497,13 +464,9 @@ function App() {
           <section className="dataNotice" aria-label="堂食数据状态">
             <Building2 size={18} />
             <span>
-              {selectedAreaSource.area} 已接入公众号正文菜单；当前可推荐{" "}
-              {selectedAreaCatalogStats?.vendorCount ?? 0} 个窗口 / {selectedAreaCatalogStats?.itemCount ?? 0} 道菜。
-              历史价格暂不展示，现况可由学生补照片校准。
+              {selectedAreaSource.area} 当前可推荐 {selectedAreaCatalogStats?.vendorCount ?? 0} 个窗口 /{" "}
+              {selectedAreaCatalogStats?.itemCount ?? 0} 道菜。现况可由学生补照片校准。
             </span>
-            <a href={selectedAreaSource.sourceUrl} target="_blank" rel="noreferrer">
-              查看来源
-            </a>
             <button
               type="button"
               onClick={() =>
@@ -528,9 +491,7 @@ function App() {
                   <h3>{result.item.name}</h3>
                   <p>{result.vendor.name}</p>
                 </div>
-                <div className="scoreBadge">{result.score}</div>
               </div>
-              {result.item.reviewStatus === "pending" ? <span className="betaPill">正文待校准</span> : null}
 
               <div className="metaLine">
                 <span>
@@ -541,15 +502,7 @@ function App() {
                   <MapPin size={15} />
                   {result.vendor.locationHint ?? result.vendor.area}
                 </span>
-                {typeof result.vendor.rating === "number" ? (
-                  <span>
-                    <Star size={15} />
-                    {result.vendor.rating}
-                  </span>
-                ) : null}
               </div>
-
-              <p className="description">{result.item.description}</p>
 
               <div className="reasonList">
                 {result.reasons.map((reason) => (
@@ -561,40 +514,11 @@ function App() {
               </div>
 
               <div className="tagRow">
-                {result.item.types.slice(0, 4).map((type) => (
+                {visibleFoodTypes(result.item.types).map((type) => (
                   <span key={type}>{foodTypeLabels[type]}</span>
                 ))}
               </div>
 
-              <div className="cardFooter">
-              <span>
-                {result.vendor.locationHint ??
-                    [
-                      result.vendor.area,
-                      result.vendor.floor,
-                      result.vendor.windowNo ? `${result.vendor.windowNo}号窗口` : "",
-                      result.vendor.windowName,
-                    ]
-                      .filter(Boolean)
-                      .join(" · ")} · {formatChannelList(result.vendor)} · {result.vendor.source}
-                  {result.vendor.updatedAt ? ` · ${result.vendor.updatedAt}` : ""}
-                </span>
-                {result.vendor.sourceUrl ? (
-                  <a
-                    className="sourceButton"
-                    aria-label={`查看 ${result.item.name} 来源`}
-                    href={result.vendor.sourceUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <ChevronRight size={18} />
-                  </a>
-                ) : (
-                  <button aria-label={`查看 ${result.item.name}`}>
-                    <ChevronRight size={18} />
-                  </button>
-                )}
-              </div>
               <div className="feedbackActions">
                 <button onClick={() => setFeedbackTarget({ mode: "correction", vendor: result.vendor, item: result.item })}>
                   <MessageSquarePlus size={15} />
@@ -963,17 +887,6 @@ function SubmissionQueue({
   );
 }
 
-function toggleWantedType(preference: StudentPreference, type: FoodType): StudentPreference {
-  const isActive = preference.wantedTypes.includes(type);
-
-  return {
-    ...preference,
-    wantedTypes: isActive
-      ? preference.wantedTypes.filter((current) => current !== type)
-      : [...preference.wantedTypes, type],
-  };
-}
-
 function getPrimaryType(preference: StudentPreference): PrimaryTypeChoice {
   return (primaryFoodTypeOptions.find((type) => preference.wantedTypes.includes(type)) as PrimaryTypeChoice | undefined) ?? "any";
 }
@@ -1081,6 +994,10 @@ function formatChannelList(vendor: FoodVendor) {
 
 function choiceKey(vendorId: string, itemId: string) {
   return `${vendorId}:${itemId}`;
+}
+
+function visibleFoodTypes(types: FoodType[]) {
+  return types.filter((type) => type !== "protein" && type !== "local").slice(0, 4);
 }
 
 function loadRecentItems() {
