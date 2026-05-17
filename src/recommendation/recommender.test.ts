@@ -427,6 +427,25 @@ describe("recommendFood", () => {
         expect(item.available.length).toBeGreaterThan(0);
         expect(item.locationHint ?? "").toContain(vendor.area);
         expect(item.name).not.toMatch(/滑动|查看更多/);
+        expect(item.name).not.toMatch(/[（）()]/);
+        expect([
+          "麻辣",
+          "香辣",
+          "微辣",
+          "中辣",
+          "重辣",
+          "番茄",
+          "金汤",
+          "三鲜",
+          "酸菜",
+          "黑椒",
+          "藤椒",
+          "原味",
+          "清香",
+          "香辣味",
+          "烧烤味",
+          "酸辣等口味",
+        ]).not.toContain(item.name);
       }
     }
   });

@@ -19,6 +19,41 @@ FOOD_TYPES = {"rice", "noodle", "spicy", "light", "snack", "western", "drink", "
 MEAL_PERIODS = {"breakfast", "lunch", "dinner", "late"}
 HEAT_LEVELS = {"none", "mild", "medium", "hot"}
 
+FLAVOR_OPTION_EXACT = {
+    "三鲜",
+    "中辣",
+    "千岛类",
+    "原味",
+    "咖喱味",
+    "大",
+    "大份",
+    "小",
+    "小份",
+    "干拌",
+    "微辣",
+    "招牌",
+    "汤面",
+    "清香",
+    "烧烤味",
+    "特辣",
+    "番茄",
+    "红枣",
+    "经典",
+    "藤椒",
+    "酸菜",
+    "酸辣",
+    "酸辣等口味",
+    "金汤",
+    "重辣",
+    "香辣",
+    "香辣味",
+    "麻椒",
+    "麻辣",
+    "黑椒",
+    "黑椒味",
+    "黑芝麻",
+}
+
 SIDE_DISH_EXACT = {
     "米饭",
     "白米饭",
@@ -36,7 +71,10 @@ SIDE_DISH_EXACT = {
     "加粉",
     "配菜",
     "小菜",
+    "加菜",
+    "各种加菜",
     "各种配菜）",
+    "各种配菜",
     "各类配菜",
 }
 
@@ -47,6 +85,9 @@ NON_DISH_EXACT = {
     "早点",
     "午晚餐",
     "晚点",
+    "一荤一素",
+    "两素",
+    "两荤一素",
     "上下滑动查看更多",
     "上滑查看更多",
     "下滑查看更多",
@@ -98,11 +139,13 @@ def is_usable_dish(name: str) -> bool:
     value = clean_dish_name(name)
     if not value:
         return False
-    if value in SIDE_DISH_EXACT or value in NON_DISH_EXACT:
+    if value in SIDE_DISH_EXACT or value in NON_DISH_EXACT or value in FLAVOR_OPTION_EXACT:
         return False
     if len(value) <= 1:
         return False
-    if re.search(r"电话|扫码|公众号|办公室|出入口|楼梯|窗口|菜单|光盘|节约|浪费|滑动|查看更多|点击|长按", value):
+    if is_flavor_option_fragment(value):
+        return False
+    if re.search(r"电话|扫码|公众号|办公室|出入口|楼梯|窗口|菜单|光盘|节约|浪费|滑动|查看更多|点击|长按|加菜|配菜", value):
         return False
     return True
 
@@ -261,9 +304,57 @@ def format_location(row: dict[str, str]) -> str:
 
 def clean_dish_name(value: str) -> str:
     value = clean_text(value)
+    value = value.replace("(", "（").replace(")", "）")
     value = value.strip("、，,;；:：.。|/\\ ")
-    value = value.replace("（)", "").replace("()", "")
+    value = drop_leading_unmatched_close(value)
+    value = drop_unmatched_open_tail(value)
+    value = re.sub(r"（([^（）]*)）", replace_parenthetical, value)
+    value = value.replace("（", "").replace("）", "")
+    value = re.sub(r"\s+", " ", value)
+    return value.strip("、，,;；:：.。|/\\ ")
+
+
+def drop_leading_unmatched_close(value: str) -> str:
+    while "）" in value:
+        close_index = value.find("）")
+        if "（" in value[:close_index]:
+            return value
+        before = value[:close_index].strip("、，,;；:：.。|/\\ ")
+        after = value[close_index + 1 :].strip("、，,;；:：.。|/\\ ")
+        if after and is_flavor_option_fragment(before):
+            value = after
+            continue
+        value = f"{value[:close_index]}{value[close_index + 1:]}"
     return value
+
+
+def drop_unmatched_open_tail(value: str) -> str:
+    while value.count("（") > value.count("）"):
+        open_index = value.rfind("（")
+        if open_index < 0:
+            break
+        value = value[:open_index].strip("、，,;；:：.。|/\\ ")
+    return value
+
+
+def replace_parenthetical(match: re.Match[str]) -> str:
+    content = clean_text(match.group(1))
+    return "" if is_flavor_option_fragment(content) else content
+
+
+def is_flavor_option_fragment(value: str) -> bool:
+    text = clean_text(value)
+    if not text:
+        return False
+    text = text.replace("(", "（").replace(")", "）")
+    text = text.strip("、，,;；:：.。|/\\（） ")
+    text = re.sub(r"(等口味|口味)$", "", text).strip()
+    if not text:
+        return False
+    if text in FLAVOR_OPTION_EXACT:
+        return True
+    tokens = [token for token in re.split(r"[\s、,，/／+＋;；]+", text) if token]
+    return bool(tokens) and all(token in FLAVOR_OPTION_EXACT for token in tokens)
 
 
 def clean_text(value: str) -> str:

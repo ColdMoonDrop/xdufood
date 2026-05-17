@@ -1,5 +1,6 @@
 import unittest
 
+import generate_wechat_text_data as wechat_text
 import xdu_canteen_importer as importer
 
 
@@ -96,6 +97,24 @@ class XduCanteenImporterTest(unittest.TestCase):
         self.assertEqual(len(records), 1)
         self.assertEqual(records[0]["duplicateCount"], 2)
         self.assertIn("duplicate-merged", records[0]["parseWarnings"])
+
+    def test_wechat_text_cleaner_removes_flavor_options_and_bad_parentheses(self):
+        cases = {
+            "麻辣香锅（清香": "麻辣香锅",
+            "韩式烧肉饭（原味": "韩式烧肉饭",
+            "千岛类）香辣鸡腿饭": "香辣鸡腿饭",
+            "鱼香茄子）": "鱼香茄子",
+            "尖椒牛肉面(干拌)": "尖椒牛肉面",
+            "炒（烩）麻食": "炒烩麻食",
+        }
+
+        for raw, expected in cases.items():
+            with self.subTest(raw=raw):
+                self.assertEqual(wechat_text.clean_dish_name(raw), expected)
+
+        for raw in ["麻辣", "番茄）", "金汤", "香辣味）", "酸辣等口味）", "三鲜）"]:
+            with self.subTest(raw=raw):
+                self.assertFalse(wechat_text.is_usable_dish(raw))
 
 
 if __name__ == "__main__":

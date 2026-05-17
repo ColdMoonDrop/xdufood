@@ -10519,7 +10519,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 8,
+    "duplicateCount": 7,
     "items": [
       {
         "id": "dingxiang-2f-11-川味锅巴饭-8afaafe2-一荤三素-9894d0a63c59a58c-46df57bd",
@@ -10599,31 +10599,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       {
         "id": "dingxiang-2f-11-川味锅巴饭-8afaafe2-三荤一素-f871a44008af11ed-c21a55d5",
         "name": "三荤一素",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 11号窗口 · 川味锅巴饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "11",
-        "windowName": "川味锅巴饭",
-        "locationHint": "丁香二层餐厅 · 二层 · 11号窗口 · 川味锅巴饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-11-川味锅巴饭-8afaafe2-两荤一素-fe18e845bd638f37-ce77b565",
-        "name": "两荤一素",
         "types": [
           "vegetarian"
         ],
@@ -10749,8 +10724,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "duplicateCount": 8,
     "items": [
       {
-        "id": "dingxiang-2f-12-12号窗口-b1053cbd-尖椒牛肉面-干拌-06bb3bfaf59f67f4-9b69d851",
-        "name": "尖椒牛肉面(干拌)",
+        "id": "dingxiang-2f-12-12号窗口-b1053cbd-尖椒牛肉面-06bb3bfaf59f67f4-b2b74114",
+        "name": "尖椒牛肉面",
         "types": [
           "noodle",
           "spicy",
@@ -10801,8 +10776,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dingxiang-2f-12-12号窗口-b1053cbd-排骨面-汤面-4c23c068239ad489-e0b09970",
-        "name": "排骨面(汤面)",
+        "id": "dingxiang-2f-12-12号窗口-b1053cbd-排骨面-4c23c068239ad489-5bba438f",
+        "name": "排骨面",
         "types": [
           "noodle",
           "light",
@@ -10828,8 +10803,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dingxiang-2f-12-12号窗口-b1053cbd-杂酱干拌面-干拌-235247a3e8e06e43-2d625030",
-        "name": "杂酱干拌面(干拌)",
+        "id": "dingxiang-2f-12-12号窗口-b1053cbd-杂酱干拌面-235247a3e8e06e43-65cbfb32",
+        "name": "杂酱干拌面",
         "types": [
           "noodle"
         ],
@@ -10879,8 +10854,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dingxiang-2f-12-12号窗口-b1053cbd-牛肉面-汤面-97822f3bca4b72fe-d03e8e84",
-        "name": "牛肉面(汤面)",
+        "id": "dingxiang-2f-12-12号窗口-b1053cbd-牛肉面-97822f3bca4b72fe-d818aa2a",
+        "name": "牛肉面",
         "types": [
           "noodle",
           "light",
@@ -10906,8 +10881,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dingxiang-2f-12-12号窗口-b1053cbd-猪肝面-汤面-bd915898a211a949-366199c9",
-        "name": "猪肝面(汤面)",
+        "id": "dingxiang-2f-12-12号窗口-b1053cbd-猪肝面-bd915898a211a949-87a09615",
+        "name": "猪肝面",
         "types": [
           "noodle",
           "light"
@@ -10932,8 +10907,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dingxiang-2f-12-12号窗口-b1053cbd-酸菜肉丝面-汤面-c8fc1e1a5902eb87-adf2fe23",
-        "name": "酸菜肉丝面(汤面)",
+        "id": "dingxiang-2f-12-12号窗口-b1053cbd-酸菜肉丝面-c8fc1e1a5902eb87-a85510dd",
+        "name": "酸菜肉丝面",
         "types": [
           "noodle",
           "spicy",
@@ -12019,7 +11994,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 6,
+    "duplicateCount": 4,
     "items": [
       {
         "id": "dingxiang-2f-17-17号窗口-ccc1979a-一荤三素-b43a7e89a04462a5-8bf8766f",
@@ -12049,56 +12024,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       {
         "id": "dingxiang-2f-17-17号窗口-ccc1979a-一荤两素-083a1edaecb5c88a-a3b8fd59",
         "name": "一荤两素",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 17号窗口 · 17号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "17",
-        "windowName": "17号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 17号窗口 · 17号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-17-17号窗口-ccc1979a-两素-5b3281a529dcf8ed-c9a173b4",
-        "name": "两素",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 17号窗口 · 17号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "17",
-        "windowName": "17号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 17号窗口 · 17号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-17-17号窗口-ccc1979a-两荤一素-824f3b223e1ac1d6-ebd57c3e",
-        "name": "两荤一素",
         "types": [
           "vegetarian"
         ],
@@ -13237,8 +13162,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 6,
     "tags": [
       "rice",
-      "vegetarian",
-      "spicy"
+      "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
@@ -13246,11 +13170,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 5,
+    "duplicateCount": 2,
     "items": [
       {
-        "id": "dingxiang-2f-21-小四川冒菜-12571a90-荤素自选-三鲜-55ab209fc0dab5c4-8aa86fc8",
-        "name": "荤素自选（三鲜",
+        "id": "dingxiang-2f-21-小四川冒菜-12571a90-荤素自选-55ab209fc0dab5c4-ce2146d3",
+        "name": "荤素自选",
         "types": [
           "rice",
           "vegetarian"
@@ -13272,108 +13196,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "parseWarnings": [
           "wechat-text"
         ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-21-小四川冒菜-12571a90-荤素自选-烧烤味-b0e4ac325c4cc27f-8fe50763",
-        "name": "荤素自选（烧烤味",
-        "types": [
-          "rice",
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "21",
-        "windowName": "小四川冒菜",
-        "locationHint": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-21-小四川冒菜-12571a90-藤椒-48082e718741484b-c3b1150a",
-        "name": "藤椒）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "21",
-        "windowName": "小四川冒菜",
-        "locationHint": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-21-小四川冒菜-12571a90-香辣味-e0ab3d76883e12a6-2bfa3cd0",
-        "name": "香辣味）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "21",
-        "windowName": "小四川冒菜",
-        "locationHint": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-21-小四川冒菜-12571a90-麻辣-cadc080370f52635-f629da8a",
-        "name": "麻辣",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "21",
-        "windowName": "小四川冒菜",
-        "locationHint": "丁香二层餐厅 · 二层 · 21号窗口 · 小四川冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
+        "duplicateCount": 2
       }
     ]
   },
@@ -13391,8 +13214,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "noodle",
       "rice",
-      "vegetarian",
-      "spicy"
+      "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
@@ -13400,7 +13222,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 4,
+    "duplicateCount": 3,
     "items": [
       {
         "id": "dingxiang-2f-22-航语佳烤盘饭-e539d93d-招牌螺蛳粉-03bd2d173f565220-b2f6b1e5",
@@ -13454,38 +13276,13 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dingxiang-2f-22-航语佳烤盘饭-e539d93d-荤素自选-烧烤味-16157175ed56bb87-fb9fded7",
-        "name": "荤素自选（烧烤味",
+        "id": "dingxiang-2f-22-航语佳烤盘饭-e539d93d-荤素自选-16157175ed56bb87-f989af01",
+        "name": "荤素自选",
         "types": [
           "rice",
           "vegetarian"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 22号窗口 · 航语佳烤盘饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "22",
-        "windowName": "航语佳烤盘饭",
-        "locationHint": "丁香二层餐厅 · 二层 · 22号窗口 · 航语佳烤盘饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-22-航语佳烤盘饭-e539d93d-香辣味-9d352ad0a4d9c347-d6c8dc61",
-        "name": "香辣味）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -15756,8 +15553,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 6,
     "tags": [
       "light",
-      "protein",
-      "spicy"
+      "protein"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
@@ -15765,7 +15561,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 6,
+    "duplicateCount": 1,
     "items": [
       {
         "id": "dingxiang-2f-7-7号窗口-08c8e9ff-嘟嘟鱼汤铺子-9cb76a3420490646-1fed949a",
@@ -15775,131 +15571,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "7号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-7-7号窗口-08c8e9ff-番茄-a042dbe3b1d8d041-2ab14b66",
-        "name": "番茄",
-        "types": [
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "7号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-7-7号窗口-08c8e9ff-藤椒-2e6920a95b3b32fb-89662982",
-        "name": "藤椒",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "7号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-7-7号窗口-08c8e9ff-酸菜-0da427e35113f521-5da2acf0",
-        "name": "酸菜",
-        "types": [
-          "spicy"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "7号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-7-7号窗口-08c8e9ff-金汤-98bd116657107c48-e5d7b596",
-        "name": "金汤",
-        "types": [
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "7号窗口",
-        "locationHint": "丁香二层餐厅 · 二层 · 7号窗口 · 7号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/nP_N_UOjAsUwcfKENy0WNQ",
-        "sourceTitle": "丁香二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dingxiang-2f-7-7号窗口-08c8e9ff-麻辣-15e281425b067d74-abab681d",
-        "name": "麻辣",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -16522,11 +16193,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "东区一层餐厅 · 一层 · 10号窗口 · 脆皮炸鸡饭、鸡腿饭",
     "distanceMinutes": 6,
     "tags": [
-      "rice",
-      "spicy",
-      "protein",
       "western",
-      "snack"
+      "rice",
+      "snack",
+      "protein",
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
@@ -16534,35 +16205,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 8,
+    "duplicateCount": 6,
     "items": [
-      {
-        "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-千岛类-香辣鸡腿饭-e8a3ac8145e8954d-de1fa844",
-        "name": "千岛类）香辣鸡腿饭",
-        "types": [
-          "rice",
-          "spicy",
-          "protein"
-        ],
-        "heat": "hot",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 10号窗口 · 脆皮炸鸡饭、鸡腿饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "10",
-        "windowName": "脆皮炸鸡饭、鸡腿饭",
-        "locationHint": "东区一层餐厅 · 一层 · 10号窗口 · 脆皮炸鸡饭、鸡腿饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
       {
         "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-咖喱-a043c720de89ba84-3828f734",
         "name": "咖喱",
@@ -16666,36 +16310,12 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-香酥鸡腿饭-b100c71c7d2b4dde-2bb8e291",
-        "name": "香酥鸡腿饭",
+        "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-香辣鸡腿饭-e8a3ac8145e8954d-7cb544e9",
+        "name": "香辣鸡腿饭",
         "types": [
           "rice",
+          "spicy",
           "protein"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 10号窗口 · 脆皮炸鸡饭、鸡腿饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "10",
-        "windowName": "脆皮炸鸡饭、鸡腿饭",
-        "locationHint": "东区一层餐厅 · 一层 · 10号窗口 · 脆皮炸鸡饭、鸡腿饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-麻辣-59e612edcabccfb1-7d63d649",
-        "name": "麻辣",
-        "types": [
-          "spicy"
         ],
         "heat": "hot",
         "popularity": 0.72,
@@ -16717,12 +16337,13 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-黑椒-8ebc4cea33d2f861-e595e75d",
-        "name": "黑椒",
+        "id": "dongqu-1f-10-脆皮炸鸡饭-鸡腿饭-a8c2ea06-香酥鸡腿饭-b100c71c7d2b4dde-2bb8e291",
+        "name": "香酥鸡腿饭",
         "types": [
-          "spicy"
+          "rice",
+          "protein"
         ],
-        "heat": "mild",
+        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -16770,7 +16391,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 24,
+    "duplicateCount": 22,
     "items": [
       {
         "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-双椒味-f686d3af502d5239-c9f121a8",
@@ -16779,31 +16400,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "spicy"
         ],
         "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 11号窗口 · 新疆炒米粉，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "11",
-        "windowName": "新疆炒米粉",
-        "locationHint": "东区一层餐厅 · 一层 · 11号窗口 · 新疆炒米粉",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-招牌-000be84b2aacf99f-b7984a93",
-        "name": "招牌",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -17104,8 +16700,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-茶泡饭-咖喱味-49a00bd7f3e8a0ac-b241ba9b",
-        "name": "茶泡饭（咖喱味",
+        "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-茶泡饭-49a00bd7f3e8a0ac-2779a999",
+        "name": "茶泡饭",
         "types": [
           "rice",
           "western",
@@ -17365,31 +16961,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "wechat-text"
         ],
         "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-黑椒味-5318f5d9a075cf0e-8f8ecc3c",
-        "name": "黑椒味）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 11号窗口 · 新疆炒米粉，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "11",
-        "windowName": "新疆炒米粉",
-        "locationHint": "东区一层餐厅 · 一层 · 11号窗口 · 新疆炒米粉",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
       }
     ]
   },
@@ -17408,9 +16979,9 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "local",
       "spicy",
-      "rice",
       "protein",
       "snack",
+      "rice",
       "drink",
       "western"
     ],
@@ -17420,7 +16991,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 28,
+    "duplicateCount": 26,
     "items": [
       {
         "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-削筋油泼面-6867aa2f0614ba7d-6262ece1",
@@ -17505,31 +17076,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "types": [
           "noodle",
           "local"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 12号窗口 · 焖一道茶泡饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "12",
-        "windowName": "焖一道茶泡饭",
-        "locationHint": "东区一层餐厅 · 一层 · 12号窗口 · 焖一道茶泡饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-招牌-bfddc03d0412af38-563a6eb7",
-        "name": "招牌",
-        "types": [
-          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -17834,8 +17380,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-茶泡饭-咖喱味-198e4bfd5630de3a-15f3ca40",
-        "name": "茶泡饭（咖喱味",
+        "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-茶泡饭-198e4bfd5630de3a-7f486742",
+        "name": "茶泡饭",
         "types": [
           "rice",
           "western",
@@ -18101,31 +17647,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "spicy"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 12号窗口 · 焖一道茶泡饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "12",
-        "windowName": "焖一道茶泡饭",
-        "locationHint": "东区一层餐厅 · 一层 · 12号窗口 · 焖一道茶泡饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-黑椒味-f96ca8b43ee1d13f-75dfbc67",
-        "name": "黑椒味）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "mild",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -21425,7 +20946,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "rice",
       "noodle",
       "light",
-      "spicy",
       "snack",
       "protein"
     ],
@@ -21435,65 +20955,15 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 4,
+    "duplicateCount": 2,
     "items": [
       {
-        "id": "dongqu-1f-18-杂粮煎饼-4da97684-三鲜-055c0bba55439f78-bf191e70",
-        "name": "三鲜",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 18号窗口 · 杂粮煎饼，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "杂粮煎饼",
-        "locationHint": "东区一层餐厅 · 一层 · 18号窗口 · 杂粮煎饼",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-18-杂粮煎饼-4da97684-云南过桥米线-金汤-4218375cfeacd517-66edb711",
-        "name": "云南过桥米线（金汤",
+        "id": "dongqu-1f-18-杂粮煎饼-4da97684-云南过桥米线-4218375cfeacd517-b974cf8d",
+        "name": "云南过桥米线",
         "types": [
           "rice",
           "noodle",
           "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 18号窗口 · 杂粮煎饼，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "杂粮煎饼",
-        "locationHint": "东区一层餐厅 · 一层 · 18号窗口 · 杂粮煎饼",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-18-杂粮煎饼-4da97684-酸菜-01a27ed5fcf516af-a0b13572",
-        "name": "酸菜）",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -21568,36 +21038,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 16,
+    "duplicateCount": 14,
     "items": [
       {
-        "id": "dongqu-1f-19-云南过桥米线-5be386fd-三鲜-e7a6728eef8e53b3-fa59e72f",
-        "name": "三鲜",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 19号窗口 · 云南过桥米线，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "19",
-        "windowName": "云南过桥米线",
-        "locationHint": "东区一层餐厅 · 一层 · 19号窗口 · 云南过桥米线",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-19-云南过桥米线-5be386fd-云南过桥米线-金汤-c66e301f4b4ca29e-0530aa62",
-        "name": "云南过桥米线（金汤",
+        "id": "dongqu-1f-19-云南过桥米线-5be386fd-云南过桥米线-c66e301f4b4ca29e-f1bbbff1",
+        "name": "云南过桥米线",
         "types": [
           "rice",
           "noodle",
@@ -21834,31 +21279,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "types": [
           "noodle",
           "snack"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 19号窗口 · 云南过桥米线，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "19",
-        "windowName": "云南过桥米线",
-        "locationHint": "东区一层餐厅 · 一层 · 19号窗口 · 云南过桥米线",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-19-云南过桥米线-5be386fd-酸菜-d60033b1905745fb-af9a290c",
-        "name": "酸菜）",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -23284,11 +22704,10 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "东区一层餐厅 · 一层 · 23号窗口 · 卤肉饭",
     "distanceMinutes": 6,
     "tags": [
-      "rice",
       "spicy",
       "protein",
-      "vegetarian",
-      "light"
+      "rice",
+      "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
@@ -23296,36 +22715,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 19,
+    "duplicateCount": 17,
     "items": [
       {
-        "id": "dongqu-1f-23-卤肉饭-bdb1922a-三鲜-1b4ca92455f85616-01306675",
-        "name": "三鲜",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 23号窗口 · 卤肉饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "23",
-        "windowName": "卤肉饭",
-        "locationHint": "东区一层餐厅 · 一层 · 23号窗口 · 卤肉饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-23-卤肉饭-bdb1922a-冒菜-麻辣-73c7a4a6d2f52bec-fd2d56f8",
-        "name": "冒菜（麻辣",
+        "id": "dongqu-1f-23-卤肉饭-bdb1922a-冒菜-73c7a4a6d2f52bec-06c54f0e",
+        "name": "冒菜",
         "types": [
           "spicy"
         ],
@@ -23754,31 +23148,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "wechat-text"
         ],
         "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-23-卤肉饭-bdb1922a-番茄-4694fe7432a166c7-db2335c1",
-        "name": "番茄）",
-        "types": [
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 23号窗口 · 卤肉饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "23",
-        "windowName": "卤肉饭",
-        "locationHint": "东区一层餐厅 · 一层 · 23号窗口 · 卤肉饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
       }
     ]
   },
@@ -23794,11 +23163,10 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "东区一层餐厅 · 一层 · 24号窗口 · 三顾冒菜",
     "distanceMinutes": 6,
     "tags": [
-      "rice",
       "spicy",
+      "rice",
       "western",
-      "protein",
-      "light"
+      "protein"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
@@ -23806,36 +23174,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 18,
+    "duplicateCount": 16,
     "items": [
       {
-        "id": "dongqu-1f-24-三顾冒菜-b15cd79c-三鲜-ed05a7b7fb7aa8bf-b91f6b91",
-        "name": "三鲜",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 24号窗口 · 三顾冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "24",
-        "windowName": "三顾冒菜",
-        "locationHint": "东区一层餐厅 · 一层 · 24号窗口 · 三顾冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-24-三顾冒菜-b15cd79c-冒菜-麻辣-befe35c2f2e0ee72-cc3ac0c6",
-        "name": "冒菜（麻辣",
+        "id": "dongqu-1f-24-三顾冒菜-b15cd79c-冒菜-befe35c2f2e0ee72-ecee372e",
+        "name": "冒菜",
         "types": [
           "spicy"
         ],
@@ -23941,31 +23284,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "汉堡",
         "types": [
           "western"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 24号窗口 · 三顾冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "24",
-        "windowName": "三顾冒菜",
-        "locationHint": "东区一层餐厅 · 一层 · 24号窗口 · 三顾冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-24-三顾冒菜-b15cd79c-番茄-b9cc4112fd031206-88df2d74",
-        "name": "番茄）",
-        "types": [
-          "light"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -24807,8 +24125,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-25-西式快餐-200b03e0-鱼香茄子-561214bbf436eefc-7871cbf4",
-        "name": "鱼香茄子）",
+        "id": "dongqu-1f-25-西式快餐-200b03e0-鱼香茄子-561214bbf436eefc-0807846a",
+        "name": "鱼香茄子",
         "types": [
           "vegetarian",
           "protein"
@@ -24910,8 +24228,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-25-西式快餐-200b03e0-麦香馅饼-照烧鸡腿-07cdd972b23c6ba2-86858ef6",
-        "name": "麦香馅饼（照烧鸡腿",
+        "id": "dongqu-1f-25-西式快餐-200b03e0-麦香馅饼-07cdd972b23c6ba2-ab865679",
+        "name": "麦香馅饼",
         "types": [
           "snack",
           "protein"
@@ -25245,8 +24563,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-自选多味饺子-牛肉葱花-654c6b270f26e947-1e4dab26",
-        "name": "自选多味饺子（牛肉葱花",
+        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-自选多味饺子-654c6b270f26e947-82da0911",
+        "name": "自选多味饺子",
         "types": [
           "rice",
           "noodle",
@@ -25323,8 +24641,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-韭菜鸡蛋-a3ab5c20c6936b5c-a742968d",
-        "name": "韭菜鸡蛋）",
+        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-韭菜鸡蛋-a3ab5c20c6936b5c-f76c9339",
+        "name": "韭菜鸡蛋",
         "types": [
           "protein"
         ],
@@ -25374,8 +24692,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-鱼香茄子-26fce4e49c7a4b3f-2d359656",
-        "name": "鱼香茄子）",
+        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-鱼香茄子-26fce4e49c7a4b3f-00c90970",
+        "name": "鱼香茄子",
         "types": [
           "vegetarian",
           "protein"
@@ -25426,8 +24744,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-麦香馅饼-照烧鸡腿-45d5e3bd93bace4f-bd3b7221",
-        "name": "麦香馅饼（照烧鸡腿",
+        "id": "dongqu-1f-26-麦香馅饼-2d73e7a4-麦香馅饼-45d5e3bd93bace4f-33b7d2bb",
+        "name": "麦香馅饼",
         "types": [
           "snack",
           "protein"
@@ -25680,8 +24998,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-27-28-自选多味饺子-d9bcb7b2-自选多味饺子-牛肉葱花-a0370e5d3c982edc-d99152ec",
-        "name": "自选多味饺子（牛肉葱花",
+        "id": "dongqu-1f-27-28-自选多味饺子-d9bcb7b2-自选多味饺子-a0370e5d3c982edc-4b81be42",
+        "name": "自选多味饺子",
         "types": [
           "rice",
           "noodle",
@@ -25707,8 +25025,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-27-28-自选多味饺子-d9bcb7b2-韭菜鸡蛋-c6b55b2b260eed2c-b8f1e9d9",
-        "name": "韭菜鸡蛋）",
+        "id": "dongqu-1f-27-28-自选多味饺子-d9bcb7b2-韭菜鸡蛋-c6b55b2b260eed2c-8c0cad67",
+        "name": "韭菜鸡蛋",
         "types": [
           "protein"
         ],
@@ -28275,8 +27593,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-7-主食-杂粮包子-28f01cad-炒-烩-麻食-4aa31ff2c028fd43-1a84345b",
-        "name": "炒（烩）麻食",
+        "id": "dongqu-1f-7-主食-杂粮包子-28f01cad-炒烩麻食-4aa31ff2c028fd43-03e65998",
+        "name": "炒烩麻食",
         "types": [
           "spicy"
         ],
@@ -28760,8 +28078,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "spicy",
       "protein",
-      "rice",
       "western",
+      "rice",
       "local",
       "snack",
       "light"
@@ -28772,7 +28090,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 23,
+    "duplicateCount": 21,
     "items": [
       {
         "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-剁椒肉块面-7f5d0824cafd502a-a88bce54",
@@ -28810,33 +28128,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "9",
-        "windowName": "鸡汤刀削面",
-        "locationHint": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-千岛类-香辣鸡腿饭-2a1e9e67c02b35d3-77d55a6d",
-        "name": "千岛类）香辣鸡腿饭",
-        "types": [
-          "rice",
-          "spicy",
-          "protein"
-        ],
-        "heat": "hot",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -28958,8 +28249,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-炒-烩-麻食-ed39549963c1cf4a-31f169b9",
-        "name": "炒（烩）麻食",
+        "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-炒烩麻食-ed39549963c1cf4a-77d3093a",
+        "name": "炒烩麻食",
         "types": [
           "spicy"
         ],
@@ -29246,6 +28537,33 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
+        "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-香辣鸡腿饭-2a1e9e67c02b35d3-9de4451c",
+        "name": "香辣鸡腿饭",
+        "types": [
+          "rice",
+          "spicy",
+          "protein"
+        ],
+        "heat": "hot",
+        "popularity": 0.72,
+        "available": [
+          "lunch",
+          "dinner"
+        ],
+        "description": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面，西电后勤公众号正文提取，当前不展示历史价格。",
+        "windowNo": "9",
+        "windowName": "鸡汤刀削面",
+        "locationHint": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面",
+        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
+        "sourceTitle": "东区一层餐厅窗口分布及菜单",
+        "sourceMethod": "html-text",
+        "reviewStatus": "pending",
+        "parseWarnings": [
+          "wechat-text"
+        ],
+        "duplicateCount": 1
+      },
+      {
         "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-香酥鸡腿饭-c1c70d13b32a6223-c8030a01",
         "name": "香酥鸡腿饭",
         "types": [
@@ -29323,56 +28641,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "wechat-text"
         ],
         "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-麻辣-eef70550bae7710b-91756153",
-        "name": "麻辣",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "9",
-        "windowName": "鸡汤刀削面",
-        "locationHint": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-9-鸡汤刀削面-ab79906c-黑椒-d2af73b1b1421af2-438ddeed",
-        "name": "黑椒",
-        "types": [
-          "spicy"
-        ],
-        "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "9",
-        "windowName": "鸡汤刀削面",
-        "locationHint": "东区一层餐厅 · 一层 · 9号窗口 · 鸡汤刀削面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
       }
     ]
   },
@@ -29401,8 +28669,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "duplicateCount": 3,
     "items": [
       {
-        "id": "haitang-1f-1-2-麻辣香锅-7a785bd1-辣肉五花肉饭-077fc80032177c04-ee48c0c9",
-        "name": "辣肉五花肉饭）",
+        "id": "haitang-1f-1-2-麻辣香锅-7a785bd1-辣肉五花肉饭-077fc80032177c04-2a5289c2",
+        "name": "辣肉五花肉饭",
         "types": [
           "rice",
           "spicy",
@@ -29428,8 +28696,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-1-2-麻辣香锅-7a785bd1-韩式烧肉饭-原味-cea03d0c7d84d8b6-055c416c",
-        "name": "韩式烧肉饭（原味",
+        "id": "haitang-1f-1-2-麻辣香锅-7a785bd1-韩式烧肉饭-cea03d0c7d84d8b6-2b2f3230",
+        "name": "韩式烧肉饭",
         "types": [
           "rice",
           "protein"
@@ -29454,8 +28722,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-1-2-麻辣香锅-7a785bd1-麻辣香锅-清香-523ea7fc672a8b7a-d3310256",
-        "name": "麻辣香锅（清香",
+        "id": "haitang-1f-1-2-麻辣香锅-7a785bd1-麻辣香锅-523ea7fc672a8b7a-7ce80cf3",
+        "name": "麻辣香锅",
         "types": [
           "spicy"
         ],
@@ -29493,7 +28761,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 8,
     "tags": [
       "snack",
-      "rice",
       "protein"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -29502,11 +28769,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 3,
+    "duplicateCount": 2,
     "items": [
       {
-        "id": "haitang-1f-10-小锅米饭-c4f0952c-手抓饼-原味-82a0643a997750d6-cfdf7ecb",
-        "name": "手抓饼（原味",
+        "id": "haitang-1f-10-小锅米饭-c4f0952c-手抓饼-82a0643a997750d6-892970ad",
+        "name": "手抓饼",
         "types": [
           "snack"
         ],
@@ -29514,31 +28781,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "popularity": 0.72,
         "available": [
           "breakfast",
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 10号窗口 · 小锅米饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "10",
-        "windowName": "小锅米饭",
-        "locationHint": "海棠一层餐厅 · 一层 · 10号窗口 · 小锅米饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-10-小锅米饭-c4f0952c-火腿-b22bfc4aadc9094a-dfe0d25b",
-        "name": "火腿）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
           "lunch",
           "dinner"
         ],
@@ -30344,8 +29586,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "rice",
       "drink",
-      "light",
-      "spicy"
+      "light"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
@@ -30353,7 +29594,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 7,
+    "duplicateCount": 6,
     "items": [
       {
         "id": "haitang-1f-18-一元爱心餐-0291b63f-卤肉类-2b1695a081280d18-90091c7e",
@@ -30482,8 +29723,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-18-一元爱心餐-0291b63f-豆浆-红枣-fc975f305b9cc131-e4f067e2",
-        "name": "豆浆（红枣",
+        "id": "haitang-1f-18-一元爱心餐-0291b63f-豆浆-fc975f305b9cc131-1edd2838",
+        "name": "豆浆",
         "types": [
           "light",
           "drink"
@@ -30492,31 +29733,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "popularity": 0.72,
         "available": [
           "breakfast"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 18号窗口 · 一元爱心餐，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "一元爱心餐",
-        "locationHint": "海棠一层餐厅 · 一层 · 18号窗口 · 一元爱心餐",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-18-一元爱心餐-0291b63f-黑芝麻-17d6fbc08fb048a5-d12e72f3",
-        "name": "黑芝麻）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
         ],
         "description": "海棠一层餐厅 · 一层 · 18号窗口 · 一元爱心餐，西电后勤公众号正文提取，当前不展示历史价格。",
         "windowNo": "18",
@@ -30558,7 +29774,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 10,
+    "duplicateCount": 9,
     "items": [
       {
         "id": "haitang-1f-19-永和豆浆-69fb70a1-无糖-ce638ca54eb95c78-5b9047bf",
@@ -30688,8 +29904,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-19-永和豆浆-69fb70a1-豆浆-红枣-ba37907b0270680d-2b899bd3",
-        "name": "豆浆（红枣",
+        "id": "haitang-1f-19-永和豆浆-69fb70a1-豆浆-ba37907b0270680d-139e5d10",
+        "name": "豆浆",
         "types": [
           "light",
           "drink"
@@ -30767,31 +29983,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "香菇",
         "types": [
           "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 19号窗口 · 永和豆浆，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "19",
-        "windowName": "永和豆浆",
-        "locationHint": "海棠一层餐厅 · 一层 · 19号窗口 · 永和豆浆",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-19-永和豆浆-69fb70a1-黑芝麻-e9c94a09f667bc63-553f2472",
-        "name": "黑芝麻）",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -31415,8 +30606,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-22-天津小笼包-d035a700-肉夹馍-优质-0243db3949d16e98-94c99ff5",
-        "name": "肉夹馍（优质",
+        "id": "haitang-1f-22-天津小笼包-d035a700-肉夹馍-0243db3949d16e98-7fddc2b1",
+        "name": "肉夹馍",
         "types": [
           "snack",
           "protein",
@@ -31829,8 +31020,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-23-腊汁肉夹馍-b6361dd3-肉夹馍-优质-c037234d0fd57985-74fc0fae",
-        "name": "肉夹馍（优质",
+        "id": "haitang-1f-23-腊汁肉夹馍-b6361dd3-肉夹馍-c037234d0fd57985-b20e9a74",
+        "name": "肉夹馍",
         "types": [
           "snack",
           "protein",
@@ -32845,8 +32036,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "duplicateCount": 2,
     "items": [
       {
-        "id": "haitang-1f-29-成氏快餐-59637b72-煎饼-纯菜-df019ee28419217b-d6979dfc",
-        "name": "煎饼（纯菜",
+        "id": "haitang-1f-29-成氏快餐-59637b72-煎饼-df019ee28419217b-5a4f5d93",
+        "name": "煎饼",
         "types": [
           "snack"
         ],
@@ -33001,8 +32192,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-3-韩式烧肉饭-7540c9b9-辣肉五花肉饭-6a54d4931c4e0232-4e37a305",
-        "name": "辣肉五花肉饭）",
+        "id": "haitang-1f-3-韩式烧肉饭-7540c9b9-辣肉五花肉饭-6a54d4931c4e0232-0f517344",
+        "name": "辣肉五花肉饭",
         "types": [
           "rice",
           "spicy",
@@ -33054,8 +32245,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-3-韩式烧肉饭-7540c9b9-韩式烧肉饭-原味-51a5aa49738b708c-2ad04a43",
-        "name": "韩式烧肉饭（原味",
+        "id": "haitang-1f-3-韩式烧肉饭-7540c9b9-韩式烧肉饭-51a5aa49738b708c-7f82f4fb",
+        "name": "韩式烧肉饭",
         "types": [
           "rice",
           "protein"
@@ -33259,8 +32450,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-30-麦香饼-3c762e27-照烧牛排-100c2d69eb39b1d9-d30dcf75",
-        "name": "照烧牛排）",
+        "id": "haitang-1f-30-麦香饼-3c762e27-照烧牛排-100c2d69eb39b1d9-10dd8a5b",
+        "name": "照烧牛排",
         "types": [
           "protein"
         ],
@@ -33339,8 +32530,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-30-麦香饼-3c762e27-麦香饼-照烧鸡肉-8e47ab7cda192cd6-9306b679",
-        "name": "麦香饼（照烧鸡肉",
+        "id": "haitang-1f-30-麦香饼-3c762e27-麦香饼-8e47ab7cda192cd6-bca3aaac",
+        "name": "麦香饼",
         "types": [
           "snack",
           "protein"
@@ -33925,8 +33116,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "snack",
       "vegetarian",
-      "rice",
       "noodle",
+      "rice",
       "light",
       "protein"
     ],
@@ -33936,7 +33127,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 13,
+    "duplicateCount": 12,
     "items": [
       {
         "id": "haitang-1f-35-鸡汤泡饼-a0af676c-土豆饼-b40ed758ffdbc401-557dddf8",
@@ -33966,10 +33157,10 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-干拌-32f96a8890d2e723-0630e2ba",
-        "name": "干拌",
+        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-方便面-8d758820f66657e3-46b17977",
+        "name": "方便面",
         "types": [
-          "rice"
+          "noodle"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -33991,10 +33182,10 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-方便面-8d758820f66657e3-46b17977",
-        "name": "方便面",
+        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-花甲-8d189f0f6f44e09c-3d0d2293",
+        "name": "花甲",
         "types": [
-          "noodle"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -34041,8 +33232,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-花甲烩面-83501585d05bca62-e7f2c7e0",
-        "name": "花甲烩面）",
+        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-花甲烩面-83501585d05bca62-8208aeee",
+        "name": "花甲烩面",
         "types": [
           "noodle"
         ],
@@ -34066,33 +33257,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-花甲-8d189f0f6f44e09c-fa74b3ca",
-        "name": "花甲）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 35号窗口 · 鸡汤泡饼，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "35",
-        "windowName": "鸡汤泡饼",
-        "locationHint": "海棠一层餐厅 · 一层 · 35号窗口 · 鸡汤泡饼",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-螺蛳粉-招牌-56792996186ad705-15631d77",
-        "name": "螺蛳粉（招牌",
+        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-螺蛳粉-56792996186ad705-bfb0b90e",
+        "name": "螺蛳粉",
         "types": [
           "noodle"
         ],
@@ -34168,8 +33334,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-锡纸花甲粉-土豆粉-c468954cfb6c85c9-b0aee6ca",
-        "name": "锡纸花甲粉（土豆粉",
+        "id": "haitang-1f-35-鸡汤泡饼-a0af676c-锡纸花甲粉-c468954cfb6c85c9-205fdbb9",
+        "name": "锡纸花甲粉",
         "types": [
           "noodle",
           "vegetarian"
@@ -34289,8 +33455,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "spicy",
       "protein",
-      "rice",
       "noodle",
+      "rice",
       "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -34299,7 +33465,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 13,
+    "duplicateCount": 12,
     "items": [
       {
         "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-尖椒牛肉-f9d4c1a1c9496987-3b907265",
@@ -34309,31 +33475,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 36号窗口 · 锡纸花甲粉、螺蛳粉，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "36",
-        "windowName": "锡纸花甲粉、螺蛳粉",
-        "locationHint": "海棠一层餐厅 · 一层 · 36号窗口 · 锡纸花甲粉、螺蛳粉",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-干拌-ce0f54912224d276-d31d105c",
-        "name": "干拌",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -34456,6 +33597,31 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
+        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-花甲-4e33bade6df0629b-14786df8",
+        "name": "花甲",
+        "types": [
+          "rice"
+        ],
+        "heat": "none",
+        "popularity": 0.72,
+        "available": [
+          "lunch",
+          "dinner"
+        ],
+        "description": "海棠一层餐厅 · 一层 · 36号窗口 · 锡纸花甲粉、螺蛳粉，西电后勤公众号正文提取，当前不展示历史价格。",
+        "windowNo": "36",
+        "windowName": "锡纸花甲粉、螺蛳粉",
+        "locationHint": "海棠一层餐厅 · 一层 · 36号窗口 · 锡纸花甲粉、螺蛳粉",
+        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
+        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
+        "sourceMethod": "html-text",
+        "reviewStatus": "pending",
+        "parseWarnings": [
+          "wechat-text"
+        ],
+        "duplicateCount": 1
+      },
+      {
         "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-花甲两掺-6209245838f73dbb-18e7f3c9",
         "name": "花甲两掺",
         "types": [
@@ -34481,8 +33647,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-花甲烩面-b8d1ce254f406946-11b773f1",
-        "name": "花甲烩面）",
+        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-花甲烩面-b8d1ce254f406946-d94065ae",
+        "name": "花甲烩面",
         "types": [
           "noodle"
         ],
@@ -34506,33 +33672,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-花甲-4e33bade6df0629b-7d6d632d",
-        "name": "花甲）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 36号窗口 · 锡纸花甲粉、螺蛳粉，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "36",
-        "windowName": "锡纸花甲粉、螺蛳粉",
-        "locationHint": "海棠一层餐厅 · 一层 · 36号窗口 · 锡纸花甲粉、螺蛳粉",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-螺蛳粉-招牌-c7297330df3cec58-f066be8a",
-        "name": "螺蛳粉（招牌",
+        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-螺蛳粉-c7297330df3cec58-04104485",
+        "name": "螺蛳粉",
         "types": [
           "noodle"
         ],
@@ -34607,8 +33748,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-锡纸花甲粉-土豆粉-4176b22fd13522a8-d6c90edf",
-        "name": "锡纸花甲粉（土豆粉",
+        "id": "haitang-1f-36-锡纸花甲粉-螺蛳粉-8b71a874-锡纸花甲粉-4176b22fd13522a8-a491f8da",
+        "name": "锡纸花甲粉",
         "types": [
           "noodle",
           "vegetarian"
@@ -35325,11 +34466,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 19,
+    "duplicateCount": 17,
     "items": [
       {
-        "id": "haitang-1f-4-老上海馄饨王-81c395e1-原味骨汤-e924b5cf0789f0ac-43426633",
-        "name": "原味骨汤）",
+        "id": "haitang-1f-4-老上海馄饨王-81c395e1-原味骨汤-e924b5cf0789f0ac-77345f7b",
+        "name": "原味骨汤",
         "types": [
           "light"
         ],
@@ -35378,8 +34519,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-4-老上海馄饨王-81c395e1-拌面-麻椒-365b8640ea1fb61a-624afdd8",
-        "name": "拌面（麻椒",
+        "id": "haitang-1f-4-老上海馄饨王-81c395e1-拌面-365b8640ea1fb61a-a817b782",
+        "name": "拌面",
         "types": [
           "noodle",
           "spicy"
@@ -35430,32 +34571,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-4-老上海馄饨王-81c395e1-汤面-私房骨汤-aacc4eea4766ddd2-d1cae4b3",
-        "name": "汤面（私房骨汤",
-        "types": [
-          "noodle",
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 4号窗口 · 老上海馄饨王，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "4",
-        "windowName": "老上海馄饨王",
-        "locationHint": "海棠一层餐厅 · 一层 · 4号窗口 · 老上海馄饨王",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "haitang-1f-4-老上海馄饨王-81c395e1-浓汤豚骨-70cec03e8849ae26-510f928a",
         "name": "浓汤豚骨",
         "types": [
@@ -35481,8 +34596,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-4-老上海馄饨王-81c395e1-爆辣-4845b7f3bf591f11-60562434",
-        "name": "爆辣）",
+        "id": "haitang-1f-4-老上海馄饨王-81c395e1-爆辣-4845b7f3bf591f11-3116da75",
+        "name": "爆辣",
         "types": [
           "spicy"
         ],
@@ -35563,31 +34678,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "noodle"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 4号窗口 · 老上海馄饨王，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "4",
-        "windowName": "老上海馄饨王",
-        "locationHint": "海棠一层餐厅 · 一层 · 4号窗口 · 老上海馄饨王",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-4-老上海馄饨王-81c395e1-藤椒-69690a0dca7ca6f0-824eb54a",
-        "name": "藤椒",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -35834,11 +34924,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 10,
+    "duplicateCount": 8,
     "items": [
       {
-        "id": "haitang-1f-5-白象天下好面-9bb48a72-原味骨汤-7ab427b17fa10a83-64bc6ec2",
-        "name": "原味骨汤）",
+        "id": "haitang-1f-5-白象天下好面-9bb48a72-原味骨汤-7ab427b17fa10a83-3b0c111f",
+        "name": "原味骨汤",
         "types": [
           "light"
         ],
@@ -35887,39 +34977,13 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-5-白象天下好面-9bb48a72-拌面-麻椒-30581d432d137b90-c48dd3b0",
-        "name": "拌面（麻椒",
+        "id": "haitang-1f-5-白象天下好面-9bb48a72-拌面-30581d432d137b90-cdca7f4c",
+        "name": "拌面",
         "types": [
           "noodle",
           "spicy"
         ],
         "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 5号窗口 · 白象天下好面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "5",
-        "windowName": "白象天下好面",
-        "locationHint": "海棠一层餐厅 · 一层 · 5号窗口 · 白象天下好面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-5-白象天下好面-9bb48a72-汤面-私房骨汤-b13a2d9bc0f2e057-749b904d",
-        "name": "汤面（私房骨汤",
-        "types": [
-          "noodle",
-          "light"
-        ],
-        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -35964,8 +35028,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-5-白象天下好面-9bb48a72-爆辣-9c6e71f5923ecb6b-eae0de74",
-        "name": "爆辣）",
+        "id": "haitang-1f-5-白象天下好面-9bb48a72-爆辣-9c6e71f5923ecb6b-7a3dc731",
+        "name": "爆辣",
         "types": [
           "spicy"
         ],
@@ -35995,31 +35059,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 5号窗口 · 白象天下好面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "5",
-        "windowName": "白象天下好面",
-        "locationHint": "海棠一层餐厅 · 一层 · 5号窗口 · 白象天下好面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-5-白象天下好面-9bb48a72-藤椒-59478065ef01a8b1-50557a63",
-        "name": "藤椒",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -36216,61 +35255,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 16,
+    "duplicateCount": 14,
     "items": [
       {
         "id": "haitang-1f-7-川香小炒-d2cc283b-一荤两素-e82b4e992e6b4646-68201d64",
         "name": "一荤两素",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 7号窗口 · 川香小炒，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "川香小炒",
-        "locationHint": "海棠一层餐厅 · 一层 · 7号窗口 · 川香小炒",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-7-川香小炒-d2cc283b-两素-5fdbad43ff0e8280-68945c96",
-        "name": "两素）",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 7号窗口 · 川香小炒，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "川香小炒",
-        "locationHint": "海棠一层餐厅 · 一层 · 7号窗口 · 川香小炒",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-7-川香小炒-d2cc283b-两荤一素-c1f0dc209876adee-8fa9c9e4",
-        "name": "两荤一素",
         "types": [
           "vegetarian"
         ],
@@ -36446,8 +35435,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-7-川香小炒-d2cc283b-烤肉饭-一荤一素-43e3d73473e5a948-2eb2fe16",
-        "name": "烤肉饭（一荤一素",
+        "id": "haitang-1f-7-川香小炒-d2cc283b-烤肉饭-43e3d73473e5a948-8989462e",
+        "name": "烤肉饭",
         "types": [
           "rice",
           "vegetarian",
@@ -36653,7 +35642,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 14,
+    "duplicateCount": 12,
     "items": [
       {
         "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-一荤两素-d300fda889b54d38-763e8f36",
@@ -36681,58 +35670,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-两素-ea45ebdac3587f9d-5170996c",
-        "name": "两素）",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 8号窗口 · 蒙古烤肉饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "8",
-        "windowName": "蒙古烤肉饭",
-        "locationHint": "海棠一层餐厅 · 一层 · 8号窗口 · 蒙古烤肉饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-两荤一素-b61a64aaa6cb1b1b-28b31e8b",
-        "name": "两荤一素",
-        "types": [
-          "vegetarian"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠一层餐厅 · 一层 · 8号窗口 · 蒙古烤肉饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "8",
-        "windowName": "蒙古烤肉饭",
-        "locationHint": "海棠一层餐厅 · 一层 · 8号窗口 · 蒙古烤肉饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
-        "sourceTitle": "海棠一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-土豆烧肉-7fe4ecfe30aa783a-5b15f522",
-        "name": "土豆烧肉）",
+        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-土豆烧肉-7fe4ecfe30aa783a-f973cc96",
+        "name": "土豆烧肉",
         "types": [
           "vegetarian",
           "protein"
@@ -36782,8 +35721,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-烤肉饭-一荤一素-04a6efce9677b743-832f5b96",
-        "name": "烤肉饭（一荤一素",
+        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-烤肉饭-04a6efce9677b743-4553d8ab",
+        "name": "烤肉饭",
         "types": [
           "rice",
           "vegetarian",
@@ -36912,8 +35851,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-锡纸米饭-火腿鸡蛋-cf116ad97ecdca65-ea6fff9b",
-        "name": "锡纸米饭（火腿鸡蛋",
+        "id": "haitang-1f-8-蒙古烤肉饭-5b20e02c-锡纸米饭-cf116ad97ecdca65-95401fc4",
+        "name": "锡纸米饭",
         "types": [
           "rice",
           "protein"
@@ -37044,8 +35983,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "duplicateCount": 9,
     "items": [
       {
-        "id": "haitang-1f-9-锡纸米饭-d054da53-土豆烧肉-c528110d9cdb68bd-35015df7",
-        "name": "土豆烧肉）",
+        "id": "haitang-1f-9-锡纸米饭-d054da53-土豆烧肉-c528110d9cdb68bd-e5b2a228",
+        "name": "土豆烧肉",
         "types": [
           "vegetarian",
           "protein"
@@ -37173,8 +36112,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-1f-9-锡纸米饭-d054da53-锡纸米饭-火腿鸡蛋-45060860307bac20-0776b93b",
-        "name": "锡纸米饭（火腿鸡蛋",
+        "id": "haitang-1f-9-锡纸米饭-d054da53-锡纸米饭-45060860307bac20-0e166691",
+        "name": "锡纸米饭",
         "types": [
           "rice",
           "protein"
@@ -37304,11 +36243,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 22,
+    "duplicateCount": 19,
     "items": [
       {
-        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-冒菜-三鲜-56057fe46db0c960-1fff631f",
-        "name": "冒菜（三鲜",
+        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-冒菜-56057fe46db0c960-813a20f0",
+        "name": "冒菜",
         "types": [
           "rice"
         ],
@@ -37434,8 +36373,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-水饺-东北猪肉酸菜-2379980393c86adf-53bd64a2",
-        "name": "水饺（东北猪肉酸菜",
+        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-水饺-2379980393c86adf-e42c4a5f",
+        "name": "水饺",
         "types": [
           "noodle",
           "spicy",
@@ -37537,8 +36476,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-猪肉白菜-9b1c31130f427daf-00575e8f",
-        "name": "猪肉白菜）",
+        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-猪肉白菜-9b1c31130f427daf-c293a75b",
+        "name": "猪肉白菜",
         "types": [
           "protein"
         ],
@@ -37638,31 +36577,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-番茄-ee84cde5aff49978-e69a8ad5",
-        "name": "番茄",
-        "types": [
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠二层餐厅 · 二层 · 1-2号窗口 · 麻辣有道冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "1-2",
-        "windowName": "麻辣有道冒菜",
-        "locationHint": "海棠二层餐厅 · 二层 · 1-2号窗口 · 麻辣有道冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/WTrA8gzGEq_Yigo1-aSMLg",
-        "sourceTitle": "海棠二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-番茄鸡蛋-4f15329e7d643bc7-440a3c67",
         "name": "番茄鸡蛋",
         "types": [
@@ -37739,31 +36653,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-藤椒-300dde1a31a10c9c-8af23c94",
-        "name": "藤椒）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠二层餐厅 · 二层 · 1-2号窗口 · 麻辣有道冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "1-2",
-        "windowName": "麻辣有道冒菜",
-        "locationHint": "海棠二层餐厅 · 二层 · 1-2号窗口 · 麻辣有道冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/WTrA8gzGEq_Yigo1-aSMLg",
-        "sourceTitle": "海棠二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-韭菜素三鲜-db87af4e07719b5e-56cd454f",
         "name": "韭菜素三鲜",
         "types": [
@@ -37794,31 +36683,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "types": [
           "spicy",
           "protein"
-        ],
-        "heat": "hot",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "海棠二层餐厅 · 二层 · 1-2号窗口 · 麻辣有道冒菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "1-2",
-        "windowName": "麻辣有道冒菜",
-        "locationHint": "海棠二层餐厅 · 二层 · 1-2号窗口 · 麻辣有道冒菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/WTrA8gzGEq_Yigo1-aSMLg",
-        "sourceTitle": "海棠二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "haitang-2f-1-2-麻辣有道冒菜-2486388d-麻辣-3b73c837e916a611-b132563a",
-        "name": "麻辣",
-        "types": [
-          "spicy"
         ],
         "heat": "hot",
         "popularity": 0.72,
@@ -44592,8 +43456,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-2f-3-自选水饺-023987d4-水饺-东北猪肉酸菜-288c6582b64988e0-f0a51eaf",
-        "name": "水饺（东北猪肉酸菜",
+        "id": "haitang-2f-3-自选水饺-023987d4-水饺-288c6582b64988e0-d9a3fbd6",
+        "name": "水饺",
         "types": [
           "noodle",
           "spicy",
@@ -44695,8 +43559,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "haitang-2f-3-自选水饺-023987d4-猪肉白菜-4ee1e81fc8ac9572-183d6cd5",
-        "name": "猪肉白菜）",
+        "id": "haitang-2f-3-自选水饺-023987d4-猪肉白菜-4ee1e81fc8ac9572-d09f3118",
+        "name": "猪肉白菜",
         "types": [
           "protein"
         ],
@@ -48983,7 +47847,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 4,
+    "duplicateCount": 3,
     "items": [
       {
         "id": "xijundian-2-2号窗口-15db3bd2-多种口味现炒鸡-酱香-f317fa48be1967ae-189b80d6",
@@ -49042,31 +47906,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "spicy"
         ],
         "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西军电餐厅 · 餐厅 · 2号窗口 · 2号窗口，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "2",
-        "windowName": "2号窗口",
-        "locationHint": "西军电餐厅 · 餐厅 · 2号窗口 · 2号窗口",
-        "sourceUrl": "https://mp.weixin.qq.com/s/X830iTQXVEaZUMXRqOPROw",
-        "sourceTitle": "西军电餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xijundian-2-2号窗口-15db3bd2-麻辣-e8f224023c406852-7b0bead1",
-        "name": "麻辣",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -52566,7 +51405,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 18,
+    "duplicateCount": 17,
     "items": [
       {
         "id": "xiqu-1f-12-谢宝林烤肉饭-332a31ef-可乐鸡翅-d87b6dbcf7d8a5d2-029b4d86",
@@ -52983,36 +51822,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-12-谢宝林烤肉饭-332a31ef-鲜肉拌饭-孜然-f816fdd082a7ddd7-235e7e35",
-        "name": "鲜肉拌饭（孜然",
+        "id": "xiqu-1f-12-谢宝林烤肉饭-332a31ef-鲜肉拌饭-f816fdd082a7ddd7-5cf40b98",
+        "name": "鲜肉拌饭",
         "types": [
           "rice",
           "protein"
-        ],
-        "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 12号窗口 · 谢宝林烤肉饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "12",
-        "windowName": "谢宝林烤肉饭",
-        "locationHint": "西区一层餐厅 · 一层 · 12号窗口 · 谢宝林烤肉饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-1f-12-谢宝林烤肉饭-332a31ef-黑椒-09d142a0f84b9f22-dada0255",
-        "name": "黑椒）",
-        "types": [
-          "spicy"
         ],
         "heat": "mild",
         "popularity": 0.72,
@@ -53062,7 +51876,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 19,
+    "duplicateCount": 18,
     "items": [
       {
         "id": "xiqu-1f-13-蒙古烤肉饭-3926e495-五花肉煮馍-b1b08409cbab7d56-c4d44efc",
@@ -53091,8 +51905,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-13-蒙古烤肉饭-3926e495-五谷渔粉-麻辣-2dca0ad8934dbb71-99923d46",
-        "name": "五谷渔粉（麻辣",
+        "id": "xiqu-1f-13-蒙古烤肉饭-3926e495-五谷渔粉-2dca0ad8934dbb71-17c19341",
+        "name": "五谷渔粉",
         "types": [
           "noodle",
           "spicy"
@@ -53479,31 +52293,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-13-蒙古烤肉饭-3926e495-酸菜-59db6b92d77f5bed-509c3435",
-        "name": "酸菜",
-        "types": [
-          "spicy"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 13号窗口 · 蒙古烤肉饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "13",
-        "windowName": "蒙古烤肉饭",
-        "locationHint": "西区一层餐厅 · 一层 · 13号窗口 · 蒙古烤肉饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "xiqu-1f-13-蒙古烤肉饭-3926e495-鱼豆腐煮馍-4c8ef25212b68b92-3d7ba79d",
         "name": "鱼豆腐煮馍",
         "types": [
@@ -53586,7 +52375,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 21,
+    "duplicateCount": 20,
     "items": [
       {
         "id": "xiqu-1f-14-五谷渔粉-老陕煮馍-1d51000d-五花肉煮馍-30f717aec7de29de-06922c31",
@@ -53615,8 +52404,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-14-五谷渔粉-老陕煮馍-1d51000d-五谷渔粉-麻辣-1240d0f5ff8f6b7f-24b8c199",
-        "name": "五谷渔粉（麻辣",
+        "id": "xiqu-1f-14-五谷渔粉-老陕煮馍-1d51000d-五谷渔粉-1240d0f5ff8f6b7f-06cbff42",
+        "name": "五谷渔粉",
         "types": [
           "noodle",
           "spicy"
@@ -53932,31 +52721,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "豆皮海带夹馍",
         "types": [
           "snack"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 14号窗口 · 五谷渔粉、老陕煮馍，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "14",
-        "windowName": "五谷渔粉、老陕煮馍",
-        "locationHint": "西区一层餐厅 · 一层 · 14号窗口 · 五谷渔粉、老陕煮馍",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-1f-14-五谷渔粉-老陕煮馍-1d51000d-酸菜-3229e2e314755deb-dae7d2f5",
-        "name": "酸菜",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -55204,13 +53968,13 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "西区一层餐厅 · 一层 · 17号窗口 · 新疆拌面",
     "distanceMinutes": 5,
     "tags": [
-      "rice",
       "noodle",
       "protein",
       "spicy",
       "snack",
       "local",
       "vegetarian",
+      "rice",
       "light"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -55219,33 +53983,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 16,
+    "duplicateCount": 13,
     "items": [
-      {
-        "id": "xiqu-1f-17-新疆拌面-4059678b-三鲜-79f26c32d5cf8071-2f4ab86b",
-        "name": "三鲜）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 17号窗口 · 新疆拌面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "17",
-        "windowName": "新疆拌面",
-        "locationHint": "西区一层餐厅 · 一层 · 17号窗口 · 新疆拌面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 3
-      },
       {
         "id": "xiqu-1f-17-新疆拌面-4059678b-新疆牛肉拌面-3f175029693b5549-f857a95a",
         "name": "新疆牛肉拌面",
@@ -55457,8 +54196,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-17-新疆拌面-4059678b-酸甜麻辣拌-麻辣-223b51cb6616375c-4ff16b7c",
-        "name": "酸甜麻辣拌（麻辣",
+        "id": "xiqu-1f-17-新疆拌面-4059678b-酸甜麻辣拌-223b51cb6616375c-c4b9e31f",
+        "name": "酸甜麻辣拌",
         "types": [
           "spicy"
         ],
@@ -55537,8 +54276,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-17-新疆拌面-4059678b-麻辣烫-麻辣-b4a4b4d3c5d85089-b7921dd0",
-        "name": "麻辣烫（麻辣",
+        "id": "xiqu-1f-17-新疆拌面-4059678b-麻辣烫-b4a4b4d3c5d85089-1339a5d2",
+        "name": "麻辣烫",
         "types": [
           "spicy"
         ],
@@ -55562,8 +54301,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-17-新疆拌面-4059678b-麻辣香锅-麻辣-071631465a302290-d5638019",
-        "name": "麻辣香锅（麻辣",
+        "id": "xiqu-1f-17-新疆拌面-4059678b-麻辣香锅-071631465a302290-0c97ff18",
+        "name": "麻辣香锅",
         "types": [
           "spicy"
         ],
@@ -55600,11 +54339,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "西区一层餐厅 · 一层 · 18号窗口 · 辉记香锅",
     "distanceMinutes": 5,
     "tags": [
-      "rice",
       "noodle",
       "vegetarian",
       "spicy",
-      "halal"
+      "halal",
+      "rice"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
@@ -55612,33 +54351,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 17,
+    "duplicateCount": 13,
     "items": [
-      {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-三鲜-d2ecea0314d1efa3-613ae87f",
-        "name": "三鲜）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 18号窗口 · 辉记香锅，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "辉记香锅",
-        "locationHint": "西区一层餐厅 · 一层 · 18号窗口 · 辉记香锅",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 4
-      },
       {
         "id": "xiqu-1f-18-辉记香锅-9a8e349c-土豆粉-c345f84acd4754c9-374e86c6",
         "name": "土豆粉",
@@ -55666,8 +54380,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-手工面-026ea908735dd9f5-79bb8628",
-        "name": "手工面）",
+        "id": "xiqu-1f-18-辉记香锅-9a8e349c-手工面-026ea908735dd9f5-307abd27",
+        "name": "手工面",
         "types": [
           "noodle"
         ],
@@ -55716,8 +54430,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-清真冒菜-麻辣-3d7c991c9b5b78cd-d4990e89",
-        "name": "清真冒菜（麻辣",
+        "id": "xiqu-1f-18-辉记香锅-9a8e349c-清真冒菜-3d7c991c9b5b78cd-10ac58e0",
+        "name": "清真冒菜",
         "types": [
           "spicy",
           "halal"
@@ -55742,8 +54456,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-清真砂锅-米线-84bc439a566f8210-7ed70676",
-        "name": "清真砂锅（米线",
+        "id": "xiqu-1f-18-辉记香锅-9a8e349c-清真砂锅-84bc439a566f8210-acc9ac11",
+        "name": "清真砂锅",
         "types": [
           "rice",
           "noodle",
@@ -55869,8 +54583,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-酸甜麻辣拌-麻辣-1445cad8412e644d-59c985ef",
-        "name": "酸甜麻辣拌（麻辣",
+        "id": "xiqu-1f-18-辉记香锅-9a8e349c-酸甜麻辣拌-1445cad8412e644d-9c90d568",
+        "name": "酸甜麻辣拌",
         "types": [
           "spicy"
         ],
@@ -55894,8 +54608,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-麻辣烫-麻辣-4b1919603a91fda4-8c89a403",
-        "name": "麻辣烫（麻辣",
+        "id": "xiqu-1f-18-辉记香锅-9a8e349c-麻辣烫-4b1919603a91fda4-72cefa3c",
+        "name": "麻辣烫",
         "types": [
           "spicy"
         ],
@@ -55919,8 +54633,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-18-辉记香锅-9a8e349c-麻辣香锅-麻辣-a95dc4d0cdd616b3-65d6a9e9",
-        "name": "麻辣香锅（麻辣",
+        "id": "xiqu-1f-18-辉记香锅-9a8e349c-麻辣香锅-a95dc4d0cdd616b3-d158f606",
+        "name": "麻辣香锅",
         "types": [
           "spicy"
         ],
@@ -55982,12 +54696,12 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "西区一层餐厅 · 一层 · 19号窗口 · 清真馋冒阁",
     "distanceMinutes": 5,
     "tags": [
-      "rice",
       "noodle",
       "vegetarian",
       "spicy",
       "halal",
-      "protein"
+      "protein",
+      "rice"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
@@ -55995,33 +54709,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 11,
+    "duplicateCount": 10,
     "items": [
-      {
-        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-三鲜-8683322a74c1284f-3c118d7a",
-        "name": "三鲜）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 19号窗口 · 清真馋冒阁，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "19",
-        "windowName": "清真馋冒阁",
-        "locationHint": "西区一层餐厅 · 一层 · 19号窗口 · 清真馋冒阁",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
       {
         "id": "xiqu-1f-19-清真馋冒阁-bcb14806-土豆粉-b4516b2f5335e67f-4c7249cf",
         "name": "土豆粉",
@@ -56049,8 +54738,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-手工面-055331f1694d7040-6a74f475",
-        "name": "手工面）",
+        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-手工面-055331f1694d7040-00cc450c",
+        "name": "手工面",
         "types": [
           "noodle"
         ],
@@ -56099,8 +54788,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-清真冒菜-麻辣-83ff9bb4cf37d782-bf347894",
-        "name": "清真冒菜（麻辣",
+        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-清真冒菜-83ff9bb4cf37d782-45036acb",
+        "name": "清真冒菜",
         "types": [
           "spicy",
           "halal"
@@ -56152,8 +54841,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-清真砂锅-米线-1512b0d2eed1cfa2-9440f3f6",
-        "name": "清真砂锅（米线",
+        "id": "xiqu-1f-19-清真馋冒阁-bcb14806-清真砂锅-1512b0d2eed1cfa2-3bb53465",
+        "name": "清真砂锅",
         "types": [
           "rice",
           "noodle",
@@ -56557,8 +55246,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "halal",
       "protein",
-      "local",
-      "spicy"
+      "local"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
@@ -56566,7 +55254,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 17,
+    "duplicateCount": 15,
     "items": [
       {
         "id": "xiqu-1f-22-清真拉面-40d69fb2-原味咖啡-5ee35c84d3e499cd-3565696b",
@@ -56719,8 +55407,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-22-清真拉面-40d69fb2-永和豆浆-原味-667e8fb53d41d3de-adfb4559",
-        "name": "永和豆浆（原味",
+        "id": "xiqu-1f-22-清真拉面-40d69fb2-永和豆浆-667e8fb53d41d3de-44c398b2",
+        "name": "永和豆浆",
         "types": [
           "light",
           "drink"
@@ -56849,8 +55537,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-22-清真拉面-40d69fb2-玉米-e28bc9e744a78acb-f34a4bb5",
-        "name": "玉米）",
+        "id": "xiqu-1f-22-清真拉面-40d69fb2-玉米-e28bc9e744a78acb-10950743",
+        "name": "玉米",
         "types": [
           "rice"
         ],
@@ -56925,61 +55613,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-22-清真拉面-40d69fb2-红枣-f8cc1be6c292a7c9-eb7513f9",
-        "name": "红枣",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 22号窗口 · 清真拉面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "22",
-        "windowName": "清真拉面",
-        "locationHint": "西区一层餐厅 · 一层 · 22号窗口 · 清真拉面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "xiqu-1f-22-清真拉面-40d69fb2-香蕉牛奶-df7c6b2496a0090a-85266ea2",
         "name": "香蕉牛奶",
         "types": [
           "drink",
           "protein"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 22号窗口 · 清真拉面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "22",
-        "windowName": "清真拉面",
-        "locationHint": "西区一层餐厅 · 一层 · 22号窗口 · 清真拉面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-1f-22-清真拉面-40d69fb2-黑芝麻-a67d48698e142388-3b5faf5e",
-        "name": "黑芝麻",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -57027,7 +55665,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 23,
+    "duplicateCount": 21,
     "items": [
       {
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-原味咖啡-f20eb9475264a3b3-8f6e1500",
@@ -57230,8 +55868,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-23-永和豆浆-6ccbbb88-永和豆浆-原味-51235aed6beacd17-76280029",
-        "name": "永和豆浆（原味",
+        "id": "xiqu-1f-23-永和豆浆-6ccbbb88-永和豆浆-51235aed6beacd17-d6ddde81",
+        "name": "永和豆浆",
         "types": [
           "light",
           "drink"
@@ -57281,8 +55919,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-1f-23-永和豆浆-6ccbbb88-玉米-3d5d54a760d9df42-9ff03e31",
-        "name": "玉米）",
+        "id": "xiqu-1f-23-永和豆浆-6ccbbb88-玉米-3d5d54a760d9df42-29851c3d",
+        "name": "玉米",
         "types": [
           "rice"
         ],
@@ -57334,31 +55972,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       {
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-生椰拿铁-e190e0bbfad1ff11-f3b3f12a",
         "name": "生椰拿铁",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 23号窗口 · 永和豆浆，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "23",
-        "windowName": "永和豆浆",
-        "locationHint": "西区一层餐厅 · 一层 · 23号窗口 · 永和豆浆",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-1f-23-永和豆浆-6ccbbb88-红枣-d7d2fe34446d7b1c-1e54a6d2",
-        "name": "红枣",
         "types": [
           "rice"
         ],
@@ -57567,31 +56180,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区一层餐厅 · 一层 · 23号窗口 · 永和豆浆，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "23",
-        "windowName": "永和豆浆",
-        "locationHint": "西区一层餐厅 · 一层 · 23号窗口 · 永和豆浆",
-        "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
-        "sourceTitle": "西区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-1f-23-永和豆浆-6ccbbb88-黑芝麻-19d9049dbc911591-bdfc30e0",
-        "name": "黑芝麻",
-        "types": [
-          "spicy"
-        ],
-        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -60276,8 +58864,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-10-热卤品种-6228be81-卤肝-卤菜-腐竹-18adb1aca18b9f27-b46770a7",
-        "name": "卤肝 卤菜(腐竹",
+        "id": "xiqu-2f-10-热卤品种-6228be81-卤肝-卤菜-18adb1aca18b9f27-1de11526",
+        "name": "卤肝 卤菜",
         "types": [
           "rice"
         ],
@@ -60351,8 +58939,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-10-热卤品种-6228be81-土豆片等-7fbe0cff434cb39f-23a42510",
-        "name": "土豆片等）",
+        "id": "xiqu-2f-10-热卤品种-6228be81-土豆片等-7fbe0cff434cb39f-ddb5a2f1",
+        "name": "土豆片等",
         "types": [
           "vegetarian"
         ],
@@ -66474,7 +65062,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 19,
+    "duplicateCount": 18,
     "items": [
       {
         "id": "xiqu-2f-4-新疆炒米粉-570eeb58-回锅肉焖饭-f617172ca04842ff-7492a7ae",
@@ -66891,34 +65479,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-4-新疆炒米粉-570eeb58-鸡肉炒粉馕对半及各种加菜-芹菜-f357cafe6015fdaf-fd8f181d",
-        "name": "鸡肉炒粉馕对半及各种加菜（芹菜",
-        "types": [
-          "noodle",
-          "protein"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 4号窗口 · 新疆炒米粉，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "4",
-        "windowName": "新疆炒米粉",
-        "locationHint": "西区二层餐厅 · 二层 · 4号窗口 · 新疆炒米粉",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-2f-4-新疆炒米粉-570eeb58-鸡肉-2d280d482614d36d-25cbf34e",
-        "name": "鸡肉）",
+        "id": "xiqu-2f-4-新疆炒米粉-570eeb58-鸡肉-2d280d482614d36d-4841b866",
+        "name": "鸡肉",
         "types": [
           "protein"
         ],
@@ -67599,8 +66161,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "spicy",
       "vegetarian",
       "protein",
-      "noodle",
-      "light"
+      "noodle"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -67608,7 +66169,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 23,
+    "duplicateCount": 20,
     "items": [
       {
         "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-冬瓜-0237a3404a111fe3-e0990a6f",
@@ -67814,8 +66375,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-水煮培根-麻辣-4a3741bf6474fea7-a08a9187",
-        "name": "水煮培根（麻辣",
+        "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-水煮培根-4a3741bf6474fea7-7a0d3fa6",
+        "name": "水煮培根",
         "types": [
           "spicy",
           "protein"
@@ -67923,31 +66484,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "水蒸蛋",
         "types": [
           "protein"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 6号窗口 · 八角溪小蒸碗，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "6",
-        "windowName": "八角溪小蒸碗",
-        "locationHint": "西区二层餐厅 · 二层 · 6号窗口 · 八角溪小蒸碗",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-番茄-8ef51c945f7926c8-dc1e0a9e",
-        "name": "番茄",
-        "types": [
-          "light"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -68119,56 +66655,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-酸菜-b5aa396126f7fcd5-f30146b4",
-        "name": "酸菜",
-        "types": [
-          "spicy"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 6号窗口 · 八角溪小蒸碗，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "6",
-        "windowName": "八角溪小蒸碗",
-        "locationHint": "西区二层餐厅 · 二层 · 6号窗口 · 八角溪小蒸碗",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-酸辣等口味-a813d9e4c63c8617-d4022ce3",
-        "name": "酸辣等口味）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 6号窗口 · 八角溪小蒸碗，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "6",
-        "windowName": "八角溪小蒸碗",
-        "locationHint": "西区二层餐厅 · 二层 · 6号窗口 · 八角溪小蒸碗",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "xiqu-2f-6-八角溪小蒸碗-f37fba02-韭菜鸡蛋-1717755ba04675c8-7c9723fe",
         "name": "韭菜鸡蛋",
         "types": [
@@ -68221,7 +66707,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 19,
+    "duplicateCount": 16,
     "items": [
       {
         "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-培根煮馍-eeb79bc3117acedc-8d24ff2c",
@@ -68354,8 +66840,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-水煮培根-麻辣-43920a3e37a5884f-12a8d0f0",
-        "name": "水煮培根（麻辣",
+        "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-水煮培根-43920a3e37a5884f-92eec95a",
+        "name": "水煮培根",
         "types": [
           "spicy",
           "protein"
@@ -68537,31 +67023,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-番茄-282d697bd233d8b9-10cc94c1",
-        "name": "番茄",
-        "types": [
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 7号窗口 · 椒香哥水煮肉片 景娘家煮馍，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "椒香哥水煮肉片 景娘家煮馍",
-        "locationHint": "西区二层餐厅 · 二层 · 7号窗口 · 椒香哥水煮肉片 景娘家煮馍",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-番茄煮馍-95845280fab26c7f-e54155c5",
         "name": "番茄煮馍",
         "types": [
@@ -68640,56 +67101,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-酸菜-c08bbaaf4b16bd5c-edf6bceb",
-        "name": "酸菜",
-        "types": [
-          "spicy"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 7号窗口 · 椒香哥水煮肉片 景娘家煮馍，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "椒香哥水煮肉片 景娘家煮馍",
-        "locationHint": "西区二层餐厅 · 二层 · 7号窗口 · 椒香哥水煮肉片 景娘家煮馍",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-酸辣等口味-4c4e7c70adadedca-dfcfc291",
-        "name": "酸辣等口味）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "西区二层餐厅 · 二层 · 7号窗口 · 椒香哥水煮肉片 景娘家煮馍，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "7",
-        "windowName": "椒香哥水煮肉片 景娘家煮馍",
-        "locationHint": "西区二层餐厅 · 二层 · 7号窗口 · 椒香哥水煮肉片 景娘家煮馍",
-        "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
-        "sourceTitle": "西区二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "xiqu-2f-7-椒香哥水煮肉片-景娘家煮馍-70e4f140-鱼豆腐煮馍-99a3244d043ddacf-abcdad5c",
         "name": "鱼豆腐煮馍",
         "types": [
@@ -68744,8 +67155,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "duplicateCount": 2,
     "items": [
       {
-        "id": "xiqu-2f-8-品品麻辣香锅-冒菜-125f34db-冒菜-麻辣-香辣-微辣-三鲜-金汤-番茄-2cacb297dc1bdff7-8e55ae2b",
-        "name": "冒菜（麻辣 香辣 微辣 三鲜 金汤 番茄）",
+        "id": "xiqu-2f-8-品品麻辣香锅-冒菜-125f34db-冒菜-2cacb297dc1bdff7-1d5f00aa",
+        "name": "冒菜",
         "types": [
           "spicy",
           "light"
@@ -69054,7 +67465,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "竹园一层餐厅 · 一层 · 1号窗口 · 骨汤麻辣烫",
     "distanceMinutes": 7,
     "tags": [
-      "rice",
       "noodle",
       "protein",
       "spicy",
@@ -69066,33 +67476,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 9,
+    "duplicateCount": 8,
     "items": [
-      {
-        "id": "zhuyuan-1f-1-骨汤麻辣烫-680bfdcb-三鲜-fb28b07ef4c29cfb-253e4aa3",
-        "name": "三鲜）",
-        "types": [
-          "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园一层餐厅 · 一层 · 1号窗口 · 骨汤麻辣烫，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "1",
-        "windowName": "骨汤麻辣烫",
-        "locationHint": "竹园一层餐厅 · 一层 · 1号窗口 · 骨汤麻辣烫",
-        "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
-        "sourceTitle": "竹园一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
       {
         "id": "zhuyuan-1f-1-骨汤麻辣烫-680bfdcb-牛肉面等-c16325ece8115ec5-916bf69d",
         "name": "牛肉面等",
@@ -69249,8 +67634,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-1f-1-骨汤麻辣烫-680bfdcb-麻辣拌-麻辣-cd4d74c07300f632-a25ad1b7",
-        "name": "麻辣拌（麻辣",
+        "id": "zhuyuan-1f-1-骨汤麻辣烫-680bfdcb-麻辣拌-cd4d74c07300f632-008e1785",
+        "name": "麻辣拌",
         "types": [
           "spicy"
         ],
@@ -71383,7 +69768,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 24,
+    "duplicateCount": 23,
     "items": [
       {
         "id": "zhuyuan-1f-21-大碗刀削面-f7c56e44-三合一拌面-7f9c8160e246e6e4-590deb92",
@@ -71670,8 +70055,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-1f-21-大碗刀削面-f7c56e44-煮方便面-2d6d6e12e5a34a33-1922620f",
-        "name": "煮方便面）",
+        "id": "zhuyuan-1f-21-大碗刀削面-f7c56e44-煮方便面-2d6d6e12e5a34a33-3073dc17",
+        "name": "煮方便面",
         "types": [
           "noodle"
         ],
@@ -71905,8 +70290,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-1f-21-大碗刀削面-f7c56e44-鲜肉拌饭-孜然-3a351a2f72735371-6b7ee3d0",
-        "name": "鲜肉拌饭（孜然",
+        "id": "zhuyuan-1f-21-大碗刀削面-f7c56e44-鲜肉拌饭-3a351a2f72735371-a7c17044",
+        "name": "鲜肉拌饭",
         "types": [
           "rice",
           "protein"
@@ -71939,31 +70324,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园一层餐厅 · 一层 · 21号窗口 · 大碗刀削面，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "21",
-        "windowName": "大碗刀削面",
-        "locationHint": "竹园一层餐厅 · 一层 · 21号窗口 · 大碗刀削面",
-        "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
-        "sourceTitle": "竹园一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-1f-21-大碗刀削面-f7c56e44-黑椒-75eb2abd7f2f7cf5-ff759ac5",
-        "name": "黑椒）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "mild",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -72035,7 +70395,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 19,
+    "duplicateCount": 18,
     "items": [
       {
         "id": "zhuyuan-1f-22-烤肉拌饭-e84e21ce-可乐鸡翅-ab7dbfb0b0c51a8b-0ab96cca",
@@ -72401,8 +70761,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-1f-22-烤肉拌饭-e84e21ce-鲜肉拌饭-孜然-6071f65979eda809-4899dd75",
-        "name": "鲜肉拌饭（孜然",
+        "id": "zhuyuan-1f-22-烤肉拌饭-e84e21ce-鲜肉拌饭-6071f65979eda809-7da82df6",
+        "name": "鲜肉拌饭",
         "types": [
           "rice",
           "protein"
@@ -72486,31 +70846,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园一层餐厅 · 一层 · 22号窗口 · 烤肉拌饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "22",
-        "windowName": "烤肉拌饭",
-        "locationHint": "竹园一层餐厅 · 一层 · 22号窗口 · 烤肉拌饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
-        "sourceTitle": "竹园一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-1f-22-烤肉拌饭-e84e21ce-黑椒-36ea946a2f133d21-ba96c87d",
-        "name": "黑椒）",
-        "types": [
-          "spicy"
-        ],
-        "heat": "mild",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -75749,7 +74084,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 6,
+    "duplicateCount": 5,
     "items": [
       {
         "id": "zhuyuan-1f-4-美润水饺-05f6cb25-特色牛肉水饺-a1cd0772553c396f-16ac7b9b",
@@ -75805,8 +74140,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-1f-4-美润水饺-05f6cb25-花甲粉-三鲜-82f1988187ab27d0-a244f5f3",
-        "name": "花甲粉（三鲜",
+        "id": "zhuyuan-1f-4-美润水饺-05f6cb25-花甲粉-82f1988187ab27d0-25281986",
+        "name": "花甲粉",
         "types": [
           "noodle"
         ],
@@ -75838,31 +74173,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "protein"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园一层餐厅 · 一层 · 4号窗口 · 美润水饺，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "4",
-        "windowName": "美润水饺",
-        "locationHint": "竹园一层餐厅 · 一层 · 4号窗口 · 美润水饺",
-        "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
-        "sourceTitle": "竹园一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-1f-4-美润水饺-05f6cb25-麻辣-07f3e20fd5da6f42-b424d23e",
-        "name": "麻辣",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -75922,8 +74232,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 7,
     "tags": [
       "rice",
-      "noodle",
-      "spicy"
+      "noodle"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
@@ -75931,7 +74240,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 3,
+    "duplicateCount": 2,
     "items": [
       {
         "id": "zhuyuan-1f-5-锡纸花甲-7074f7b3-自选精致小碗菜-6c13a7559d0b6233-62ef155b",
@@ -75959,37 +74268,12 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-1f-5-锡纸花甲-7074f7b3-花甲粉-三鲜-7274ed6ece3d9171-df5e67f3",
-        "name": "花甲粉（三鲜",
+        "id": "zhuyuan-1f-5-锡纸花甲-7074f7b3-花甲粉-7274ed6ece3d9171-36e618ec",
+        "name": "花甲粉",
         "types": [
           "noodle"
         ],
         "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园一层餐厅 · 一层 · 5号窗口 · 锡纸花甲，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "5",
-        "windowName": "锡纸花甲",
-        "locationHint": "竹园一层餐厅 · 一层 · 5号窗口 · 锡纸花甲",
-        "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
-        "sourceTitle": "竹园一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-1f-5-锡纸花甲-7074f7b3-麻辣-6dd05352720a6bc9-d8a149d3",
-        "name": "麻辣",
-        "types": [
-          "spicy"
-        ],
-        "heat": "hot",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -76164,8 +74448,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-2f-1-自选餐-5573620e-鸡公煲-大-c0221f3a7dd32099-47af3871",
-        "name": "鸡公煲（大",
+        "id": "zhuyuan-2f-1-自选餐-5573620e-鸡公煲-c0221f3a7dd32099-85976d71",
+        "name": "鸡公煲",
         "types": [
           "protein"
         ],
@@ -78324,7 +76608,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 22,
+    "duplicateCount": 19,
     "items": [
       {
         "id": "zhuyuan-2f-16-17-湖南蒸菜-7cc85999-地瓜丸-a67e13fbc2581e3b-591ec39d",
@@ -78458,31 +76742,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "松仁玉米",
         "types": [
           "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园二层餐厅 · 二层 · 16-17号窗口 · 湖南蒸菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "16-17",
-        "windowName": "湖南蒸菜",
-        "locationHint": "竹园二层餐厅 · 二层 · 16-17号窗口 · 湖南蒸菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
-        "sourceTitle": "竹园二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-2f-16-17-湖南蒸菜-7cc85999-番茄-72c11fa1afd4946f-ac134d9c",
-        "name": "番茄",
-        "types": [
-          "light"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -78659,31 +76918,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-2f-16-17-湖南蒸菜-7cc85999-藤椒-cdcc675f18d5fb2e-13162237",
-        "name": "藤椒",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园二层餐厅 · 二层 · 16-17号窗口 · 湖南蒸菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "16-17",
-        "windowName": "湖南蒸菜",
-        "locationHint": "竹园二层餐厅 · 二层 · 16-17号窗口 · 湖南蒸菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
-        "sourceTitle": "竹园二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "zhuyuan-2f-16-17-湖南蒸菜-7cc85999-豆角茄子-b24042afef8851ef-d7503a65",
         "name": "豆角茄子",
         "types": [
@@ -78713,31 +76947,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "酱鸭腿",
         "types": [
           "rice"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园二层餐厅 · 二层 · 16-17号窗口 · 湖南蒸菜，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "16-17",
-        "windowName": "湖南蒸菜",
-        "locationHint": "竹园二层餐厅 · 二层 · 16-17号窗口 · 湖南蒸菜",
-        "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
-        "sourceTitle": "竹园二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-2f-16-17-湖南蒸菜-7cc85999-酸菜-bc9160c83e7498da-20ae5779",
-        "name": "酸菜",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -78904,9 +77113,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "rice",
       "protein",
-      "noodle",
-      "light",
-      "spicy"
+      "noodle"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
@@ -78914,7 +77121,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 14,
+    "duplicateCount": 11,
     "items": [
       {
         "id": "zhuyuan-2f-18-米线水煮肉片-469bb481-五花肉饭-96c7ce722eefa9dd-a8ad6959",
@@ -79046,31 +77253,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-2f-18-米线水煮肉片-469bb481-番茄-bd246969bd3a5457-59e37a92",
-        "name": "番茄",
-        "types": [
-          "light"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园二层餐厅 · 二层 · 18号窗口 · 米线水煮肉片，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "米线水煮肉片",
-        "locationHint": "竹园二层餐厅 · 二层 · 18号窗口 · 米线水煮肉片",
-        "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
-        "sourceTitle": "竹园二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
         "id": "zhuyuan-2f-18-米线水煮肉片-469bb481-粒肠饭-1863640690423b4f-579fc15c",
         "name": "粒肠饭",
         "types": [
@@ -79155,56 +77337,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
           "rice",
           "noodle",
           "protein"
-        ],
-        "heat": "none",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园二层餐厅 · 二层 · 18号窗口 · 米线水煮肉片，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "米线水煮肉片",
-        "locationHint": "竹园二层餐厅 · 二层 · 18号窗口 · 米线水煮肉片",
-        "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
-        "sourceTitle": "竹园二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-2f-18-米线水煮肉片-469bb481-藤椒-b145e2dad10e06f7-0bf41a5d",
-        "name": "藤椒",
-        "types": [
-          "spicy"
-        ],
-        "heat": "medium",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "竹园二层餐厅 · 二层 · 18号窗口 · 米线水煮肉片，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "18",
-        "windowName": "米线水煮肉片",
-        "locationHint": "竹园二层餐厅 · 二层 · 18号窗口 · 米线水煮肉片",
-        "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
-        "sourceTitle": "竹园二层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "zhuyuan-2f-18-米线水煮肉片-469bb481-酸菜-364b59bfd57135dd-733a275a",
-        "name": "酸菜",
-        "types": [
-          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -79824,8 +77956,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "duplicateCount": 1
       },
       {
-        "id": "zhuyuan-2f-2-重庆鸡公煲-e47da93b-鸡公煲-大-8d2796eee99f6315-da9917fb",
-        "name": "鸡公煲（大",
+        "id": "zhuyuan-2f-2-重庆鸡公煲-e47da93b-鸡公煲-8d2796eee99f6315-302d33f7",
+        "name": "鸡公煲",
         "types": [
           "protein"
         ],
