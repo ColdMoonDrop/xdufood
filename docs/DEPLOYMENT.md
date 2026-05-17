@@ -111,6 +111,25 @@ git pull
 ADMIN_TOKEN="你的原令牌" docker compose up -d --build
 ```
 
+## GitHub Actions 自动部署
+
+仓库包含 `.github/workflows/deploy-server.yml`，推送到 `main` 后会通过受限 SSH key 触发服务器部署。需要在 GitHub 仓库 `Settings` → `Secrets and variables` → `Actions` 中配置：
+
+| Secret | 说明 |
+| --- | --- |
+| `XDUFOOD_DEPLOY_HOST` | 服务器 IP 或域名 |
+| `XDUFOOD_DEPLOY_USER` | 受限部署用户 |
+| `XDUFOOD_DEPLOY_PORT` | SSH 端口 |
+| `XDUFOOD_DEPLOY_KEY` | 对应部署私钥内容 |
+
+可选仓库变量：
+
+| Variable | 默认值 | 说明 |
+| --- | --- | --- |
+| `XDUFOOD_HEALTH_URL` | `https://aiourstory.cn/xdufood/api/health` | 部署后健康检查地址 |
+
+服务器端需要把部署私钥对应的公钥加入部署用户的 `~/.ssh/authorized_keys`，并限制该 key 只能执行服务器上的部署脚本。
+
 ## 更新与备份
 
 升级代码：

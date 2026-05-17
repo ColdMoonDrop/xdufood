@@ -1,0 +1,75 @@
+name: Deploy server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-server
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_HOST: ${{ secrets.XDUFOOD_DEPLOY_HOST }}
+      DEPLOY_USER: ${{ secrets.XDUFOOD_DEPLOY_USER }}
+      DEPLOY_PORT: ${{ secrets.XDUFOOD_DEPLOY_PORT }}
+      DEPLOY_KEY: ${{ secrets.XDUFOOD_DEPLOY_KEY }}
+      HEALTH_URL: ${{ vars.XDUFOOD_HEALTH_URL || 'https://aiourstory.cn/xdufood/api/health' }}
+
+    steps:
+      - name: Validate deployment secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$DEPLOY_HOST"
+          test -n "$DEPLOY_USER"
+          test -n "$DEPLOY_PORT"
+          test -n "$DEPLOY_KEY"
+
+      - name: Install SSH key
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/xdufood_deploy_key
+          chmod 600 ~/.ssh/xdufood_deploy_key
+          ssh-keyscan -p "$DEPLOY_PORT" -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+      - name: Trigger restricted server deployment
+        shell: bash
+        run: |
+          set -uo pipefail
+          ssh -T \
+            -i ~/.ssh/xdufood_deploy_key \
+            -p "$DEPLOY_PORT" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            "$DEPLOY_USER@$DEPLOY_HOST" 2>&1 | tee deploy.log
+          ssh_status=${PIPESTATUS[0]}
+
+          if grep -q '\[deploy\] ok:' deploy.log; then
+            echo "Deployment entry completed."
+            exit 0
+          fi
+
+          echo "Deployment did not print the success marker." >&2
+          exit "$ssh_status"
+
+      - name: Check public health endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..12}; do
+            if curl -fsS "$HEALTH_URL"; then
+              echo
+              echo "Health check passed."
+              exit 0
+            fi
+            echo "Health check failed, retrying ($attempt/12)..."
+            sleep 5
+          done
+          echo "Health check did not pass: $HEALTH_URL" >&2
+          exit 1
