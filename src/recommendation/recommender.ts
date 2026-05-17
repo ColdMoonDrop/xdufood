@@ -30,39 +30,87 @@ function selectBalancedRecommendations(ranked: Recommendation[], preference: Stu
     preference.canteenAreas.length === 0 &&
     ranked.filter((result) => isDineInRecommendation(result)).length > 1 &&
     new Set(ranked.filter((result) => isDineInRecommendation(result)).map((result) => result.vendor.area)).size > 1;
+
+  if (shouldBalanceAreas) {
+    return selectAreaBalancedRecommendations(ranked, preference, maxResults);
+  }
+
   const selected: Recommendation[] = [];
   const usedDishNames = new Set<string>();
   const usedCandidateKeys = new Set<string>();
-  const areaCounts = new Map<string, number>();
-  let areaLimit = shouldBalanceAreas ? 1 : maxResults;
+
+  for (const result of ranked) {
+    if (usedCandidateKeys.has(candidateKey(result))) continue;
+    const dishKey = normalizeDishName(result.item.name);
+    if (usedDishNames.has(dishKey)) continue;
+
+    selected.push(result);
+    usedCandidateKeys.add(candidateKey(result));
+    usedDishNames.add(dishKey);
+    if (selected.length >= maxResults) break;
+  }
+
+  return selected;
+}
+
+function selectAreaBalancedRecommendations(
+  ranked: Recommendation[],
+  preference: StudentPreference,
+  maxResults: number,
+): Recommendation[] {
+  const groups = new Map<string, Recommendation[]>();
+  for (const result of ranked) {
+    const area = result.vendor.area || result.vendor.id;
+    groups.set(area, [...(groups.get(area) ?? []), result]);
+  }
+
+  const areaOrder = Array.from(groups.keys()).sort((a, b) => compareAreaPriority(a, b, groups, preference));
+  const selected: Recommendation[] = [];
+  const usedDishNames = new Set<string>();
+  const usedCandidateKeys = new Set<string>();
 
   while (selected.length < maxResults) {
     let added = false;
 
-    for (const result of ranked) {
-      if (usedCandidateKeys.has(candidateKey(result))) continue;
-      const dishKey = normalizeDishName(result.item.name);
-      if (usedDishNames.has(dishKey)) continue;
-
-      const area = result.vendor.area || result.vendor.id;
-      if (shouldBalanceAreas && (areaCounts.get(area) ?? 0) >= areaLimit) continue;
+    for (const area of areaOrder) {
+      const result = (groups.get(area) ?? []).find((candidate) => {
+        return !usedCandidateKeys.has(candidateKey(candidate)) && !usedDishNames.has(normalizeDishName(candidate.item.name));
+      });
+      if (!result) continue;
 
       selected.push(result);
       usedCandidateKeys.add(candidateKey(result));
-      usedDishNames.add(dishKey);
-      areaCounts.set(area, (areaCounts.get(area) ?? 0) + 1);
+      usedDishNames.add(normalizeDishName(result.item.name));
       added = true;
 
       if (selected.length >= maxResults) break;
     }
 
-    if (selected.length >= maxResults) break;
-    if (!shouldBalanceAreas) break;
-    if (areaLimit >= maxResults) break;
-    areaLimit += 1;
+    if (!added) break;
   }
 
   return selected;
+}
+
+function compareAreaPriority(
+  a: string,
+  b: string,
+  groups: Map<string, Recommendation[]>,
+  preference: StudentPreference,
+) {
+  if (typeof preference.randomnessSeed === "number") {
+    return (
+      stableNoise(`${preference.randomnessSeed}:area:${b}`) - stableNoise(`${preference.randomnessSeed}:area:${a}`) ||
+      areaBestScore(b, groups) - areaBestScore(a, groups) ||
+      a.localeCompare(b, "zh-CN")
+    );
+  }
+
+  return areaBestScore(b, groups) - areaBestScore(a, groups) || a.localeCompare(b, "zh-CN");
+}
+
+function areaBestScore(area: string, groups: Map<string, Recommendation[]>) {
+  return groups.get(area)?.[0]?.score ?? 0;
 }
 
 function candidateKey(result: Recommendation) {

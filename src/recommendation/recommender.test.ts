@@ -262,6 +262,48 @@ describe("recommendFood", () => {
     expect(new Set(results.map((result) => result.vendor.area)).size).toBeGreaterThan(3);
   });
 
+  it("rotates the first canteen area when no dining location is selected", () => {
+    const areaFixture: FoodVendor[] = ["丁香二层餐厅", "海棠一层餐厅", "竹园一层餐厅", "西区一层餐厅"].map(
+      (area, index) => ({
+        id: `test-area-${index}`,
+        name: `${area} 测试窗口`,
+        campus: "south",
+        channel: "canteen",
+        area,
+        distanceMinutes: 5,
+        tags: ["rice", "protein"],
+        source: "测试数据",
+        updatedAt: "2026-05-17",
+        items: [
+          {
+            id: `test-area-item-${index}`,
+            name: `${area} 推荐饭`,
+            price: 15,
+            types: ["rice", "protein"],
+            heat: "none",
+            popularity: 0.8,
+            available: ["lunch", "dinner"],
+            description: "测试用餐品。",
+          },
+        ],
+      }),
+    );
+
+    const firstAreas = new Set(
+      Array.from({ length: 20 }, (_, index) =>
+        recommendFood(areaFixture, {
+          ...basePreference,
+          selectedChannels: ["canteen"],
+          canteenAreas: [],
+          wantedTypes: [],
+          randomnessSeed: index + 1,
+        })[0]?.vendor.area,
+      ),
+    );
+
+    expect(firstAreas.size).toBeGreaterThan(1);
+  });
+
   it("does not repeat the same dish name across different vendors in one batch", () => {
     const hulatangVendors: FoodVendor[] = [1, 2, 3].map((index) => ({
       id: `test-hulatang-${index}`,
