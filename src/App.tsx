@@ -80,7 +80,7 @@ const defaultPreference: StudentPreference = {
   mealPeriod: "lunch",
   selectedChannels: ["canteen", "nearby", "delivery"],
   canteenAreas: [],
-  wantedTypes: ["rice", "protein"],
+  wantedTypes: [],
   avoidTypes: [],
   heat: "any",
   needVegetarian: false,

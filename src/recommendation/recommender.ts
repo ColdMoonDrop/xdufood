@@ -20,18 +20,57 @@ export function recommendFood(vendors: FoodVendor[], preference: StudentPreferen
     })
     .filter((result): result is Recommendation => Boolean(result))
     .sort(compareRecommendations);
+
+  return selectBalancedRecommendations(ranked, preference);
+}
+
+function selectBalancedRecommendations(ranked: Recommendation[], preference: StudentPreference): Recommendation[] {
+  const maxResults = 8;
+  const shouldBalanceAreas =
+    preference.canteenAreas.length === 0 &&
+    ranked.filter((result) => isDineInRecommendation(result)).length > 1 &&
+    new Set(ranked.filter((result) => isDineInRecommendation(result)).map((result) => result.vendor.area)).size > 1;
   const selected: Recommendation[] = [];
   const usedDishNames = new Set<string>();
+  const usedCandidateKeys = new Set<string>();
+  const areaCounts = new Map<string, number>();
+  let areaLimit = shouldBalanceAreas ? 1 : maxResults;
 
-  for (const result of ranked) {
-    const dishKey = normalizeDishName(result.item.name);
-    if (usedDishNames.has(dishKey)) continue;
-    selected.push(result);
-    usedDishNames.add(dishKey);
-    if (selected.length >= 8) break;
+  while (selected.length < maxResults) {
+    let added = false;
+
+    for (const result of ranked) {
+      if (usedCandidateKeys.has(candidateKey(result))) continue;
+      const dishKey = normalizeDishName(result.item.name);
+      if (usedDishNames.has(dishKey)) continue;
+
+      const area = result.vendor.area || result.vendor.id;
+      if (shouldBalanceAreas && (areaCounts.get(area) ?? 0) >= areaLimit) continue;
+
+      selected.push(result);
+      usedCandidateKeys.add(candidateKey(result));
+      usedDishNames.add(dishKey);
+      areaCounts.set(area, (areaCounts.get(area) ?? 0) + 1);
+      added = true;
+
+      if (selected.length >= maxResults) break;
+    }
+
+    if (selected.length >= maxResults) break;
+    if (!shouldBalanceAreas) break;
+    if (areaLimit >= maxResults) break;
+    areaLimit += 1;
   }
 
   return selected;
+}
+
+function candidateKey(result: Recommendation) {
+  return `${result.vendor.id}:${result.item.id}`;
+}
+
+function isDineInRecommendation(result: Recommendation) {
+  return vendorChannels(result.vendor).some((channel) => channel === "canteen" || channel === "nearby");
 }
 
 function compareRecommendations(a: Recommendation, b: Recommendation) {
@@ -115,6 +154,14 @@ function scoreCandidate(
   if (matchedWanted.length > 0) {
     score += matchedWanted.length * 14;
     reasons.push(`命中 ${matchedWanted.map((type) => foodTypeLabels[type]).join("、")}`);
+  }
+
+  if (
+    wantedPrimaryTypes.length === 0 &&
+    item.types.includes("drink") &&
+    !item.types.some((type) => ["rice", "noodle", "snack", "western", "protein"].includes(type))
+  ) {
+    score -= 18;
   }
 
   const avoided = preference.avoidTypes.filter((type) => item.types.includes(type) || vendor.tags.includes(type));

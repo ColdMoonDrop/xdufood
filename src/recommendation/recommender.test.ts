@@ -249,6 +249,19 @@ describe("recommendFood", () => {
     expect(results.some((result) => result.vendor.id === smallVendor.id)).toBe(true);
   });
 
+  it("balances canteen areas when no dining location is selected", () => {
+    const results = recommendFood(foodCatalog, {
+      ...basePreference,
+      selectedChannels: ["canteen"],
+      canteenAreas: [],
+      wantedTypes: [],
+      randomnessSeed: 20260517,
+    });
+
+    expect(results.length).toBeGreaterThan(4);
+    expect(new Set(results.map((result) => result.vendor.area)).size).toBeGreaterThan(3);
+  });
+
   it("does not repeat the same dish name across different vendors in one batch", () => {
     const hulatangVendors: FoodVendor[] = [1, 2, 3].map((index) => ({
       id: `test-hulatang-${index}`,
@@ -371,6 +384,7 @@ describe("recommendFood", () => {
         expect(item.price).toBeUndefined();
         expect(item.available.length).toBeGreaterThan(0);
         expect(item.locationHint ?? "").toContain(vendor.area);
+        expect(item.name).not.toMatch(/滑动|查看更多/);
       }
     }
   });

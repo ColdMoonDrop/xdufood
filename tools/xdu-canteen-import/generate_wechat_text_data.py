@@ -35,6 +35,7 @@ SIDE_DISH_EXACT = {
     "加面",
     "加粉",
     "配菜",
+    "小菜",
     "各种配菜）",
     "各类配菜",
 }
@@ -46,6 +47,12 @@ NON_DISH_EXACT = {
     "早点",
     "午晚餐",
     "晚点",
+    "上下滑动查看更多",
+    "上滑查看更多",
+    "下滑查看更多",
+    "滑动查看更多",
+    "点击查看更多",
+    "查看更多",
 }
 
 
@@ -95,7 +102,7 @@ def is_usable_dish(name: str) -> bool:
         return False
     if len(value) <= 1:
         return False
-    if re.search(r"电话|扫码|公众号|办公室|出入口|楼梯|窗口|菜单|光盘|节约|浪费", value):
+    if re.search(r"电话|扫码|公众号|办公室|出入口|楼梯|窗口|菜单|光盘|节约|浪费|滑动|查看更多|点击|长按", value):
         return False
     return True
 
