@@ -124,27 +124,6 @@ function App() {
     return Array.from(new Set([...realAreas, ...communityAreas]));
   }, [preference.campus]);
   const isDineInSelected = preference.selectedChannels.some((channel) => channel === "canteen" || channel === "nearby");
-  const selectedAreaSource = useMemo(() => {
-    return (
-      officialCanteenAreas.find(
-        (source) => source.campus === preference.campus && preference.canteenAreas.includes(source.area),
-      ) ?? null
-    );
-  }, [preference.campus, preference.canteenAreas]);
-  const selectedAreaCatalogStats = useMemo(() => {
-    if (!selectedAreaSource) return null;
-    const vendors = catalog.filter(
-      (vendor) =>
-        vendor.campus === preference.campus &&
-        vendor.channel === "canteen" &&
-        vendor.area === selectedAreaSource.area,
-    );
-    return {
-      vendorCount: vendors.length,
-      itemCount: vendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
-      imageCount: selectedAreaSource.imageCount,
-    };
-  }, [catalog, preference.campus, selectedAreaSource]);
   useEffect(() => {
     let cancelled = false;
     loadServerSubmissions()
@@ -233,7 +212,7 @@ function App() {
           {top ? (
             <>
               <h2>{top.item.name}</h2>
-              <p>{top.vendor.name}</p>
+              <p>{formatVendorTitle(top.vendor)}</p>
               <div className="quickPickMeta">
                 <span>{formatChannelList(top.vendor)}</span>
                 <span>{topLocation}</span>
@@ -252,7 +231,7 @@ function App() {
           ) : (
             <>
               <h2>暂时没有合适餐品</h2>
-              <p>放宽主类别、换餐别，或选择有正文菜单的堂食地点。</p>
+              <p>放宽主类别、换餐别，或换一个堂食地点。</p>
               <div className="quickPickActions single">
                 <button onClick={() => setPreference(defaultPreference)}>
                   <RotateCcw size={16} />
@@ -460,28 +439,6 @@ function App() {
           />
         ) : null}
 
-        {selectedAreaSource ? (
-          <section className="dataNotice" aria-label="堂食数据状态">
-            <Building2 size={18} />
-            <span>
-              {selectedAreaSource.area} 当前可推荐 {selectedAreaCatalogStats?.vendorCount ?? 0} 个窗口 /{" "}
-              {selectedAreaCatalogStats?.itemCount ?? 0} 道菜。现况可由学生补照片校准。
-            </span>
-            <button
-              type="button"
-              onClick={() =>
-                setFeedbackTarget({
-                  mode: "new-vendor",
-                  areaPreset: selectedAreaSource.area,
-                  supportedChannels: ["canteen"],
-                })
-              }
-            >
-              补充菜单照片
-            </button>
-          </section>
-        ) : null}
-
         <section className="recommendationGrid" aria-label="推荐列表">
           {recommendations.map((result, index) => (
             <article className={index === 0 ? "foodCard primary" : "foodCard"} key={`${result.vendor.id}-${result.item.id}`}>
@@ -489,7 +446,7 @@ function App() {
                 <div>
                   <span className="rank">#{index + 1}</span>
                   <h3>{result.item.name}</h3>
-                  <p>{result.vendor.name}</p>
+                  <p>{formatVendorTitle(result.vendor)}</p>
                 </div>
               </div>
 
@@ -502,15 +459,6 @@ function App() {
                   <MapPin size={15} />
                   {result.vendor.locationHint ?? result.vendor.area}
                 </span>
-              </div>
-
-              <div className="reasonList">
-                {result.reasons.map((reason) => (
-                  <span key={reason}>
-                    <Check size={14} />
-                    {reason}
-                  </span>
-                ))}
               </div>
 
               <div className="tagRow">
@@ -990,6 +938,10 @@ function formatChannelList(vendor: FoodVendor) {
   if (channels.some((channel) => channel === "canteen" || channel === "nearby")) labels.push("堂食");
   if (channels.includes("delivery")) labels.push(channelLabels.delivery);
   return labels.join(" / ");
+}
+
+function formatVendorTitle(vendor: FoodVendor) {
+  return vendor.windowName || vendor.name;
 }
 
 function choiceKey(vendorId: string, itemId: string) {

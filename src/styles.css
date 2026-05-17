@@ -420,47 +420,6 @@ h1 {
   text-align: right;
 }
 
-.dataNotice {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 48px;
-  margin: -4px 0 18px;
-  padding: 0 14px;
-  border: 1px solid rgba(244, 179, 94, 0.34);
-  border-radius: 8px;
-  color: #624512;
-  background: #fff6df;
-  font-size: 14px;
-  font-weight: 800;
-  box-shadow: var(--shadow-soft);
-}
-
-.dataNotice svg {
-  flex: 0 0 auto;
-  color: var(--orange);
-}
-
-.dataNotice span {
-  flex: 1 1 auto;
-}
-
-.dataNotice button {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0 10px;
-  color: var(--green-dark);
-  background: #ffffff;
-  font-size: 13px;
-  font-weight: 850;
-  text-decoration: none;
-}
-
 .feedbackActions button,
 .queueHeader button,
 .feedbackHeader button,
@@ -486,7 +445,7 @@ h1 {
 .foodCard {
   display: flex;
   flex-direction: column;
-  min-height: 232px;
+  min-height: 204px;
   padding: 17px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -563,26 +522,6 @@ h1 {
 
 .metaLine svg {
   color: var(--green);
-}
-
-.reasonList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.reasonList span {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 30px;
-  padding: 0 9px;
-  border-radius: 8px;
-  color: var(--green-dark);
-  background: rgba(255, 79, 163, 0.12);
-  font-size: 12px;
-  font-weight: 800;
 }
 
 .tagRow {

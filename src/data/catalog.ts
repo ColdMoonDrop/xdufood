@@ -2,8 +2,10 @@ import {
   xduWechatTextCanteenSourceSummary,
   xduWechatTextCanteenVendors,
 } from "./xduWechatTextCanteens.generated";
+import { currentCanteenHiddenVendorIds, currentCanteenVendors } from "./currentCanteenUpdates";
 
 const wechatTextVendors = xduWechatTextCanteenVendors
+  .filter((vendor) => !currentCanteenHiddenVendorIds.includes(vendor.id))
   .map((vendor) => ({
     ...vendor,
     items: vendor.items.filter((item) => item.sourceMethod === "html-text" && item.reviewStatus === "pending"),
@@ -12,6 +14,7 @@ const wechatTextVendors = xduWechatTextCanteenVendors
 
 export const foodCatalog = [
   ...wechatTextVendors,
+  ...currentCanteenVendors,
 ];
 
 export const officialCanteenAreas = xduWechatTextCanteenSourceSummary.map((source) => ({
@@ -30,4 +33,6 @@ export const officialCanteenStats = {
   reviewedDishCount: 0,
   betaVendorCount: wechatTextVendors.length,
   betaDishCount: wechatTextVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
+  currentVendorCount: currentCanteenVendors.length,
+  currentDishCount: currentCanteenVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
 };

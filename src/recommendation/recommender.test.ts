@@ -395,11 +395,21 @@ describe("recommendFood", () => {
     expect(betaResults.every((result) => result.item.sourceMethod === "html-text")).toBe(true);
   });
 
-  it("only includes official XDU logistics canteen data in the base catalog", () => {
+  it("only includes canteen data and reviewed student menu corrections in the base catalog", () => {
     expect(foodCatalog.length).toBeGreaterThan(0);
     expect(foodCatalog.every((vendor) => vendor.channel === "canteen")).toBe(true);
-    expect(foodCatalog.every((vendor) => vendor.source.includes("西电后勤公众号"))).toBe(true);
+    expect(foodCatalog.every((vendor) => vendor.source.includes("西电后勤公众号") || vendor.source.includes("学生现场照片"))).toBe(true);
     expect(foodCatalog.some((vendor) => vendor.source.includes("样例") || vendor.source.includes("平台导入"))).toBe(false);
+  });
+
+  it("uses current student-photo updates for Zhuyuan second-floor windows 10 and 12", () => {
+    const zhuyuan2f = foodCatalog.filter((vendor) => vendor.area === "竹园二层餐厅");
+    expect(zhuyuan2f.some((vendor) => vendor.id === "zhuyuan-2f-10-一粉一城新疆炒米粉-b7c3a31a")).toBe(false);
+    expect(zhuyuan2f.some((vendor) => vendor.id === "zhuyuan-2f-12-三汁焖锅-716f70bb")).toBe(false);
+    expect(zhuyuan2f.find((vendor) => vendor.windowNo === "10")?.windowName).toBe("勺伯石锅菜");
+    expect(zhuyuan2f.find((vendor) => vendor.windowNo === "12")?.windowName).toBe("烤肉拌饭");
+    expect(zhuyuan2f.find((vendor) => vendor.windowNo === "10")?.items.map((item) => item.name)).toContain("石锅麻辣烤肉");
+    expect(zhuyuan2f.find((vendor) => vendor.windowNo === "12")?.items.map((item) => item.name)).toContain("烤五花肉拌饭");
   });
 
   it("keeps WeChat text source metadata and item ids well formed", () => {
