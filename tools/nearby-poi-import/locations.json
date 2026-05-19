@@ -1,0 +1,35 @@
+[
+  {
+    "id": "xdu-south-new-complex",
+    "campus": "south",
+    "area": "新综",
+    "name": "西电南校区新综合楼",
+    "latitude": 34.1296337,
+    "longitude": 108.83162,
+    "radiusMeters": 260,
+    "sourceUrl": "https://mapcarta.com/W159349005",
+    "note": "OpenStreetMap way 159349005; Mapcarta exposes the OSM coordinates."
+  },
+  {
+    "id": "xdu-south-old-complex",
+    "campus": "south",
+    "area": "老综",
+    "name": "西电南校区老综合楼",
+    "latitude": 34.1291309,
+    "longitude": 108.8327419,
+    "radiusMeters": 260,
+    "sourceUrl": "https://www.openstreetmap.org/way/159349049",
+    "note": "OpenStreetMap way 159349049, discovered from Overpass around 新综合楼."
+  },
+  {
+    "id": "xdu-south-family-area",
+    "campus": "south",
+    "area": "家属区",
+    "name": "西电南校区家属区",
+    "latitude": 34.132,
+    "longitude": 108.837,
+    "radiusMeters": 650,
+    "sourceUrl": "https://mobile.anjuke.com/fangjia/xa/xq1304631",
+    "note": "Approximate center; use map API results and student review before production use."
+  }
+]

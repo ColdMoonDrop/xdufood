@@ -1,0 +1,145 @@
+[
+  {
+    "name": "多味居江南味道",
+    "area": "新综",
+    "locationHint": "综合楼",
+    "category": "餐饮",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "公开学生手册提及，当前状态和菜单需学生复核。"
+  },
+  {
+    "name": "羊肉面",
+    "area": "新综",
+    "locationHint": "综合楼",
+    "category": "面食",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "小码头",
+    "area": "新综",
+    "locationHint": "综合楼",
+    "category": "餐饮",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "公开学生手册提及，当前状态和菜单需学生复核。"
+  },
+  {
+    "name": "小碗菜",
+    "area": "新综",
+    "locationHint": "综合楼",
+    "category": "快餐",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "韩式炸鸭腿",
+    "area": "新综",
+    "locationHint": "综合楼",
+    "category": "小吃",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "毛月湘菜",
+    "area": "新综",
+    "floor": "二层",
+    "locationHint": "新综二楼",
+    "category": "湘菜",
+    "sourceUrl": "https://blog.hxd.gay/index.php/2022/08/25/xdu-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/",
+    "sourceTitle": "XDU 计算机学院生存指南",
+    "note": "公开学生博客提及，当前状态和菜单需学生复核。"
+  },
+  {
+    "name": "茗花有主",
+    "area": "新综",
+    "floor": "一层",
+    "locationHint": "新综一楼靠北",
+    "category": "饮品",
+    "sourceUrl": "https://blog.hxd.gay/index.php/2022/08/25/xdu-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/",
+    "sourceTitle": "XDU 计算机学院生存指南",
+    "note": "公开学生博客提及，当前状态和菜单需学生复核。"
+  },
+  {
+    "name": "排骨饭",
+    "area": "老综",
+    "floor": "二层",
+    "locationHint": "老综二楼",
+    "category": "米饭套餐",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "渔粉",
+    "area": "老综",
+    "floor": "一层",
+    "locationHint": "老综一楼",
+    "category": "面/粉",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "老陕",
+    "area": "老综",
+    "floor": "一层",
+    "locationHint": "老综一楼",
+    "category": "陕西本地",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "东北菜",
+    "area": "老综",
+    "floor": "一层",
+    "locationHint": "老综一楼",
+    "category": "快餐",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  },
+  {
+    "name": "北木南烤肉",
+    "area": "老综",
+    "locationHint": "老综乐购超市附近",
+    "category": "烧烤",
+    "sourceUrl": "https://blog.hxd.gay/index.php/2022/08/25/xdu-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/",
+    "sourceTitle": "XDU 计算机学院生存指南",
+    "note": "公开学生博客提及，当前状态和菜单需学生复核。"
+  },
+  {
+    "name": "川香缘小火锅",
+    "area": "老综",
+    "floor": "一层",
+    "locationHint": "老综一楼",
+    "category": "火锅",
+    "sourceUrl": "https://blog.hxd.gay/index.php/2022/08/25/xdu-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/",
+    "sourceTitle": "XDU 计算机学院生存指南",
+    "note": "公开学生博客提及，当前状态和菜单需学生复核。"
+  },
+  {
+    "name": "香八度",
+    "area": "老综",
+    "floor": "二层",
+    "locationHint": "老综二楼",
+    "category": "餐饮",
+    "sourceUrl": "https://blog.hxd.gay/index.php/2022/08/25/xdu-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/",
+    "sourceTitle": "XDU 计算机学院生存指南",
+    "note": "同一文章在快递位置中提到“老综香八度二楼”，需确认是否仍营业和主营菜单。"
+  },
+  {
+    "name": "咖喱饭",
+    "area": "家属区",
+    "locationHint": "家属区",
+    "category": "米饭套餐",
+    "sourceUrl": "https://survivexdu.github.io/SurviveXDU/%E7%94%9F%E6%B4%BB%E7%AF%87/%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90/",
+    "sourceTitle": "西安电子科技大学生存手册：吃喝玩乐",
+    "note": "可能是档口品类而非正式店名。"
+  }
+]

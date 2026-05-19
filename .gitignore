@@ -14,6 +14,8 @@ data/xdu-canteen/review/
 data/xdu-canteen/export/*
 !data/xdu-canteen/export/xdu-canteen-wechat-text-window-dishes.csv
 data/xdu-canteen/*.log
+data/nearby-poi/
+data/menu-screenshots/
 tools/xdu-canteen-import/.venv/
 tools/bin/cloudflared.exe
 tools/phone.local.json

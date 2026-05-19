@@ -102,6 +102,20 @@ npm run data:xdu:generate
 
 不建议直接爬取第三方外卖平台页面或绕过平台访问控制。
 
+仓库提供了一个综合楼/家属区候选商户探测工具，用于把地图 POI 和公开学生资料整理成待审核线索：
+
+```bash
+npm run data:nearby:probe
+```
+
+如需接入高德或百度地图 POI，请参考 [综合楼、家属区商户候选导入](docs/NEARBY_DATA_IMPORT.md) 配置对应 Key。生成结果只进入 `data/nearby-poi/`，不会自动进入正式推荐池。
+
+学生或管理员提供的菜单截图、外卖平台截图、店内菜单照片可以走本地 OCR 流程，详见 [菜单截图本地 OCR](docs/MENU_SCREENSHOT_OCR.md)：
+
+```bash
+npm run data:menu:screenshot -- --submissions default
+```
+
 ## 业务规则
 
 - `早餐` 属于餐别，不作为“想吃”标签。

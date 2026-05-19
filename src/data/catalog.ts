@@ -2,6 +2,7 @@ import {
   xduWechatTextCanteenSourceSummary,
   xduWechatTextCanteenVendors,
 } from "./xduWechatTextCanteens.generated";
+import { communityPlatformStats, communityPlatformVendors } from "./communityPlatformMenus";
 import { currentCanteenHiddenVendorIds, currentCanteenVendors } from "./currentCanteenUpdates";
 
 const wechatTextVendors = xduWechatTextCanteenVendors
@@ -15,6 +16,7 @@ const wechatTextVendors = xduWechatTextCanteenVendors
 export const foodCatalog = [
   ...wechatTextVendors,
   ...currentCanteenVendors,
+  ...communityPlatformVendors,
 ];
 
 export const officialCanteenAreas = xduWechatTextCanteenSourceSummary.map((source) => ({
@@ -35,4 +37,6 @@ export const officialCanteenStats = {
   betaDishCount: wechatTextVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
   currentVendorCount: currentCanteenVendors.length,
   currentDishCount: currentCanteenVendors.reduce((sum, vendor) => sum + vendor.items.length, 0),
+  communityVendorCount: communityPlatformStats.vendorCount,
+  communityDishCount: communityPlatformStats.dishCount,
 };

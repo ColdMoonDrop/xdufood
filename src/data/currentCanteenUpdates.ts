@@ -28,34 +28,34 @@ export const currentCanteenVendors: FoodVendor[] = [
     reviewStatus: "approved",
     items: [
       ...stonePotItems("麻辣", "hot", [
-        ["石锅麻辣肉沫鸡蛋", 11],
-        ["石锅麻辣肉沫豆腐", 11],
-        ["石锅麻辣片片鸡", 13],
-        ["石锅麻辣烤肉", 13],
-        ["石锅麻辣小酥肉", 14],
-        ["石锅麻辣瓦罐鱼", 15],
-        ["石锅麻辣鸡块", 15],
-        ["石锅麻辣肥肠鸡", 16],
+        "石锅麻辣肉沫鸡蛋",
+        "石锅麻辣肉沫豆腐",
+        "石锅麻辣片片鸡",
+        "石锅麻辣烤肉",
+        "石锅麻辣小酥肉",
+        "石锅麻辣瓦罐鱼",
+        "石锅麻辣鸡块",
+        "石锅麻辣肥肠鸡",
       ]),
       ...stonePotItems("酱烧", "none", [
-        ["石锅酱烧肉沫鸡蛋", 11],
-        ["石锅酱烧肉沫豆腐", 11],
-        ["石锅酱烧片片鸡", 13],
-        ["石锅酱烧烤肉", 13],
-        ["石锅酱烧小酥肉", 14],
-        ["石锅酱烧瓦罐鱼", 15],
-        ["石锅酱烧鸡块", 15],
-        ["石锅酱烧肥肠鸡", 16],
+        "石锅酱烧肉沫鸡蛋",
+        "石锅酱烧肉沫豆腐",
+        "石锅酱烧片片鸡",
+        "石锅酱烧烤肉",
+        "石锅酱烧小酥肉",
+        "石锅酱烧瓦罐鱼",
+        "石锅酱烧鸡块",
+        "石锅酱烧肥肠鸡",
       ]),
       ...stonePotItems("蒜香", "none", [
-        ["石锅蒜香肉沫鸡蛋", 11],
-        ["石锅蒜香肉沫豆腐", 11],
-        ["石锅蒜香片片鸡", 13],
-        ["石锅蒜香烤肉", 13],
-        ["石锅蒜香小酥肉", 14],
-        ["石锅蒜香瓦罐鱼", 15],
-        ["石锅蒜香鸡块", 15],
-        ["石锅蒜香肥肠鸡", 16],
+        "石锅蒜香肉沫鸡蛋",
+        "石锅蒜香肉沫豆腐",
+        "石锅蒜香片片鸡",
+        "石锅蒜香烤肉",
+        "石锅蒜香小酥肉",
+        "石锅蒜香瓦罐鱼",
+        "石锅蒜香鸡块",
+        "石锅蒜香肥肠鸡",
       ]),
     ],
   },
@@ -76,18 +76,17 @@ export const currentCanteenVendors: FoodVendor[] = [
     sourceMethod: "manual-review",
     reviewStatus: "approved",
     items: [
-      barbecueRiceItem("烤筋拌饭", 12),
-      barbecueRiceItem("烤脆皮鸡拌饭", 13),
-      barbecueRiceItem("烤五花肉拌饭", 14),
+      barbecueRiceItem("烤筋拌饭"),
+      barbecueRiceItem("烤脆皮鸡拌饭"),
+      barbecueRiceItem("烤五花肉拌饭"),
     ],
   },
 ];
 
-function stonePotItems(flavor: string, heat: HeatLevel, entries: Array<[string, number]>): FoodItem[] {
-  return entries.map(([name, price]) => ({
+function stonePotItems(flavor: string, heat: HeatLevel, entries: string[]): FoodItem[] {
+  return entries.map((name) => ({
     id: `zhuyuan-2f-10-shao-bo-${slugify(name)}`,
     name,
-    price,
     types: ["rice", "protein", ...(flavor === "麻辣" ? (["spicy"] satisfies FoodType[]) : [])],
     heat,
     popularity: flavor === "麻辣" ? 0.9 : 0.86,
@@ -101,11 +100,10 @@ function stonePotItems(flavor: string, heat: HeatLevel, entries: Array<[string, 
   }));
 }
 
-function barbecueRiceItem(name: string, price: number): FoodItem {
+function barbecueRiceItem(name: string): FoodItem {
   return {
     id: `zhuyuan-2f-12-kaorou-${slugify(name)}`,
     name,
-    price,
     types: ["rice", "protein", "spicy"],
     heat: "mild",
     popularity: 0.88,

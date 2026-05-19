@@ -34,7 +34,10 @@
     "data:xdu:review-ui": "python tools/xdu-canteen-import/review_ui_server.py",
     "data:xdu:wechat-text": "python tools/xdu-canteen-import/generate_wechat_text_data.py",
     "data:xdu:generate": "powershell -ExecutionPolicy Bypass -File tools/xdu-canteen-import/run-ocr.ps1 generate",
-    "data:xdu:test": "python tools/xdu-canteen-import/test_xdu_canteen_importer.py"
+    "data:xdu:test": "python tools/xdu-canteen-import/test_xdu_canteen_importer.py",
+    "data:menu:screenshot": "powershell -ExecutionPolicy Bypass -File tools/menu-screenshot-import/run-menu-ocr.ps1",
+    "data:nearby:probe": "node tools/nearby-poi-import/import-nearby-poi.mjs --probe",
+    "data:nearby:import": "node tools/nearby-poi-import/import-nearby-poi.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

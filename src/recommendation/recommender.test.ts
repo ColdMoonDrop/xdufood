@@ -4,6 +4,7 @@ import {
   xduWechatTextCanteenSourceSummary,
   xduWechatTextCanteenVendors,
 } from "../data/xduWechatTextCanteens.generated";
+import { communityPlatformVendors } from "../data/communityPlatformMenus";
 import type { FoodVendor, StudentPreference } from "../domain/food";
 import { recommendFood } from "./recommender";
 
@@ -87,7 +88,7 @@ describe("recommendFood", () => {
     expect(results.length).toBeGreaterThan(0);
     expect(results[0].vendor.channel).toBe("canteen");
     expect(results[0].vendor.area).toBe("海棠一层餐厅");
-    expect(results[0].vendor.source).toContain("西电后勤公众号");
+    expect(["西电后勤公众号", "学生整理平台菜单"].some((source) => results[0].vendor.source.includes(source))).toBe(true);
   });
 
   it("treats selected staple categories as hard item filters", () => {
@@ -113,7 +114,7 @@ describe("recommendFood", () => {
     expect(results.every((result) => result.item.available.includes("late"))).toBe(true);
   });
 
-  it("keeps comprehensive building locations empty until students submit approved data", () => {
+  it("includes reviewed comprehensive building platform menu data", () => {
     const results = recommendFood(foodCatalog, {
       ...basePreference,
       selectedChannels: ["canteen", "nearby"],
@@ -122,7 +123,9 @@ describe("recommendFood", () => {
       budget: 30,
     });
 
-    expect(results).toHaveLength(0);
+    expect(results.length).toBeGreaterThan(0);
+    expect(results.every((result) => result.vendor.area === "老综")).toBe(true);
+    expect(results.every((result) => result.vendor.source === "学生整理平台菜单")).toBe(true);
   });
 
   it("matches South Campus shared merchants by any supported channel", () => {
@@ -365,7 +368,8 @@ describe("recommendFood", () => {
   });
 
   it("includes direct WeChat article text canteen data from XDU logistics", () => {
-    const results = recommendFood(foodCatalog, {
+    const officialTextCatalog = foodCatalog.filter((vendor) => vendor.source.includes("西电后勤公众号"));
+    const results = recommendFood(officialTextCatalog, {
       ...basePreference,
       selectedChannels: ["canteen"],
       canteenAreas: ["海棠一层餐厅"],
@@ -395,11 +399,30 @@ describe("recommendFood", () => {
     expect(betaResults.every((result) => result.item.sourceMethod === "html-text")).toBe(true);
   });
 
-  it("only includes canteen data and reviewed student menu corrections in the base catalog", () => {
+  it("only includes approved real menu sources in the base catalog", () => {
     expect(foodCatalog.length).toBeGreaterThan(0);
-    expect(foodCatalog.every((vendor) => vendor.channel === "canteen")).toBe(true);
-    expect(foodCatalog.every((vendor) => vendor.source.includes("西电后勤公众号") || vendor.source.includes("学生现场照片"))).toBe(true);
+    expect(
+      foodCatalog.every((vendor) =>
+        vendor.source.includes("西电后勤公众号") ||
+        vendor.source.includes("学生现场照片") ||
+        vendor.source.includes("学生整理平台菜单"),
+      ),
+    ).toBe(true);
     expect(foodCatalog.some((vendor) => vendor.source.includes("样例") || vendor.source.includes("平台导入"))).toBe(false);
+  });
+
+  it("filters unavailable or non-food platform rows and keeps platform prices out of student data", () => {
+    expect(communityPlatformVendors.length).toBeGreaterThan(70);
+    expect(communityPlatformVendors.some((vendor) => /教苑服务中心|晨光文具/.test(`${vendor.name}${vendor.locationHint}`))).toBe(false);
+    expect(communityPlatformVendors.some((vendor) => vendor.name.includes("瑞幸咖啡"))).toBe(true);
+    expect(communityPlatformVendors.some((vendor) => vendor.name.includes("膳当家黄焖鸡米饭"))).toBe(true);
+    expect(communityPlatformVendors.some((vendor) => vendor.name.includes("科苑酒店餐厅"))).toBe(true);
+    expect(communityPlatformVendors.every((vendor) => vendor.items.every((item) => item.price === undefined))).toBe(true);
+    expect(
+      communityPlatformVendors.every((vendor) =>
+        vendor.items.every((item) => !/^(配菜|素菜|荤菜|汤底|加面|米饭|烤肠|酸梅汤)$/.test(item.name)),
+      ),
+    ).toBe(true);
   });
 
   it("uses current student-photo updates for Zhuyuan second-floor windows 10 and 12", () => {
