@@ -420,7 +420,7 @@ describe("recommendFood", () => {
     expect(communityPlatformVendors.every((vendor) => vendor.items.every((item) => item.price === undefined))).toBe(true);
     expect(
       communityPlatformVendors.every((vendor) =>
-        vendor.items.every((item) => !/^(配菜|素菜|荤菜|汤底|加面|米饭|烤肠|酸梅汤)$/.test(item.name)),
+        vendor.items.every((item) => !/^(配菜|素菜|荤菜|汤底|加面|米饭|烤肠)$/.test(item.name)),
       ),
     ).toBe(true);
   });
@@ -432,6 +432,32 @@ describe("recommendFood", () => {
     expect(canteenRows.every((vendor) => vendor.channel === "canteen")).toBe(true);
     expect(canteenRows.every((vendor) => !(vendor.supportedChannels ?? []).includes("delivery"))).toBe(true);
     expect(canteenRows.every((vendor) => vendor.deliveryMinutes === undefined)).toBe(true);
+  });
+
+  it("keeps drink-dessert classification from catching tea and honey meals", () => {
+    const allItems = foodCatalog.flatMap((vendor) => vendor.items.map((item) => ({ vendor, item })));
+    const falseDrinkItems = allItems.filter(
+      ({ item }) =>
+        item.types.includes("drink") &&
+        /茶泡饭|茶香鸡|蜜汁|甜辣|酸甜|香甜豆沙包|甜饭团|水果玉米|柠檬鱼米饭/.test(item.name),
+    );
+    const honeyMeals = allItems.filter(({ item }) => /蜜汁(?:叉烧饭|烤肉饭|手扒鸡|鸡块|鸡柳|肉片饭)/.test(item.name));
+
+    expect(falseDrinkItems.map(({ item }) => item.name)).toEqual([]);
+    expect(honeyMeals.length).toBeGreaterThan(0);
+    expect(honeyMeals.every(({ item }) => !item.types.includes("drink"))).toBe(true);
+  });
+
+  it("classifies fruit, beverages, and desserts as drink-dessert options", () => {
+    const allItems = foodCatalog.flatMap((vendor) => vendor.items.map((item) => ({ vendor, item })));
+    const dessertItems = allItems.filter(({ item }) =>
+      /^(时令水果|各类水果|自选水果|各类果切|鲜榨西瓜汁|芒果汁|水果捞|酸奶|蛋糕|咖啡|水果茶|鲜榨果汁等|经典奶茶|草莓圣代)$/.test(
+        item.name,
+      ),
+    );
+
+    expect(dessertItems.length).toBeGreaterThan(10);
+    expect(dessertItems.every(({ item }) => item.types.includes("drink"))).toBe(true);
   });
 
   it("uses current student-photo updates for Zhuyuan second-floor windows 10 and 12", () => {

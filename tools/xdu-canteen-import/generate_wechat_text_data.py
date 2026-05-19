@@ -18,6 +18,14 @@ OUTPUT_PATH = REPO_ROOT / "src" / "data" / "xduWechatTextCanteens.generated.ts"
 FOOD_TYPES = {"rice", "noodle", "spicy", "light", "snack", "western", "drink", "vegetarian", "halal", "protein", "local"}
 MEAL_PERIODS = {"breakfast", "lunch", "dinner", "late"}
 HEAT_LEVELS = {"none", "mild", "medium", "hot"}
+DRINK_DESSERT_RE = re.compile(
+    r"奶茶|咖啡|饮料|酸奶|果汁|柠檬水|柠檬茶|柠檬汁|椰奶|豆浆|水吧|鲜饮|鲜榨|"
+    r"水果捞|水果茶|果切|鲜果|时令水果|自选水果|各类水果|西瓜汁|芒果汁|"
+    r"圣代|烧仙草|奶绿|拿铁|美式|啵啵鲜奶|杨枝甘露|甜品|蛋糕|布丁|冰粉|贡茶"
+)
+DRINK_FALSE_POSITIVE_RE = re.compile(
+    r"茶泡饭|茶香鸡|茶叶蛋|茶树|蜜汁|烤汁饭|甜皮鸭|甜辣|酸甜|香甜豆沙包|甜饭团|水果玉米"
+)
 
 FLAVOR_OPTION_EXACT = {
     "三鲜",
@@ -39,6 +47,8 @@ FLAVOR_OPTION_EXACT = {
     "番茄",
     "红枣",
     "经典",
+    "孜然",
+    "烟熏",
     "藤椒",
     "酸菜",
     "酸辣",
@@ -47,8 +57,11 @@ FLAVOR_OPTION_EXACT = {
     "重辣",
     "香辣",
     "香辣味",
+    "蜜汁",
+    "蜜汁味",
     "麻椒",
     "麻辣",
+    "麻辣味",
     "黑椒",
     "黑椒味",
     "黑芝麻",
@@ -252,9 +265,21 @@ def source_summary_from_rows(rows: list[dict[str, str]], articles: dict[str, dic
 
 def parse_types(value: str, dish_name: str) -> list[str]:
     types = [part for part in split_cell(value) if part in FOOD_TYPES]
+    types = sanitize_types(types, dish_name)
     if not types:
         types = infer_types(dish_name)
     return unique(types)
+
+
+def sanitize_types(types: list[str], dish_name: str) -> list[str]:
+    clean_types = list(types)
+    if "drink" in clean_types and not is_drink_or_dessert(dish_name):
+        clean_types = [food_type for food_type in clean_types if food_type != "drink"]
+    if is_drink_or_dessert(dish_name) and "drink" not in clean_types:
+        clean_types.append("drink")
+    if is_drink_or_dessert_only(dish_name):
+        clean_types = [food_type for food_type in clean_types if food_type in {"drink", "light"}]
+    return clean_types
 
 
 def parse_available(value: str, dish_name: str) -> list[str]:
@@ -282,14 +307,28 @@ def infer_types(name: str) -> list[str]:
         ("light", r"粥|豆浆|汤|番茄|鸡蛋羹|南瓜"),
         ("snack", r"饼|馍|包|串|饭团|小吃|炸|汉堡|薯条|鸡柳"),
         ("western", r"咖喱|汉堡|披萨|意面|西式|薯条"),
-        ("drink", r"奶茶|咖啡|饮料|酸奶|果汁|柠檬|椰奶|豆浆"),
         ("vegetarian", r"素|青菜|土豆|茄子|豆腐|包菜|白菜|西红柿|番茄|韭菜鸡蛋"),
         ("halal", r"清真|牛肉拉面|兰州|新疆|炒米粉"),
         ("protein", r"肉|鸡|鸭|鱼|牛|羊|蛋|排骨|肥肠|虾|猪|肠|培根|里脊"),
         ("local", r"臊子|肉夹馍|凉皮|岐山|油泼|胡辣汤|泡馍|煮馍"),
     ]
     result = [food_type for food_type, pattern in rules if re.search(pattern, name)]
+    if is_drink_or_dessert(name):
+        result.append("drink")
+    result = sanitize_types(result, name)
     return unique(result or ["snack"])
+
+
+def is_drink_or_dessert(name: str) -> bool:
+    if DRINK_FALSE_POSITIVE_RE.search(name):
+        return False
+    return bool(DRINK_DESSERT_RE.search(name))
+
+
+def is_drink_or_dessert_only(name: str) -> bool:
+    if not is_drink_or_dessert(name):
+        return False
+    return not bool(re.search(r"饭|面|粉|米线|馍|饼|包|肉|鸡|鸭|鱼|牛|羊|排|肠|虾|汉堡|薯|串", name))
 
 
 def format_location(row: dict[str, str]) -> str:

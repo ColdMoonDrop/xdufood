@@ -116,6 +116,28 @@ class XduCanteenImporterTest(unittest.TestCase):
             with self.subTest(raw=raw):
                 self.assertFalse(wechat_text.is_usable_dish(raw))
 
+    def test_drink_classification_avoids_tea_and_honey_meals(self):
+        false_drinks = [
+            "小炒肉茶泡饭",
+            "茶香鸡",
+            "蜜汁叉烧饭",
+            "蜜汁手扒鸡",
+            "甜辣馋嘴鸡土豆泥拌饭",
+            "水果玉米",
+            "柠檬鱼米饭",
+        ]
+        true_drinks = ["时令水果", "各类水果", "自选水果", "鲜榨果汁等", "水果茶", "蛋糕", "酸奶", "经典奶茶"]
+
+        for name in false_drinks:
+            with self.subTest(name=name):
+                self.assertNotIn("drink", wechat_text.infer_types(name))
+                self.assertNotIn("drink", importer.infer_types(name))
+
+        for name in true_drinks:
+            with self.subTest(name=name):
+                self.assertIn("drink", wechat_text.infer_types(name))
+                self.assertIn("drink", importer.infer_types(name))
+
 
 if __name__ == "__main__":
     unittest.main()

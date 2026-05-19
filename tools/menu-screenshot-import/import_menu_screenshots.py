@@ -311,11 +311,23 @@ def write_csv(path: Path, records: list[dict[str, Any]]) -> None:
 def infer_types(name: str) -> list[str]:
     if re.search(r"面|粉|米线|馄饨|饺|馍|饼", name):
         return ["noodle"]
-    if re.search(r"奶茶|咖啡|果茶|饮|汁|冰|甜|蛋糕|布丁", name):
+    if is_drink_or_dessert(name):
         return ["drink"]
     if re.search(r"炸|串|烤肠|鸡排|小酥肉|薯|饼", name):
         return ["snack"]
     return ["rice"]
+
+
+def is_drink_or_dessert(name: str) -> bool:
+    if re.search(r"茶泡饭|茶香鸡|茶叶蛋|茶树|蜜汁|烤汁饭|甜皮鸭|甜辣|酸甜|香甜豆沙包|甜饭团|水果玉米", name):
+        return False
+    return bool(
+        re.search(
+            r"奶茶|咖啡|果茶|饮料|果汁|柠檬水|柠檬茶|柠檬汁|鲜饮|鲜榨|水果捞|水果茶|果切|鲜果|"
+            r"时令水果|自选水果|各类水果|西瓜汁|芒果汁|酸奶|豆浆|圣代|甜品|蛋糕|布丁|冰粉",
+            name,
+        )
+    )
 
 
 def infer_heat(name: str) -> str:

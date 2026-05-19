@@ -144,6 +144,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "snack",
       "rice",
+      "drink",
       "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -442,7 +443,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-1-麦香馅饼-eb8a4307-蛋糕-95aa81a0e23f6b4f-0a8c39ee",
         "name": "蛋糕",
         "types": [
-          "protein"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -939,8 +940,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "local",
       "rice",
       "noodle",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/BCnHWQErlSOTS0FW0WJI8g",
@@ -1210,7 +1210,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "腊汁肉夹馍",
         "types": [
           "snack",
-          "drink",
           "protein",
           "local"
         ],
@@ -1304,8 +1303,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "local",
       "light",
-      "drink",
-      "spicy"
+      "drink"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/BCnHWQErlSOTS0FW0WJI8g",
@@ -1523,7 +1521,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "腊汁肉夹馍",
         "types": [
           "snack",
-          "drink",
           "protein",
           "local"
         ],
@@ -1551,7 +1548,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-13-西安正宗肉夹馍-a3663153-芝麻豆浆-17772d76f08ead82-13218fb7",
         "name": "芝麻豆浆",
         "types": [
-          "spicy",
           "light",
           "drink"
         ],
@@ -1628,7 +1624,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-13-西安正宗肉夹馍-a3663153-香蕉牛奶-153b0e151cbb49e7-b1a8aec6",
         "name": "香蕉牛奶",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -1654,7 +1649,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-13-西安正宗肉夹馍-a3663153-黑芝麻豆浆-42959dbf206cc79d-0c2745a6",
         "name": "黑芝麻豆浆",
         "types": [
-          "spicy",
           "light",
           "drink"
         ],
@@ -2014,7 +2008,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-14-永和豆浆-d711bb32-芝麻豆浆-16dee9039ad5132f-bb9d4f8c",
         "name": "芝麻豆浆",
         "types": [
-          "spicy",
           "light",
           "drink"
         ],
@@ -2092,7 +2085,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-14-永和豆浆-d711bb32-香蕉牛奶-0d4a2cc5732b2319-460e6ad1",
         "name": "香蕉牛奶",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -2144,7 +2136,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-14-永和豆浆-d711bb32-黑芝麻豆浆-be0549e9e1219219-07f10ed8",
         "name": "黑芝麻豆浆",
         "types": [
-          "spicy",
           "light",
           "drink"
         ],
@@ -5004,7 +4995,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "local",
       "snack",
       "light",
-      "drink",
       "protein",
       "spicy"
     ],
@@ -5173,7 +5163,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "腊汁肉拌面",
         "types": [
           "noodle",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -5263,8 +5252,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "protein",
       "local",
-      "snack",
-      "drink"
+      "snack"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/BCnHWQErlSOTS0FW0WJI8g",
@@ -5432,7 +5420,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "腊汁肉拌面",
         "types": [
           "noodle",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -7737,7 +7724,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "丁香一层餐厅 · 一层 · 31-32号窗口 · 养生豆奶",
     "distanceMinutes": 6,
     "tags": [
-      "drink",
       "snack",
       "rice",
       "spicy",
@@ -7757,7 +7743,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-五谷豆饮-fbab196705fdc694-f26f2669",
         "name": "五谷豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -7832,7 +7818,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-枸杞豆饮-fc70ca2977ee22c5-5f4e3f73",
         "name": "枸杞豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -7882,7 +7868,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-燕麦豆饮-376f3b8f628d0c9f-459f5f8a",
         "name": "燕麦豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -7932,7 +7918,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-红枣豆饮-f057e466f56c7369-61b9761e",
         "name": "红枣豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -7957,7 +7943,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-绿豆豆饮-eacf7929d354bb35-ad8dc1f6",
         "name": "绿豆豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -8059,7 +8045,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "酱香鸡汁包",
         "types": [
           "snack",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -8215,7 +8200,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-黄桃豆饮-b9891275523ecca8-be66e29d",
         "name": "黄桃豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -8240,7 +8225,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-黄豆豆饮-26116c59d43acb65-26c694a1",
         "name": "黄豆豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -8265,8 +8250,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-黑米豆饮-8cff83e0a87df2eb-e2534ad1",
         "name": "黑米豆饮",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -8291,7 +8275,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-31-32-养生豆奶-d3f5a1fd-黑豆豆饮-9a9676fe4bd8ebdd-124020a1",
         "name": "黑豆豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -8327,10 +8311,10 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 6,
     "tags": [
       "snack",
+      "drink",
       "rice",
       "spicy",
       "protein",
-      "drink",
       "vegetarian",
       "noodle"
     ],
@@ -8371,7 +8355,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-33-35-老台门鲜包-a60bfcce-时令水果-36384052b90df0fd-a9750501",
         "name": "时令水果",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -8548,7 +8532,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "酱香鸡汁包",
         "types": [
           "snack",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -8756,7 +8739,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-36-水果-9a39b4a3-时令水果-1a5f0a8fb598f29a-e8d10dc5",
         "name": "时令水果",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -9291,7 +9274,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "snack",
       "rice",
-      "drink",
       "protein",
       "spicy"
     ],
@@ -9334,7 +9316,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "小炒肉茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9360,8 +9341,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-6-自选小碗菜-早餐-40eed202-酱爆鸭茶泡饭-8c1d5a87b6d49990-2f3b6ce4",
         "name": "酱爆鸭茶泡饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -9387,7 +9367,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "鲍汁鸡茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9414,8 +9393,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "麻椒茶泡饭",
         "types": [
           "rice",
-          "spicy",
-          "drink"
+          "spicy"
         ],
         "heat": "medium",
         "popularity": 0.72,
@@ -9451,7 +9429,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 6,
     "tags": [
       "rice",
-      "drink",
       "protein",
       "western",
       "spicy"
@@ -9469,7 +9446,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "卤香肉茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9496,8 +9472,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "咖喱茶泡饭",
         "types": [
           "rice",
-          "western",
-          "drink"
+          "western"
         ],
         "heat": "mild",
         "popularity": 0.72,
@@ -9523,7 +9498,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "小炒肉茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9550,7 +9524,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "焖鲜鸡茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9576,8 +9549,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-7-茶泡饭-73ad5ee3-经典原味茶泡饭-ef12f3287e4a2560-6f39847f",
         "name": "经典原味茶泡饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -9602,8 +9574,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-7-茶泡饭-73ad5ee3-酱爆鸭茶泡饭-9e01b09f09aa51b2-cd9337ec",
         "name": "酱爆鸭茶泡饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -9629,7 +9600,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "鲍汁鸡茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9656,8 +9626,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "麻椒茶泡饭",
         "types": [
           "rice",
-          "spicy",
-          "drink"
+          "spicy"
         ],
         "heat": "medium",
         "popularity": 0.72,
@@ -9693,7 +9662,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "distanceMinutes": 6,
     "tags": [
       "rice",
-      "drink",
       "protein",
       "western",
       "snack",
@@ -9712,7 +9680,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "卤香肉茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9764,8 +9731,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "咖喱茶泡饭",
         "types": [
           "rice",
-          "western",
-          "drink"
+          "western"
         ],
         "heat": "mild",
         "popularity": 0.72,
@@ -9867,7 +9833,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "焖鲜鸡茶泡饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -9893,8 +9858,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-1f-8-茶泡饭-1e9bc0d4-经典原味茶泡饭-8dfec52e0802a393-d70ed48a",
         "name": "经典原味茶泡饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -11679,7 +11643,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "snack",
       "rice",
       "noodle",
-      "drink",
       "spicy",
       "vegetarian",
       "light"
@@ -11872,7 +11835,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dingxiang-2f-16-16号窗口-cac2b6b6-蜜汁鸡柳-48e37922f3740220-0244923f",
         "name": "蜜汁鸡柳",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -16381,7 +16343,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "snack",
       "protein",
-      "drink",
       "vegetarian",
       "western"
     ],
@@ -16391,7 +16352,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 22,
+    "duplicateCount": 21,
     "items": [
       {
         "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-双椒味-f686d3af502d5239-c9f121a8",
@@ -16549,8 +16510,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-烟熏茶泡饭-d29bbe25b0ba1751-95b2bbd6",
         "name": "烟熏茶泡饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -16704,35 +16664,9 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "茶泡饭",
         "types": [
           "rice",
-          "western",
-          "drink"
+          "western"
         ],
         "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 11号窗口 · 新疆炒米粉，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "11",
-        "windowName": "新疆炒米粉",
-        "locationHint": "东区一层餐厅 · 一层 · 11号窗口 · 新疆炒米粉",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-11-新疆炒米粉-e6ca4d0f-蜜汁味-e340e44b107142bd-2411f853",
-        "name": "蜜汁味",
-        "types": [
-          "drink"
-        ],
-        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -16982,7 +16916,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "snack",
       "rice",
-      "drink",
       "western"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -16991,7 +16924,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "updatedAt": "2024-09-27",
     "sourceMethod": "html-text",
     "reviewStatus": "pending",
-    "duplicateCount": 26,
+    "duplicateCount": 25,
     "items": [
       {
         "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-削筋油泼面-6867aa2f0614ba7d-6262ece1",
@@ -17176,8 +17109,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-烟熏茶泡饭-1adb303aeb154308-84435d96",
         "name": "烟熏茶泡饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -17384,35 +17316,9 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "茶泡饭",
         "types": [
           "rice",
-          "western",
-          "drink"
+          "western"
         ],
         "heat": "mild",
-        "popularity": 0.72,
-        "available": [
-          "lunch",
-          "dinner"
-        ],
-        "description": "东区一层餐厅 · 一层 · 12号窗口 · 焖一道茶泡饭，西电后勤公众号正文提取，当前不展示历史价格。",
-        "windowNo": "12",
-        "windowName": "焖一道茶泡饭",
-        "locationHint": "东区一层餐厅 · 一层 · 12号窗口 · 焖一道茶泡饭",
-        "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
-        "sourceTitle": "东区一层餐厅窗口分布及菜单",
-        "sourceMethod": "html-text",
-        "reviewStatus": "pending",
-        "parseWarnings": [
-          "wechat-text"
-        ],
-        "duplicateCount": 1
-      },
-      {
-        "id": "dongqu-1f-12-焖一道茶泡饭-e1e39b33-蜜汁味-3e662cd3d5c00587-90b114d2",
-        "name": "蜜汁味",
-        "types": [
-          "drink"
-        ],
-        "heat": "none",
         "popularity": 0.72,
         "available": [
           "lunch",
@@ -17684,7 +17590,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "vegetarian",
       "protein",
       "rice",
-      "drink",
       "snack",
       "spicy"
     ],
@@ -17928,7 +17833,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-13-岐山面-0f808c18-爆汁鸡块焖锅-6d55b8c5542d3030-152e9860",
         "name": "爆汁鸡块焖锅",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -18459,7 +18363,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "rice",
       "noodle",
-      "drink",
       "light",
       "snack"
     ],
@@ -18729,7 +18632,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-14-锅庐三汁焖锅-e4ac2557-爆汁鸡块焖锅-e3e2e1027d20c6ab-4e77c031",
         "name": "爆汁鸡块焖锅",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -24784,7 +24686,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "东区一层餐厅 · 一层 · 27-28号窗口 · 自选多味饺子",
     "distanceMinutes": 6,
     "tags": [
-      "drink",
+      "snack",
       "protein",
       "rice",
       "noodle"
@@ -24801,7 +24703,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-27-28-自选多味饺子-d9bcb7b2-各类现做饮品-4674c7933af25d89-94aead2d",
         "name": "各类现做饮品",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -25063,7 +24965,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "东区一层餐厅 · 一层 · 29号窗口 · 歌思泊鲜果茶",
     "distanceMinutes": 6,
     "tags": [
-      "drink"
+      "snack"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/OKX1aCdQhrD68YflW1lIEQ",
@@ -25077,7 +24979,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-29-歌思泊鲜果茶-9d5ccc6f-各类现做饮品-148d5569e2108009-87d03237",
         "name": "各类现做饮品",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -26666,8 +26568,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "spicy",
       "rice",
-      "drink",
       "noodle",
+      "drink",
       "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -26734,8 +26636,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "奶香玉米饼",
         "types": [
           "rice",
-          "snack",
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -27041,7 +26942,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-6-炒货大王-28eff693-蒸蛋糕-cefbc4c249d4116f-8066b555",
         "name": "蒸蛋糕",
         "types": [
-          "protein"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -27290,9 +27191,9 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "snack",
       "rice",
-      "drink",
       "local",
       "light",
+      "drink",
       "vegetarian"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -27439,8 +27340,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "奶香玉米饼",
         "types": [
           "rice",
-          "snack",
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -27856,7 +27756,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "dongqu-1f-7-主食-杂粮包子-28f01cad-蒸蛋糕-59fa06c9bd289206-2e217f52",
         "name": "蒸蛋糕",
         "types": [
-          "protein"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -28893,8 +28793,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "rice",
       "snack",
       "spicy",
-      "protein",
-      "drink"
+      "protein"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
@@ -29184,8 +29083,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "鲜汁蟹棒饭团",
         "types": [
           "rice",
-          "snack",
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -29675,7 +29573,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-1f-18-一元爱心餐-0291b63f-燕麦牛奶等-606430d221c98f31-263a2315",
         "name": "燕麦牛奶等",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -29830,7 +29727,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-1f-19-永和豆浆-69fb70a1-燕麦牛奶等-60a63cc118071852-b498ccd6",
         "name": "燕麦牛奶等",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -30172,7 +30068,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "protein",
       "light",
-      "drink",
       "snack",
       "vegetarian",
       "spicy"
@@ -30267,8 +30162,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "番茄汁面",
         "types": [
           "noodle",
-          "light",
-          "drink"
+          "light"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -35633,8 +35527,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "vegetarian",
       "protein",
       "rice",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
@@ -35906,7 +35799,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "黑椒茶香鸡",
         "types": [
           "spicy",
-          "drink",
           "protein"
         ],
         "heat": "mild",
@@ -35971,8 +35863,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "vegetarian",
       "protein",
       "rice",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/Tlrlugeac0WUsrrYyr06tw",
@@ -36167,7 +36058,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "黑椒茶香鸡",
         "types": [
           "spicy",
-          "drink",
           "protein"
         ],
         "heat": "mild",
@@ -37020,7 +36910,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "western",
       "vegetarian",
-      "drink",
       "spicy",
       "light"
     ],
@@ -37376,7 +37265,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "蜜汁肉片饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -37683,7 +37571,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "halal",
       "vegetarian",
-      "drink",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -37959,7 +37846,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "蜜汁肉片饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -38132,6 +38018,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "rice",
       "protein",
       "noodle",
+      "snack",
       "halal",
       "vegetarian"
     ],
@@ -38298,7 +38185,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-13-伊鼎盛蘭金典牛肉面-8eacbb80-柠檬水-e0379ff61d8f367a-90ea74b5",
         "name": "柠檬水",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -38323,7 +38210,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-13-伊鼎盛蘭金典牛肉面-8eacbb80-柠檬红茶-5883613462374561-3b128289",
         "name": "柠檬红茶",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -38400,7 +38287,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-13-伊鼎盛蘭金典牛肉面-8eacbb80-百香果茶-05ff350c413ffd2a-002f7ce6",
         "name": "百香果茶",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -38693,6 +38580,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "drink",
       "rice",
       "protein",
+      "snack",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -38833,7 +38721,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-14-茶仙坊-e4b7cbbc-柠檬水-3ef14f7e143db050-d76ea41b",
         "name": "柠檬水",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -38858,7 +38746,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-14-茶仙坊-e4b7cbbc-柠檬红茶-b3e9729669c2868d-ddf17f6f",
         "name": "柠檬红茶",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -38908,7 +38796,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-14-茶仙坊-e4b7cbbc-百香果茶-e6b5b595894db6a9-1035a124",
         "name": "百香果茶",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -40534,8 +40422,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "snack",
       "vegetarian",
-      "local",
-      "drink"
+      "local"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/WTrA8gzGEq_Yigo1-aSMLg",
@@ -40831,8 +40718,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "haitang-2f-21-港依依-香港叉烧饭-c0abe75d-蜜汁叉烧饭-3f2b159c0c08e341-1a3c3ea7",
         "name": "蜜汁叉烧饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -40858,7 +40744,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "蜜汁鸡腿饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -40975,7 +40860,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "rice",
       "protein",
-      "drink",
       "noodle",
       "snack",
       "vegetarian",
@@ -41021,7 +40905,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "卤汁肉卷捞饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -41350,7 +41233,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "light",
       "rice",
       "protein",
-      "drink",
       "spicy",
       "vegetarian",
       "snack"
@@ -41420,7 +41302,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "卤汁肉卷捞饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -48813,7 +48694,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "rice",
       "vegetarian",
-      "drink",
       "light",
       "local",
       "noodle"
@@ -49159,7 +49039,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xijundian-7-自助餐-dfff159a-捞汁秋葵小海鲜-6480dd022d846ac4-702050b5",
         "name": "捞汁秋葵小海鲜",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50203,7 +50083,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "西区一层餐厅 · 一层 · 1号窗口 · 五谷豆浆",
     "distanceMinutes": 5,
     "tags": [
-      "drink",
+      "snack",
       "rice",
       "protein",
       "spicy"
@@ -50220,7 +50100,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-五谷豆饮-fcfd787c7934a2c9-2fb68679",
         "name": "五谷豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50245,7 +50125,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-原味豆饮-f97af99320f02976-d4f8ae7d",
         "name": "原味豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50270,7 +50150,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-枸杞豆饮-10a39b0df27d1238-bdefe37b",
         "name": "枸杞豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50295,7 +50175,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-核桃花生豆饮-3746fdcd77bdf88d-779093f1",
         "name": "核桃花生豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50320,7 +50200,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-燕麦豆饮-2267ce161ecd6cae-d1e0c418",
         "name": "燕麦豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50370,7 +50250,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-红枣牛奶豆饮-f0f9dd25a63ddf4f-3b6f9949",
         "name": "红枣牛奶豆饮",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -50396,7 +50275,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-红枣豆饮-0fe7f4777d0d906d-7c1f45e0",
         "name": "红枣豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50421,7 +50300,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-红豆紫薯豆饮-b40dda6de19df846-1280045d",
         "name": "红豆紫薯豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50446,7 +50325,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-绿豆豆饮-19854c701dc6474f-480b5f33",
         "name": "绿豆豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50471,7 +50350,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-菊花豆饮-5cb78d594dd95133-66e3ea39",
         "name": "菊花豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50496,7 +50375,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-黄桃豆饮-c526cd3943835367-51aa1ee8",
         "name": "黄桃豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50521,7 +50400,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-黄豆豆饮-e466b229bfeb7013-dc2c5449",
         "name": "黄豆豆饮",
         "types": [
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50546,8 +50425,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-黑米豆饮-555daea69c782955-ea9963ec",
         "name": "黑米豆饮",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -50572,8 +50450,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-1-五谷豆浆-12560c0b-黑芝麻豆饮-4ae2cd1d990c1bf8-648d0964",
         "name": "黑芝麻豆饮",
         "types": [
-          "spicy",
-          "drink"
+          "spicy"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -52365,7 +52242,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "spicy",
       "light",
       "vegetarian",
-      "drink",
       "local",
       "rice"
     ],
@@ -52667,7 +52543,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "腊汁肉夹馍",
         "types": [
           "snack",
-          "drink",
           "protein",
           "local"
         ],
@@ -52918,7 +52793,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "local",
       "snack",
-      "drink",
       "light",
       "rice"
     ],
@@ -53141,7 +53015,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "腊汁肉夹馍",
         "types": [
           "snack",
-          "drink",
           "protein",
           "local"
         ],
@@ -55514,7 +55387,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-22-清真拉面-40d69fb2-牛奶麦片-35576d07e4e64837-e6ec3c84",
         "name": "牛奶麦片",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -55565,7 +55437,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-22-清真拉面-40d69fb2-甜牛奶-af68c2d54872eebc-87fe9595",
         "name": "甜牛奶",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -55591,7 +55462,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-22-清真拉面-40d69fb2-生椰拿铁-3435828d12517334-9b92a048",
         "name": "生椰拿铁",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -55616,7 +55487,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-22-清真拉面-40d69fb2-香蕉牛奶-df7c6b2496a0090a-85266ea2",
         "name": "香蕉牛奶",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -55896,7 +55766,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-牛奶麦片-b2aa9b07ec38e536-4cfd2974",
         "name": "牛奶麦片",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -55947,7 +55816,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-甜牛奶-352293f7ee10cc3a-6bebb48b",
         "name": "甜牛奶",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -55973,7 +55841,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-生椰拿铁-e190e0bbfad1ff11-f3b3f12a",
         "name": "生椰拿铁",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -55998,7 +55866,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-美式烤全鸡-4a98181a31ed1630-a89293eb",
         "name": "美式烤全鸡",
         "types": [
-          "protein"
+          "protein",
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -56124,7 +55993,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-23-永和豆浆-6ccbbb88-香蕉牛奶-3c59aeb20b99b8e6-ec4cd204",
         "name": "香蕉牛奶",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -56214,8 +56082,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "rice",
       "protein",
-      "snack",
       "drink",
+      "snack",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -56280,7 +56148,8 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-1f-24-0090炸鸡汉堡-7b67edfd-美式烤全鸡-748989048ce09d93-9763d28d",
         "name": "美式烤全鸡",
         "types": [
-          "protein"
+          "protein",
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -57478,8 +57347,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "snack",
       "vegetarian",
       "protein",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
@@ -58207,8 +58075,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "鲜汁蟹棒饭团",
         "types": [
           "rice",
-          "snack",
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -58302,8 +58169,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "vegetarian",
       "protein",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/xAZOWA3J3NQUktsJe2AJjQ",
@@ -58763,8 +58629,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "鲜汁蟹棒饭团",
         "types": [
           "rice",
-          "snack",
-          "drink"
+          "snack"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -61287,8 +61152,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "light",
       "vegetarian",
-      "rice",
-      "drink"
+      "rice"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -61507,7 +61371,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-14-谷力馋鸡捞面-fd92cec9-石锅爆汁鸡块-1ef671edbf72a35e-9f32bf0f",
         "name": "石锅爆汁鸡块",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -61883,7 +61746,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "rice",
       "protein",
       "vegetarian",
-      "drink",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -62124,7 +61986,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-15-蜀汁记石锅菜-f1549b1e-石锅爆汁鸡块-5a7a90ce7c41b934-bd7e6ff4",
         "name": "石锅爆汁鸡块",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -62276,8 +62137,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-15-蜀汁记石锅菜-f1549b1e-蜜汁叉烧饭-7c6f4bb49a5ffe10-2311cbdd",
         "name": "蜜汁叉烧饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -62393,8 +62253,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "rice",
       "vegetarian",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -62851,8 +62710,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-16-广式叉烧饭-90d337e4-蜜汁叉烧饭-746a63e545e6d1bf-8a117a51",
         "name": "蜜汁叉烧饭",
         "types": [
-          "rice",
-          "drink"
+          "rice"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -62878,7 +62736,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "蜜汁烤肉饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -63101,8 +62958,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "protein",
       "rice",
       "vegetarian",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -63486,7 +63342,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "蜜汁烤肉饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -63709,7 +63564,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "rice",
       "protein",
       "western",
-      "drink",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -63929,7 +63783,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-19-铁板炒饭-ddbf0407-蜜汁鸡块-a8e097410b6b2d1a-9fa5d62e",
         "name": "蜜汁鸡块",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -64147,8 +64000,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "rice",
       "noodle",
-      "protein",
-      "drink"
+      "protein"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -64238,8 +64090,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-2-美润水饺-b685547a-黄记煌三汁焖锅面-8d59aea1397259f3-6ccd3035",
         "name": "黄记煌三汁焖锅面",
         "types": [
-          "noodle",
-          "drink"
+          "noodle"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -64277,7 +64128,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "rice",
       "protein",
       "western",
-      "drink",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -64445,7 +64295,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-20-禾香丰咖喱饭-8e82183e-蜜汁鸡块-9fda8ee9ee1216f1-9c0e65c1",
         "name": "蜜汁鸡块",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -64583,9 +64432,9 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "西区二层餐厅 · 二层 · 21号窗口 · 新正自选餐",
     "distanceMinutes": 5,
     "tags": [
-      "rice",
       "drink",
-      "snack"
+      "snack",
+      "rice"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -64599,7 +64448,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-21-新正自选餐-443568e5-千喜明朗水吧-48fa0b0f3b3f0093-a1650d8b",
         "name": "千喜明朗水吧",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -64713,8 +64562,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "vegetarian",
       "protein",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/f23jLgV9TYv_TXZbCSyqVQ",
@@ -65014,8 +64862,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "xiqu-2f-3-3号窗口-2b824b2c-黄记煌三汁焖锅面-7e0279c80d8e08f4-3e678c85",
         "name": "黄记煌三汁焖锅面",
         "types": [
-          "noodle",
-          "drink"
+          "noodle"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -67699,8 +67546,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "snack",
       "protein",
-      "local",
-      "drink"
+      "local"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
@@ -67742,7 +67588,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-1f-10-老潼关肉夹馍-53c1ea97-茶香鸡-15ab13141556870f-865902ad",
         "name": "茶香鸡",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -67781,7 +67626,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "western",
       "protein",
       "vegetarian",
-      "drink",
       "rice",
       "spicy"
     ],
@@ -67849,7 +67693,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-1f-11-11号窗口-c8937563-孜然茶香鸡-d2a65ca4aa0bf43c-de7111bd",
         "name": "孜然茶香鸡",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "mild",
@@ -67900,7 +67743,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-1f-11-11号窗口-c8937563-烟熏茶香鸡-9e630dc0d544dae3-739372d0",
         "name": "烟熏茶香鸡",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -67926,7 +67768,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-1f-11-11号窗口-c8937563-茶香鸡-65cd18d24bd2fe46-538bd648",
         "name": "茶香鸡",
         "types": [
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -67979,7 +67820,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "麻辣茶香鸡",
         "types": [
           "spicy",
-          "drink",
           "protein"
         ],
         "heat": "hot",
@@ -68044,7 +67884,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "light",
       "rice",
       "western",
-      "drink",
       "protein",
       "noodle",
       "spicy"
@@ -68086,8 +67925,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "咖喱浇汁饭",
         "types": [
           "rice",
-          "western",
-          "drink"
+          "western"
         ],
         "heat": "mild",
         "popularity": 0.72,
@@ -68113,7 +67951,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "小炒肉浇汁饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -68191,7 +68028,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "types": [
           "rice",
           "spicy",
-          "drink",
           "protein"
         ],
         "heat": "hot",
@@ -68254,7 +68090,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "tags": [
       "rice",
       "western",
-      "drink",
       "protein",
       "spicy"
     ],
@@ -68271,8 +68106,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "咖喱浇汁饭",
         "types": [
           "rice",
-          "western",
-          "drink"
+          "western"
         ],
         "heat": "mild",
         "popularity": 0.72,
@@ -68298,7 +68132,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "name": "小炒肉浇汁饭",
         "types": [
           "rice",
-          "drink",
           "protein"
         ],
         "heat": "none",
@@ -68326,7 +68159,6 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "types": [
           "rice",
           "spicy",
-          "drink",
           "protein"
         ],
         "heat": "hot",
@@ -72439,12 +72271,11 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "竹园一层餐厅 · 一层 · 29号窗口 · 石小川石锅煲",
     "distanceMinutes": 7,
     "tags": [
-      "rice",
+      "drink",
       "vegetarian",
       "protein",
       "light",
-      "spicy",
-      "drink"
+      "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/ch0Gt6b-0mqHbfyXOWkgbQ",
@@ -72458,7 +72289,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-1f-29-石小川石锅煲-2edebc11-各类水果-d060bb9dbff1c033-b587c6f6",
         "name": "各类水果",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -73237,9 +73068,9 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "竹园一层餐厅 · 一层 · 31号窗口 · 水果捞",
     "distanceMinutes": 7,
     "tags": [
-      "rice",
-      "noodle",
       "drink",
+      "noodle",
+      "rice",
       "protein"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -73254,7 +73085,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-1f-31-水果捞-8de98189-各类水果-f7be5bc1f3b51d93-c0654cd4",
         "name": "各类水果",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -79910,7 +79741,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
       "noodle",
       "protein",
       "snack",
-      "rice",
+      "drink",
       "spicy"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
@@ -80029,7 +79860,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-2f-28-羊杂面-140f803b-自选水果-46507a7fc5ebe88a-30bff310",
         "name": "自选水果",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,
@@ -80194,8 +80025,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
     "locationHint": "竹园二层餐厅 · 二层 · 31号窗口 · 水果捞",
     "distanceMinutes": 7,
     "tags": [
-      "drink",
-      "rice"
+      "drink"
     ],
     "source": "西电后勤公众号 · 正文菜单待校准",
     "sourceUrl": "https://mp.weixin.qq.com/s/7TNIacqu478VkF3Kf8GSuQ",
@@ -80234,7 +80064,7 @@ export const xduWechatTextCanteenVendors: FoodVendor[] = [
         "id": "zhuyuan-2f-31-水果捞-abea9b0f-自选水果-626a5b477a0369fe-c0b781b2",
         "name": "自选水果",
         "types": [
-          "rice"
+          "drink"
         ],
         "heat": "none",
         "popularity": 0.72,

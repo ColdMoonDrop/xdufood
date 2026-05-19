@@ -263,10 +263,10 @@ function cleanDishName(value: string) {
 
 function isSideOrGenericDish(name: string) {
   if (!name || name.length < 2) return true;
-  if (/^(配菜|素菜|荤菜|汤底|加面|加炸蛋|加肥肠|米饭|拌面|烤肠|酸梅汤|冰峰|可乐|薯条|鸡米花|包间可预订|各类零食)$/.test(name)) return true;
+  if (/^(配菜|素菜|荤菜|汤底|加面|加炸蛋|加肥肠|米饭|拌面|烤肠|薯条|鸡米花|包间可预订|各类零食)$/.test(name)) return true;
   if (/^(各类|炒菜|面食|小炒|中份|双人餐|套餐)$/.test(name)) return true;
   if (/配菜|素菜|荤菜|汤底|包间/.test(name)) return true;
-  if (/^各类/.test(name)) return true;
+  if (/^各类/.test(name) && !isDrinkOrDessert(name)) return true;
   return false;
 }
 
@@ -324,8 +324,11 @@ function inferVendorTypes(text: string): FoodType[] {
 }
 
 function inferItemTypes(text: string, fallback: FoodType[]): FoodType[] {
-  const types = new Set<FoodType>(fallback);
-  if (/咖啡|奶茶|烧仙草|果汁|柠檬|鲜饮|蜜雪|书亦|益禾堂|拿铁|美式|奶绿|果茶|圣代|水果捞|酸梅汤/.test(text)) types.add("drink");
+  const types = new Set<FoodType>();
+  const inheritedConstraints = fallback.filter((type) => type === "halal" || type === "vegetarian");
+  inheritedConstraints.forEach((type) => types.add(type));
+
+  if (isDrinkOrDessert(text)) types.add("drink");
   if (/汉堡|华莱士|迈德思克|0090|派克|意面|三明治|寿司/.test(text)) types.add("western");
   if (/饭|盖浇|黄焖鸡|烤肉饭|拌饭|煲仔|便当|炒鸡|小炒|川菜|湘菜|鸡公煲|炒菜|大盘鸡|煲|米饭/.test(text)) types.add("rice");
   if (/面|粉|米线|拉面|泡馍|肉夹馍|凉皮|螺蛳粉|渔粉|小面|蒸面|焖面|馍/.test(text)) types.add("noodle");
@@ -334,8 +337,16 @@ function inferItemTypes(text: string, fallback: FoodType[]): FoodType[] {
   if (/粥|汤|番茄|小米|豆浆|清汤|原汤/.test(text)) types.add("light");
   if (/牛|羊|鸡|鸭|肉|鱼|排骨|肥牛|黄牛|五花|鸡蛋|培根|虾|花甲|猪|肠/.test(text)) types.add("protein");
   if (/油泼|臊子|biang|泡馍|老潼关|老陕|肉夹馍|同州|凉皮|胡辣汤/.test(text)) types.add("local");
+  if (!types.size && fallback.length) fallback.forEach((type) => types.add(type));
   if (!types.size) types.add("rice");
   return [...types];
+}
+
+function isDrinkOrDessert(text: string) {
+  if (/茶泡饭|茶香鸡|茶叶蛋|茶树|蜜汁|烤汁饭|甜皮鸭|甜辣|酸甜|香甜豆沙包|甜饭团|水果玉米/.test(text)) {
+    return false;
+  }
+  return /咖啡|奶茶|烧仙草|果汁|柠檬水|柠檬茶|柠檬汁|鲜饮|鲜榨|蜜雪|书亦|益禾堂|茗花有煮|贡茶|拿铁|美式|奶绿|果茶|圣代|水果捞|(?:时令|自选|各类)?水果$|果切|鲜果|酸梅汤|冰峰|可乐|酸奶|豆浆|杨枝甘露|摩天脆脆|饮料|水吧|甜品|蛋糕|布丁/.test(text);
 }
 
 function inferHeat(text: string): HeatLevel {
