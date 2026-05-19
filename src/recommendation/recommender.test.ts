@@ -425,6 +425,15 @@ describe("recommendFood", () => {
     ).toBe(true);
   });
 
+  it("does not mark canteen window platform rows as delivery vendors", () => {
+    const canteenRows = communityPlatformVendors.filter((vendor) => vendor.area.includes("餐厅"));
+
+    expect(canteenRows.length).toBeGreaterThan(0);
+    expect(canteenRows.every((vendor) => vendor.channel === "canteen")).toBe(true);
+    expect(canteenRows.every((vendor) => !(vendor.supportedChannels ?? []).includes("delivery"))).toBe(true);
+    expect(canteenRows.every((vendor) => vendor.deliveryMinutes === undefined)).toBe(true);
+  });
+
   it("uses current student-photo updates for Zhuyuan second-floor windows 10 and 12", () => {
     const zhuyuan2f = foodCatalog.filter((vendor) => vendor.area === "竹园二层餐厅");
     expect(zhuyuan2f.some((vendor) => vendor.id === "zhuyuan-2f-10-一粉一城新疆炒米粉-b7c3a31a")).toBe(false);

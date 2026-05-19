@@ -298,6 +298,7 @@ function inferWindowNo(location: string) {
 }
 
 function inferSupportedChannels(primary: Channel, platform: string): Channel[] {
+  if (primary === "canteen") return ["canteen"];
   if (platform.includes("仅堂食")) return [primary];
   return Array.from(new Set([primary, "delivery"]));
 }
