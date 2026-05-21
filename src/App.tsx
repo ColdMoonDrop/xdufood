@@ -214,8 +214,8 @@ function App() {
               <h2>{top.item.name}</h2>
               <p>{formatVendorTitle(top.vendor)}</p>
               <div className="quickPickMeta">
-                <span>{formatChannelList(top.vendor)}</span>
-                <span>{topLocation}</span>
+                <span title={formatChannelList(top.vendor)}>{formatChannelList(top.vendor)}</span>
+                <span title={topLocation}>{topLocation}</span>
               </div>
               <div className="quickPickActions">
                 <button onClick={reshuffleRecommendations}>
@@ -451,13 +451,13 @@ function App() {
               </div>
 
               <div className="metaLine">
-                <span>
+                <span className="metaPill" title={formatChannelList(result.vendor)}>
                   {vendorChannels(result.vendor).includes("delivery") ? <Bike size={15} /> : <Building2 size={15} />}
-                  {formatChannelList(result.vendor)}
+                  <span className="metaText">{formatChannelList(result.vendor)}</span>
                 </span>
-                <span>
+                <span className="metaPill" title={result.vendor.locationHint ?? result.vendor.area}>
                   <MapPin size={15} />
-                  {result.vendor.locationHint ?? result.vendor.area}
+                  <span className="metaText">{result.vendor.locationHint ?? result.vendor.area}</span>
                 </span>
               </div>
 

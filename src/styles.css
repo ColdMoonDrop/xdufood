@@ -161,36 +161,52 @@ h1 {
 }
 
 .quickPickCard h2 {
+  display: -webkit-box;
+  min-height: 60px;
   margin-bottom: 6px;
+  overflow: hidden;
   font-size: 25px;
   line-height: 1.18;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .quickPickCard p {
+  display: -webkit-box;
+  min-height: 38px;
   margin-bottom: 10px;
+  overflow: hidden;
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
   line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .quickPickMeta {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 26px);
   gap: 7px;
+  min-height: 59px;
   margin-bottom: 12px;
 }
 
 .quickPickMeta span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  min-width: 0;
   min-height: 26px;
   padding: 0 8px;
+  overflow: hidden;
   border-radius: 999px;
   color: #5a3447;
   background: #ffe7f2;
   font-size: 12px;
   font-weight: 850;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .quickPickMeta span:first-child {
@@ -445,7 +461,7 @@ h1 {
 .foodCard {
   display: flex;
   flex-direction: column;
-  min-height: 204px;
+  min-height: 272px;
   padding: 17px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -474,6 +490,11 @@ h1 {
   gap: 14px;
 }
 
+.cardTop > div {
+  min-width: 0;
+  width: 100%;
+}
+
 .rank {
   display: inline-flex;
   align-items: center;
@@ -488,31 +509,44 @@ h1 {
 }
 
 .cardTop h3 {
+  display: -webkit-box;
+  min-height: 54px;
   margin-bottom: 7px;
+  overflow: hidden;
   font-size: 22px;
   font-weight: 850;
   line-height: 1.22;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .cardTop p {
+  min-height: 20px;
   margin-bottom: 0;
+  overflow: hidden;
   color: var(--muted);
   font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .metaLine {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 32px);
   gap: 8px;
+  min-height: 72px;
   margin: 14px 0 11px;
 }
 
-.metaLine span {
-  display: inline-flex;
+.metaLine .metaPill {
+  display: flex;
   align-items: center;
   gap: 5px;
+  min-width: 0;
   min-height: 30px;
   padding: 0 9px;
+  overflow: hidden;
   border-radius: 999px;
   color: #4f3c43;
   background: #ffeaf4;
@@ -521,25 +555,39 @@ h1 {
 }
 
 .metaLine svg {
+  flex: 0 0 auto;
   color: var(--green);
+}
+
+.metaText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tagRow {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+  min-height: 59px;
   margin-top: auto;
   padding-top: 10px;
+  align-content: flex-start;
 }
 
 .tagRow span {
+  max-width: 100%;
   padding: 5px 8px;
+  overflow: hidden;
   border: 1px solid rgba(47, 127, 122, 0.22);
   border-radius: 999px;
   color: var(--blue);
   background: rgba(47, 127, 122, 0.07);
   font-size: 12px;
   font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .feedbackActions {
