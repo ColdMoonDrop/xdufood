@@ -1,50 +1,15 @@
 param(
   [string]$ApiBase,
-  [string]$Base = "/",
-  [string]$HostName = "",
-  [int]$Port = 0,
-  [string]$User = "",
-  [string]$KeyPath = ""
+  [string]$Base = "/"
 )
 
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
-$LocalConfigPath = Join-Path $PSScriptRoot "phone.local.json"
-$PhoneConfig = if (Test-Path -LiteralPath $LocalConfigPath) {
-  Get-Content -Raw -LiteralPath $LocalConfigPath | ConvertFrom-Json
-} else {
-  [pscustomobject]@{}
-}
-
-function Get-PhoneSetting {
-  param([string]$Value, [string]$EnvName, [string]$ConfigName, [string]$DefaultValue = "")
-  if ($Value) { return $Value }
-  $EnvValue = [Environment]::GetEnvironmentVariable($EnvName)
-  if ($EnvValue) { return $EnvValue }
-  $ConfigValue = $PhoneConfig.$ConfigName
-  if ($ConfigValue) { return [string]$ConfigValue }
-  return $DefaultValue
-}
-
-$HostName = Get-PhoneSetting $HostName "XDU_PHONE_HOST" "hostName" "192.168.3.85"
-$User = Get-PhoneSetting $User "XDU_PHONE_USER" "user" "u0_a166"
-$KeyPath = Get-PhoneSetting $KeyPath "XDU_PHONE_SSH_KEY" "keyPath"
-if ($Port -le 0) {
-  $ConfigPort = [int]($PhoneConfig.port ?? 0)
-  $Port = if ($env:XDU_PHONE_PORT) { [int]$env:XDU_PHONE_PORT } elseif ($ConfigPort -gt 0) { $ConfigPort } else { 8022 }
-}
+$ApiBase = if ($ApiBase) { $ApiBase } elseif ($env:VITE_API_BASE) { $env:VITE_API_BASE } elseif ($env:XDUFOOD_API_BASE) { $env:XDUFOOD_API_BASE } else { "" }
 
 if (-not $ApiBase) {
-  if (-not (Test-Path -LiteralPath $KeyPath)) {
-    throw "SSH key not found: $KeyPath. Pass -ApiBase or configure tools/phone.local.json."
-  }
-  $Remote = "${User}@${HostName}"
-  $RemoteCommand = "cat /data/data/com.termux/files/home/www/xdu-food-oracle/server-data/public-url.txt"
-  $ApiBase = (& ssh -i $KeyPath -p $Port -o BatchMode=yes -o StrictHostKeyChecking=accept-new $Remote $RemoteCommand).Trim()
-  if ($LASTEXITCODE -ne 0) {
-    throw "Failed to read phone public URL through SSH."
-  }
+  throw "Missing API base. Pass -ApiBase or set VITE_API_BASE/XDUFOOD_API_BASE before running this script."
 }
 
 $ApiBase = $ApiBase.TrimEnd("/")

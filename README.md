@@ -2,6 +2,8 @@
 
 面向西安电子科技大学学生的“今天吃什么”推荐应用。学生选择校区、餐别、堂食/外卖、地点、主类别、口味倾向，以及素食/清真等需求后，系统会从西电后勤公众号正文菜单和审核后的学生共建数据里推荐合适档口与菜品。
 
+当前仓库只维护网页服务器部署链路。早期手机 / Termux 部署脚本已不再作为正式发布方案。
+
 ## 功能概览
 
 - 学生端移动优先推荐界面：餐别、校区、堂食/外卖、堂食地点多选、主类别单选、口味倾向和加分偏好。
@@ -60,6 +62,12 @@ npm start              # 启动生产 Node 服务
 
 ```bash
 VITE_API_BASE=https://api.example.com npm run build
+```
+
+如果本地需要生成 GitHub Pages 构建，也请显式传入后端地址，不再从旧手机配置自动推断：
+
+```bash
+pwsh -File tools/build-github-pages.ps1 -ApiBase https://api.example.com -Base /xdufood/
 ```
 
 仓库已包含 `.github/workflows/pages.yml`，可以在 GitHub Pages 使用 Actions 自动发布前端。后端仍需部署 `server/site-server.mjs`，用于学生提交、后台审核和菜单照片数据。

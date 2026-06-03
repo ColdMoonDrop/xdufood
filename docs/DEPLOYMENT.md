@@ -2,6 +2,8 @@
 
 这个项目可以作为一个普通 Node.js 服务部署：前端静态文件由 Vite 构建，`server/site-server.mjs` 同时提供页面、学生提交 API 和管理后台 API。
 
+当前仓库只维护网页服务器部署。历史上的手机 / Termux 部署流程不再作为正式方案，本文档也不再覆盖那条链路。
+
 ## 环境要求
 
 - Linux 服务器或支持 Node.js 的云主机
@@ -157,3 +159,9 @@ VITE_API_BASE=https://api.your-domain.example npm run build
 这样静态页面会把 `/api/*` 请求发到指定后端。
 
 使用仓库自带的 GitHub Pages Actions 时，请把同一个后端地址配置为仓库变量 `VITE_API_BASE`。不要把临时隧道、管理员令牌或私人服务器地址写死到 workflow。
+
+如果你在本地手动生成 GitHub Pages 构建，请显式提供后端地址：
+
+```bash
+pwsh -File tools/build-github-pages.ps1 -ApiBase https://api.your-domain.example -Base /xdufood/
+```
