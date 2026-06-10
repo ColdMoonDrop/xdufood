@@ -2,7 +2,7 @@
 
 ## 管理后台
 
-部署到公网前必须设置强随机 `ADMIN_TOKEN`，并只通过 HTTPS 访问 `/admin`。不要把 `.env`、`server-data/`、管理员令牌或学生提交数据提交到 Git。
+部署到公网前必须设置强随机 `ADMIN_TOKEN`，并只通过 HTTPS 访问 `/admin`。不要把 `.env`、`server-data/`、SQLite 数据库、管理员令牌或学生提交数据提交到 Git。
 
 ## 学生提交数据
 

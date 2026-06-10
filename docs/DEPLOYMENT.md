@@ -41,6 +41,7 @@ npm start
 | `PORT` | `8080` | 监听端口 |
 | `SITE_DIR` | `dist` | 前端构建产物目录 |
 | `DATA_DIR` | `server-data` | 学生提交和审核修订数据目录 |
+| `DATABASE_FILE` | `server-data/xdufood.sqlite` | SQLite 数据库文件；未设置时会放在 `DATA_DIR/xdufood.sqlite` |
 | `ADMIN_TOKEN` | 空 | 后台管理员令牌；公网部署必须设置 |
 | `MAX_BODY_BYTES` | `5242880` | 单次提交 JSON 最大体积 |
 | `MAX_SUBMISSION_ATTACHMENTS` | `3` | 单次反馈最多图片数 |
@@ -106,7 +107,7 @@ cd xdufood
 ADMIN_TOKEN="$(openssl rand -hex 32)" docker compose up -d --build
 ```
 
-数据会保存在 Docker volume `xdufood-data`。升级时：
+数据会保存在 Docker volume `xdufood-data` 中的 SQLite 数据库。升级时：
 
 ```bash
 git pull
@@ -145,8 +146,11 @@ sudo systemctl restart xdufood
 
 建议定期备份 `DATA_DIR`，其中最重要的是：
 
-- `submissions.jsonl`：学生提交与菜单照片
-- `catalog-patch.json`：后台审核后的商家、菜品和隐藏项修订
+- `xdufood.sqlite`：当前主数据库，包含学生提交、菜单照片附件、审核修订和变更记录
+- `submissions-*.jsonl.bak`：清空学生反馈时生成的兼容备份
+- `catalog-patch-*.json.bak`：覆盖审核修订时生成的兼容备份
+
+如果旧部署目录里存在 `submissions.jsonl` 或 `catalog-patch.json`，新版服务第一次启动时会自动导入到 SQLite；旧文件不会被删除，便于人工兜底核对。
 
 ## 静态前端 + 独立 API
 

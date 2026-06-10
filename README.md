@@ -9,7 +9,7 @@
 - 学生端移动优先推荐界面：餐别、校区、堂食/外卖、堂食地点多选、主类别单选、口味倾向和加分偏好。
 - 真实食堂数据：内置西电后勤公众号公开正文菜单整理数据，不展示历史价格。
 - 学生共建：南校区老综、新综、家属区和外卖商家可由学生提交，管理员审核后进入推荐池。
-- 后台审核：支持查看反馈、新增或修订商家与菜品、隐藏错误数据。
+- 后台审核：支持查看反馈、新增或修订商家与菜品、隐藏错误数据；动态数据保存在 SQLite 数据库中。
 - 推荐规则：结合校区、餐别、地点、标签、避雷项、素食/清真硬约束和轮换随机性，避免每顿重复。
 - 数据边界：测试虚拟商家已从正式推荐池移除，非食堂商家不会未经审核进入推荐。
 
@@ -45,7 +45,7 @@ npm start
 ADMIN_TOKEN="$(openssl rand -hex 32)" docker compose up -d --build
 ```
 
-学生提交和审核数据保存在 Docker volume `xdufood-data`。更多 systemd、Nginx、HTTPS 和备份说明见 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
+学生提交、菜单照片和审核修订保存在 Docker volume `xdufood-data` 里的 SQLite 数据库。更多 systemd、Nginx、HTTPS 和备份说明见 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 
 ## 常用脚本
 

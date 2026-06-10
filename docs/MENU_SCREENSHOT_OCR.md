@@ -34,15 +34,16 @@ npm run data:menu:screenshot -- --vendor 老综某商家 --area 老综
 
 ## 处理学生反馈里的图片
 
-如果服务器数据在本机 `server-data/submissions.jsonl`：
+如果服务器数据在本机，默认会优先读取 `server-data/xdufood.sqlite` 中的学生反馈图片；如果数据库不存在，则退回读取旧的 `server-data/submissions.jsonl`：
 
 ```bash
 npm run data:menu:screenshot -- --submissions default
 ```
 
-也可以指定导出的 JSONL：
+也可以指定 SQLite 或导出的 JSONL：
 
 ```bash
+npm run data:menu:screenshot -- --submissions path/to/xdufood.sqlite
 npm run data:menu:screenshot -- --submissions path/to/submissions.jsonl
 ```
 

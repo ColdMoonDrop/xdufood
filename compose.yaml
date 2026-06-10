@@ -6,6 +6,7 @@ services:
     environment:
       ADMIN_TOKEN: ${ADMIN_TOKEN:?Set ADMIN_TOKEN before starting}
       DATA_DIR: /data
+      DATABASE_FILE: /data/xdufood.sqlite
       HOST: 0.0.0.0
       PORT: 8080
     volumes:

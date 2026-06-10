@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 import re
+import sqlite3
 import sys
 import tempfile
 from pathlib import Path
@@ -26,6 +27,7 @@ from xdu_canteen_importer import (  # noqa: E402
 DEFAULT_INPUT = REPO_ROOT / "data" / "menu-screenshots" / "inbox"
 DEFAULT_OUTPUT = REPO_ROOT / "data" / "menu-screenshots" / "review"
 DEFAULT_SUBMISSIONS = REPO_ROOT / "server-data" / "submissions.jsonl"
+DEFAULT_DATABASE = REPO_ROOT / "server-data" / "xdufood.sqlite"
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
 PRICE_MARKER_RE = re.compile(r"(?:¥|￥|元|块|\b\d+(?:\.\d{1,2})?\b)")
 
@@ -39,7 +41,7 @@ def main() -> None:
     parser.add_argument(
         "--submissions",
         default="",
-        help="Optional submissions.jsonl. Use 'default' to read server-data/submissions.jsonl.",
+        help="Optional submissions source. Use 'default' to read server-data/xdufood.sqlite, or pass a .sqlite/.jsonl file.",
     )
     parser.add_argument("--vendor", default="", help="Vendor name to attach to standalone image drafts.")
     parser.add_argument("--area", default="", help="Area/location to attach to standalone image drafts.")
@@ -105,9 +107,11 @@ def collect_image_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
                     }
                 )
 
-    submissions_path = resolve_submissions_arg(args.submissions)
-    if submissions_path and submissions_path.exists():
-        for submission in read_jsonl(submissions_path):
+    submissions_source = resolve_submissions_arg(args.submissions)
+    if submissions_source and submissions_source[1].exists():
+        source_kind, submissions_path = submissions_source
+        submissions = read_sqlite_submissions(submissions_path) if source_kind == "sqlite" else read_jsonl(submissions_path)
+        for submission in submissions:
             for photo in submission.get("attachments") or []:
                 jobs.append(
                     {
@@ -128,12 +132,17 @@ def collect_image_jobs(args: argparse.Namespace) -> list[dict[str, Any]]:
     return jobs
 
 
-def resolve_submissions_arg(value: str) -> Path | None:
+def resolve_submissions_arg(value: str) -> tuple[str, Path] | None:
     if not value:
         return None
     if value == "default":
-        return DEFAULT_SUBMISSIONS
-    return Path(value)
+        if DEFAULT_DATABASE.exists():
+            return ("sqlite", DEFAULT_DATABASE)
+        return ("jsonl", DEFAULT_SUBMISSIONS)
+    path = Path(value)
+    if path.suffix.lower() in {".sqlite", ".sqlite3", ".db"}:
+        return ("sqlite", path)
+    return ("jsonl", path)
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -148,6 +157,46 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
         except json.JSONDecodeError:
             continue
     return rows
+
+
+def read_sqlite_submissions(path: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    with sqlite3.connect(path) as connection:
+        connection.row_factory = sqlite3.Row
+        for row in connection.execute("SELECT payload_json FROM submissions ORDER BY created_at DESC"):
+            try:
+                submission = json.loads(row["payload_json"])
+            except json.JSONDecodeError:
+                continue
+            submission["attachments"] = read_sqlite_attachments(connection, str(submission.get("id") or ""))
+            submission["attachmentCount"] = len(submission["attachments"])
+            rows.append(submission)
+    return rows
+
+
+def read_sqlite_attachments(connection: sqlite3.Connection, submission_id: str) -> list[dict[str, Any]]:
+    attachments: list[dict[str, Any]] = []
+    for row in connection.execute(
+        """
+        SELECT id, name, mime_type, size_bytes, data_blob
+        FROM submission_attachments
+        WHERE submission_id = ?
+        ORDER BY rowid ASC
+        """,
+        (submission_id,),
+    ):
+        mime_type = str(row["mime_type"] or "image/jpeg")
+        data = base64.b64encode(bytes(row["data_blob"])).decode("ascii")
+        attachments.append(
+            {
+                "id": row["id"],
+                "name": row["name"],
+                "mimeType": mime_type,
+                "size": int(row["size_bytes"] or 0),
+                "dataUrl": f"data:{mime_type};base64,{data}",
+            }
+        )
+    return attachments
 
 
 def materialize_image(job: dict[str, Any], temp_root: Path) -> Path:

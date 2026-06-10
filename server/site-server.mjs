@@ -1,9 +1,10 @@
 import { createHash, randomUUID } from "node:crypto";
 import { createReadStream } from "node:fs";
-import { appendFile, mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import { createServer } from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createSqliteStore } from "./sqlite-store.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
@@ -14,6 +15,7 @@ const siteDir = resolveProjectPath(process.env.SITE_DIR, path.join(projectRoot, 
 const dataDir = resolveProjectPath(process.env.DATA_DIR, path.join(projectRoot, "server-data"));
 const submissionsFile = path.join(dataDir, "submissions.jsonl");
 const catalogPatchFile = path.join(dataDir, "catalog-patch.json");
+const databaseFile = resolveProjectPath(process.env.DATABASE_FILE, path.join(dataDir, "xdufood.sqlite"));
 const host = process.env.HOST || "0.0.0.0";
 const port = Number(process.env.PORT || 8080);
 const adminToken = process.env.ADMIN_TOKEN || "";
@@ -49,7 +51,12 @@ const allowedCampus = new Set(["south", "north"]);
 const allowedChannels = new Set(["canteen", "delivery", "nearby"]);
 const allowedSubmissionStatuses = new Set(["pending", "reviewed", "applied", "rejected"]);
 
-await mkdir(dataDir, { recursive: true });
+const store = await createSqliteStore({
+  dataDir,
+  databaseFile,
+  legacySubmissionsFile: submissionsFile,
+  legacyCatalogPatchFile: catalogPatchFile,
+});
 
 const server = createServer(async (request, response) => {
   try {
@@ -66,7 +73,7 @@ const server = createServer(async (request, response) => {
 server.listen(port, host, () => {
   console.log(`[site-server] listening on http://${host}:${port}`);
   console.log(`[site-server] serving ${siteDir}`);
-  console.log(`[site-server] storing submissions in ${submissionsFile}`);
+  console.log(`[site-server] storing data in ${store.info().databaseFile}`);
 });
 
 async function route(request, response) {
@@ -84,6 +91,7 @@ async function route(request, response) {
     sendJson(response, 200, {
       ok: true,
       service: "xdu-food-oracle",
+      storage: store.info().kind,
       submissions: submissions.length,
       catalogPatchUpdatedAt: patch.updatedAt || null,
       publicMode: !adminToken,
@@ -140,8 +148,7 @@ async function route(request, response) {
       return;
     }
     const body = await readJsonBody(request);
-    const patch = normalizeCatalogPatch(body);
-    await writeCatalogPatch(patch);
+    const patch = await writeCatalogPatch(normalizeCatalogPatch(body));
     sendJson(response, 200, { ok: true, patch });
     return;
   }
@@ -153,8 +160,8 @@ async function route(request, response) {
     }
     const body = await readJsonBody(request);
     const submission = normalizeSubmission(body);
-    await appendFile(submissionsFile, `${JSON.stringify(submission)}\n`, "utf8");
-    sendJson(response, 201, { ok: true, submission: redactPrivateFields(submission) });
+    const saved = await store.addSubmission(submission);
+    sendJson(response, 201, { ok: true, submission: redactPrivateFields(saved) });
     return;
   }
 
@@ -163,15 +170,8 @@ async function route(request, response) {
       sendJson(response, 401, { ok: false, error: "admin_token_required" });
       return;
     }
-    const backupPath = path.join(dataDir, `submissions-${Date.now()}.jsonl.bak`);
-    try {
-      const existing = await readFile(submissionsFile);
-      await writeFile(backupPath, existing);
-    } catch {
-      // No submissions yet.
-    }
-    await writeFile(submissionsFile, "");
-    sendJson(response, 200, { ok: true, backup: path.basename(backupPath) });
+    const backup = await store.clearSubmissions();
+    sendJson(response, 200, { ok: true, backup });
     return;
   }
 
@@ -231,44 +231,19 @@ async function serveStatic(pathname, response) {
 }
 
 async function readSubmissions() {
-  try {
-    const raw = await readFile(submissionsFile, "utf8");
-    return raw
-      .split("\n")
-      .filter(Boolean)
-      .map((line) => JSON.parse(line))
-      .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
-  } catch {
-    return [];
-  }
+  return store.readSubmissions();
 }
 
 async function updateSubmission(id, patch) {
-  const submissions = await readSubmissions();
-  const next = submissions.map((entry) =>
-    entry.id === id ? { ...entry, ...patch, reviewedAt: new Date().toISOString() } : entry,
-  );
-  await writeFile(submissionsFile, next.map((entry) => JSON.stringify(entry)).join("\n") + (next.length ? "\n" : ""), "utf8");
-  return next;
+  return store.updateSubmission(id, patch);
 }
 
 async function readCatalogPatch() {
-  try {
-    return normalizeCatalogPatch(JSON.parse(await readFile(catalogPatchFile, "utf8")));
-  } catch {
-    return normalizeCatalogPatch({});
-  }
+  return normalizeCatalogPatch(store.readCatalogPatch());
 }
 
 async function writeCatalogPatch(patch) {
-  patch.updatedAt = new Date().toISOString();
-  try {
-    const existing = await readFile(catalogPatchFile);
-    await writeFile(path.join(dataDir, `catalog-patch-${Date.now()}.json.bak`), existing);
-  } catch {
-    // First write.
-  }
-  await writeFile(catalogPatchFile, JSON.stringify(patch, null, 2), "utf8");
+  return normalizeCatalogPatch(await store.writeCatalogPatch(patch));
 }
 
 function normalizeCatalogPatch(value) {

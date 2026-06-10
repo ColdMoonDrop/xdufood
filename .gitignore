@@ -8,6 +8,10 @@ npm-debug.log*
 *.pyc
 __pycache__/
 server-data/
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
 data/xdu-canteen/raw/
 data/xdu-canteen/ocr/
 data/xdu-canteen/review/
